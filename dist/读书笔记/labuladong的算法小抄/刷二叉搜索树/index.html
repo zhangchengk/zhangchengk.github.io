@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>刷二叉搜索树 | Panda诚的博客</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="https://gitee.com/zhangchengk/image/raw/master/blob/logo.png">
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png">
+    <meta name="description" content="古来圣贤皆贫贱 何况我辈孤且直">
+    <meta property="og:url" content="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/labuladong%E7%9A%84%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84/%E5%88%B7%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.html">
+    <meta property="og:site_name" content="Panda诚的博客">
+    <meta property="og:title" content="刷二叉搜索树">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en-US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="Panda诚的博客">
+    <meta property="article:author" content="张诚">
+    <meta property="article:tag" content="算法小抄">
+    <meta property="article:published_time" content="2021-02-07T00:00:00.000Z">
+    <meta name="referrer" content="no-referrer">
+    <meta name="theme-color" content="#46bd87">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <link rel="preload" href="/assets/css/0.styles.16c2f43a.css" as="style"><link rel="preload" href="/assets/js/app.adf127c5.js" as="script"><link rel="preload" href="/assets/js/layout-Slide.80a219c9.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound~layout-Slide.0f08e35b.js" as="script"><link rel="preload" href="/assets/js/page-刷二叉搜索树.ab5c76aa.js" as="script"><link rel="prefetch" href="/assets/js/219.f48bbc14.js"><link rel="prefetch" href="/assets/js/220.9c5d7e47.js"><link rel="prefetch" href="/assets/js/221.f06a0ba9.js"><link rel="prefetch" href="/assets/js/222.7ae7c054.js"><link rel="prefetch" href="/assets/js/223.d0c28d44.js"><link rel="prefetch" href="/assets/js/layout-Blog.2326f8af.js"><link rel="prefetch" href="/assets/js/layout-Layout.0830d8a7.js"><link rel="prefetch" href="/assets/js/layout-NotFound.38732d48.js"><link rel="prefetch" href="/assets/js/page--262de094.2df5ab75.js"><link rel="prefetch" href="/assets/js/page--ac93ea9c.3bef1365.js"><link rel="prefetch" href="/assets/js/page-1考虑使用静态工厂方法替代构造方法.e4588af8.js"><link rel="prefetch" href="/assets/js/page-2-两数相加.897a6796.js"><link rel="prefetch" href="/assets/js/page-2SpringBootApplication注解.d643326e.js"><link rel="prefetch" href="/assets/js/page-3-无重复字符的最长子串.ecd82635.js"><link rel="prefetch" href="/assets/js/page-4-寻找两个有序数组的中位数.124e4169.js"><link rel="prefetch" href="/assets/js/page-5-最长回文子串.fd51d002.js"><link rel="prefetch" href="/assets/js/page-6-Z字形变换.2ecf94b5.js"><link rel="prefetch" href="/assets/js/page-AQS.7158d20f.js"><link rel="prefetch" href="/assets/js/page-AboutMe.48a3fcb9.js"><link rel="prefetch" href="/assets/js/page-AliasFor注解.baff227d.js"><link rel="prefetch" href="/assets/js/page-ApacheNIFIProcessor情况.9da2a199.js"><link rel="prefetch" href="/assets/js/page-ApacheNIFIRunDuration深入理解.daa21a93.js"><link rel="prefetch" href="/assets/js/page-ApacheNIFI开启HTTPS.4e6babc3.js"><link rel="prefetch" href="/assets/js/page-ApacheNIFI术语.956acf35.js"><link rel="prefetch" href="/assets/js/page-ApacheNIFI注解讲解.91741985.js"><link rel="prefetch" href="/assets/js/page-ApacheNIFI简史.d1c5d25c.js"><link rel="prefetch" href="/assets/js/page-ApacheNIFI读完即入门.16905c8d.js"><link rel="prefetch" href="/assets/js/page-ApacheNIFI项目结构的类资源隔离机制.2094cc36.js"><link rel="prefetch" href="/assets/js/page-CAS与原子操作.7ac2da66.js"><link rel="prefetch" href="/assets/js/page-ClassLoaderjava.39fa314d.js"><link rel="prefetch" href="/assets/js/page-ControllerServices是守护进程.920f11eb.js"><link rel="prefetch" href="/assets/js/page-CopyOnWrite容器.6a9a947a.js"><link rel="prefetch" href="/assets/js/page-ExecuteScript组件脚本使用教程.94a1c307.js"><link rel="prefetch" href="/assets/js/page-Fork_Join框架.380ef33e.js"><link rel="prefetch" href="/assets/js/page-GiteePages自动部署.8dddecaa.js"><link rel="prefetch" href="/assets/js/page-Git切换远程仓库.0ea02be5.js"><link rel="prefetch" href="/assets/js/page-HTTP模式下开启权限.161d3a03.js"><link rel="prefetch" href="/assets/js/page-Home.bc705f3a.js"><link rel="prefetch" href="/assets/js/page-Java8Stream并行计算原理.0a05b06c.js"><link rel="prefetch" href="/assets/js/page-JavaSPI机制.7e48856e.js"><link rel="prefetch" href="/assets/js/page-Java中atomic包中的原子操作类总结.ee6f7c63.js"><link rel="prefetch" href="/assets/js/page-Java内存模型原理.9cf89948.js"><link rel="prefetch" href="/assets/js/page-Java内存模型基础知识.c228853d.js"><link rel="prefetch" href="/assets/js/page-Java多线程入门类和接口.5303fb6d.js"><link rel="prefetch" href="/assets/js/page-Java导入语句中不宜使用通配符.99599499.js"><link rel="prefetch" href="/assets/js/page-Java类加载器.02a941da.js"><link rel="prefetch" href="/assets/js/page-Java线程的状态及主要转化方法.90309740.js"><link rel="prefetch" href="/assets/js/page-Java线程间的通信.1665c663.js"><link rel="prefetch" href="/assets/js/page-Java里带标签的break和continue.72ebacc3.js"><link rel="prefetch" href="/assets/js/page-JettyServer源码解读.f0788496.js"><link rel="prefetch" href="/assets/js/page-JsonJOLT教程(英文版).06b2a4d6.js"><link rel="prefetch" href="/assets/js/page-JsonJOLT教程.d7f80570.js"><link rel="prefetch" href="/assets/js/page-Jvmdumpjstackjmapjstat介绍与使用.08a51ac3.js"><link rel="prefetch" href="/assets/js/page-Mac的Mat独立版本打开失败解决方案.210c361b.js"><link rel="prefetch" href="/assets/js/page-Maven3种打包方式之一maven-assembly-plugin的使用.913ff1bb.js"><link rel="prefetch" href="/assets/js/page-MavenAssembly配置详细解释.aca43936.js"><link rel="prefetch" href="/assets/js/page-MavenMirror高级配置.735d4d8f.js"><link rel="prefetch" href="/assets/js/page-Maven依赖管理-POM文件中依赖的版本锁定.5be12688.js"><link rel="prefetch" href="/assets/js/page-Maven发版名词介绍.6f3bb880.js"><link rel="prefetch" href="/assets/js/page-MySQL不要再使用UTF-8了.f42306f4.js"><link rel="prefetch" href="/assets/js/page-NIFINar包加载机制源码解读.d977ebb7.js"><link rel="prefetch" href="/assets/js/page-NIFI各个NAR包功能概述.62730794.js"><link rel="prefetch" href="/assets/js/page-NIFI启动源码解读.593276b5.js"><link rel="prefetch" href="/assets/js/page-NIFI自定义开发规范.9f84dc51.js"><link rel="prefetch" href="/assets/js/page-NIFI里的数据库连接池.5a0fae5e.js"><link rel="prefetch" href="/assets/js/page-Nar包下的MANIFESTMF-NIFI启动时有用到.ce8e0be2.js"><link rel="prefetch" href="/assets/js/page-NiFijava源码解读.23270cbd.js"><link rel="prefetch" href="/assets/js/page-OOP规约.01ecee5b.js"><link rel="prefetch" href="/assets/js/page-Oracle(12c)使用LogMiner分析Redo日志文件.f1a2cda0.js"><link rel="prefetch" href="/assets/js/page-Processor的一些方法.0e20902b.js"><link rel="prefetch" href="/assets/js/page-QQ及QQ群.3878675c.js"><link rel="prefetch" href="/assets/js/page-RunNiFijava源码解读.3f7e42b2.js"><link rel="prefetch" href="/assets/js/page-SpringBoot源码搭建.3061b8e8.js"><link rel="prefetch" href="/assets/js/page-Spring中文文档-CoreTechnologies.97fd1e51.js"><link rel="prefetch" href="/assets/js/page-Spring中文文档-SpringFrameworkOverview.2ffeb68a.js"><link rel="prefetch" href="/assets/js/page-Spring中的FactoryBean.84f0d9d2.js"><link rel="prefetch" href="/assets/js/page-Spring整体架构.38d10854.js"><link rel="prefetch" href="/assets/js/page-Spring的结构组成.3c9b51c7.js"><link rel="prefetch" href="/assets/js/page-WEB简史.1982aa9a.js"><link rel="prefetch" href="/assets/js/page-clean-compile-build-install-package区别.6693326c.js"><link rel="prefetch" href="/assets/js/page-docker简介.34a28231.js"><link rel="prefetch" href="/assets/js/page-javasqlTypes的具体对应值(jdbcType).d13201c0.js"><link rel="prefetch" href="/assets/js/page-java内存dump文件导出与查看.4b769eb8.js"><link rel="prefetch" href="/assets/js/page-java反射原理.559de27d.js"><link rel="prefetch" href="/assets/js/page-java注解.b0b367a6.js"><link rel="prefetch" href="/assets/js/page-linux之如何清理磁盘空间.10f0cd60.js"><link rel="prefetch" href="/assets/js/page-linux如何启动nginx.2f068e83.js"><link rel="prefetch" href="/assets/js/page-linux安装jdk8.c13d5ef6.js"><link rel="prefetch" href="/assets/js/page-linux查看crontab任务执行情况.59164d9b.js"><link rel="prefetch" href="/assets/js/page-maven压缩解压使jar文件损坏.97805bad.js"><link rel="prefetch" href="/assets/js/page-maven打包去除版本号.b49aa3d5.js"><link rel="prefetch" href="/assets/js/page-maven打包重命名jar.d498c134.js"><link rel="prefetch" href="/assets/js/page-maven的dependency参数.f5eff4df.js"><link rel="prefetch" href="/assets/js/page-nifi-env脚本解读.5a869946.js"><link rel="prefetch" href="/assets/js/page-nifishstart解读.9824ae10.js"><link rel="prefetch" href="/assets/js/page-nifish脚本解读.39995ae3.js"><link rel="prefetch" href="/assets/js/page-sqlserver数据库类型对应Java中的数据类型.10497bca.js"><link rel="prefetch" href="/assets/js/page-synchronized与锁.46b925ee.js"><link rel="prefetch" href="/assets/js/page-volatitle.56f55187.js"><link rel="prefetch" href="/assets/js/page-一对一联结训练.cc17b107.js"><link rel="prefetch" href="/assets/js/page-七大软件架构设计原则.05c5c790.js"><link rel="prefetch" href="/assets/js/page-万物皆桩.edc32608.js"><link rel="prefetch" href="/assets/js/page-为什么建议使用NIFI里的Record.0eb591ba.js"><link rel="prefetch" href="/assets/js/page-为什么按位置读取JDBCResultSet的速度比按名称读取的速度快.a9aafa18.js"><link rel="prefetch" href="/assets/js/page-了解ApacheNiFi最大线程池和处理器并发任务设置.2875dede.js"><link rel="prefetch" href="/assets/js/page-二叉搜索树的前驱和后继节点.312eec5a.js"><link rel="prefetch" href="/assets/js/page-五种方法记单词.6b86c529.js"><link rel="prefetch" href="/assets/js/page-什么是乐观锁,什么是悲观锁.cd710b05.js"><link rel="prefetch" href="/assets/js/page-什么是红黑树.a1cdebb0.js"><link rel="prefetch" href="/assets/js/page-什么是联想.e2c7b410.js"><link rel="prefetch" href="/assets/js/page-代替法.69d20571.js"><link rel="prefetch" href="/assets/js/page-代码格式.02633092.js"><link rel="prefetch" href="/assets/js/page-代码设计原理.76bce000.js"><link rel="prefetch" href="/assets/js/page-使用List.590ef19d.js"><link rel="prefetch" href="/assets/js/page-偏向锁批量重偏向与批量撤销.25d6e3f2.js"><link rel="prefetch" href="/assets/js/page-关于设计模式的那些事儿.00364f6a.js"><link rel="prefetch" href="/assets/js/page-关键词记忆法.99d6b69f.js"><link rel="prefetch" href="/assets/js/page-内视觉出图七要素.cec8ff7e.js"><link rel="prefetch" href="/assets/js/page-冒泡排序.913b4395.js"><link rel="prefetch" href="/assets/js/page-创造和加工图像.3a83652c.js"><link rel="prefetch" href="/assets/js/page-到底什么是classpath.a6a152fd.js"><link rel="prefetch" href="/assets/js/page-刷平衡二叉树.d2cbae9e.js"><link rel="prefetch" href="/assets/js/page-前言.69b4d939.js"><link rel="prefetch" href="/assets/js/page-动态规划详解.d3030fe5.js"><link rel="prefetch" href="/assets/js/page-动手体验JVM中Class对象的唯一性.9f0f32bc.js"><link rel="prefetch" href="/assets/js/page-十大经典排序算法最强总结.575e402e.js"><link rel="prefetch" href="/assets/js/page-口诀记忆.8cdd9c9d.js"><link rel="prefetch" href="/assets/js/page-命名风格.901afc86.js"><link rel="prefetch" href="/assets/js/page-回溯算法详解.e6d6755a.js"><link rel="prefetch" href="/assets/js/page-固定法.2e460194.js"><link rel="prefetch" href="/assets/js/page-固定法之千位数字定位系统.276ec4d8.js"><link rel="prefetch" href="/assets/js/page-固定法之地点桩记忆体验.81b03c4d.js"><link rel="prefetch" href="/assets/js/page-固定法之记忆力测试.0d6df35b.js"><link rel="prefetch" href="/assets/js/page-固定法之记忆宫殿实战.2f869b26.js"><link rel="prefetch" href="/assets/js/page-图像记忆.91592aa1.js"><link rel="prefetch" href="/assets/js/page-在NIFI中基于增量字段同步数据.7163e105.js"><link rel="prefetch" href="/assets/js/page-基于Java实现红黑树的基本操作.78f0679f.js"><link rel="prefetch" href="/assets/js/page-多线程基础知识总结.2805b11a.js"><link rel="prefetch" href="/assets/js/page-大数据的4v.2a118b44.js"><link rel="prefetch" href="/assets/js/page-如何给ApacheNIFI贡献代码.10664b4b.js"><link rel="prefetch" href="/assets/js/page-如何集中注意力.5054a73d.js"><link rel="prefetch" href="/assets/js/page-字体高亮颜色工具.84e62d52.js"><link rel="prefetch" href="/assets/js/page-学习算法和刷题的思路指南.212c5f2a.js"><link rel="prefetch" href="/assets/js/page-容器的基础XmlBeanFactory.0a0508eb.js"><link rel="prefetch" href="/assets/js/page-带你体验ApacheNIFI新建数据同步流程.38128a4c.js"><link rel="prefetch" href="/assets/js/page-带你刷二叉树.719efe2e.js"><link rel="prefetch" href="/assets/js/page-常量定义.41f5006b.js"><link rel="prefetch" href="/assets/js/page-并发容器集合.681330ed.js"><link rel="prefetch" href="/assets/js/page-彻底理解Synchronized.26feb969.js"><link rel="prefetch" href="/assets/js/page-微信及公众号.d53f65ab.js"><link rel="prefetch" href="/assets/js/page-快速记忆的秘密.0ab72528.js"><link rel="prefetch" href="/assets/js/page-意群图像记忆的步骤.a28ffb2c.js"><link rel="prefetch" href="/assets/js/page-意群的逻辑图像转化.80e50e64.js"><link rel="prefetch" href="/assets/js/page-打印Java对象头.3bfa472a.js"><link rel="prefetch" href="/assets/js/page-探索ApacheNIFI集群的高可用.fd6428f1.js"><link rel="prefetch" href="/assets/js/page-数据抽取的常见理论方法.aa2b40d6.js"><link rel="prefetch" href="/assets/js/page-无效的列索引.ccd5c4a1.js"><link rel="prefetch" href="/assets/js/page-普罗米修斯安装MAC版.e68d83f1.js"><link rel="prefetch" href="/assets/js/page-机械记忆.5df560a1.js"><link rel="prefetch" href="/assets/js/page-比喻记忆法.cbe926bc.js"><link rel="prefetch" href="/assets/js/page-深入HTTPS加解密原理.1f4b6251.js"><link rel="prefetch" href="/assets/js/page-深入了解Java锁.cdc48bb8.js"><link rel="prefetch" href="/assets/js/page-深入浅出Java多线程.41294d13.js"><link rel="prefetch" href="/assets/js/page-深入理解ApacheNIFIConnection.179dee92.js"><link rel="prefetch" href="/assets/js/page-深入解析ApacheNIFI的调度策略.7f8a4d6d.js"><link rel="prefetch" href="/assets/js/page-现实记忆宫殿.22dc9595.js"><link rel="prefetch" href="/assets/js/page-理解ContentRepositoryArchiving工作原理（译）.34a48560.js"><link rel="prefetch" href="/assets/js/page-相对路径与绝对路径去读取文件.b72f461e.js"><link rel="prefetch" href="/assets/js/page-简单工厂模式.1faf0045.js"><link rel="prefetch" href="/assets/js/page-算法.56ce23fc.js"><link rel="prefetch" href="/assets/js/page-管理OracleRedoLog.17c45679.js"><link rel="prefetch" href="/assets/js/page-类加载机制.9dd81496.js"><link rel="prefetch" href="/assets/js/page-线程池原理.9b81afc7.js"><link rel="prefetch" href="/assets/js/page-线程组和线程优先级.3a2c99aa.js"><link rel="prefetch" href="/assets/js/page-绘图记忆法.1f33c3bc.js"><link rel="prefetch" href="/assets/js/page-编码和编码格式.35c328d4.js"><link rel="prefetch" href="/assets/js/page-编译NIFI源码.5fc09c89.js"><link rel="prefetch" href="/assets/js/page-聊聊HTTPS和SSL,TLS协议.5c3c4177.js"><link rel="prefetch" href="/assets/js/page-联结的技巧.6eb0261d.js"><link rel="prefetch" href="/assets/js/page-自定义ExpressionLanguage.26e574d9.js"><link rel="prefetch" href="/assets/js/page-自定义Processor组件.5927e5df.js"><link rel="prefetch" href="/assets/js/page-虚拟记忆宫殿.afb2b23e.js"><link rel="prefetch" href="/assets/js/page-视觉化的窍门.ceb849cb.js"><link rel="prefetch" href="/assets/js/page-视觉图像是一切记忆的基础.c9057d9b.js"><link rel="prefetch" href="/assets/js/page-计划任务.23db8576.js"><link rel="prefetch" href="/assets/js/page-记忆初级万能公式.a4c3fe12.js"><link rel="prefetch" href="/assets/js/page-记忆宫殿之人物系统.43f4cf33.js"><link rel="prefetch" href="/assets/js/page-记忆宫殿的原理.8fbc7c34.js"><link rel="prefetch" href="/assets/js/page-记忆宫殿的起源.76c169f1.js"><link rel="prefetch" href="/assets/js/page-记忆宫殿速记体验.1dcf4f75.js"><link rel="prefetch" href="/assets/js/page-记忆思维的演变.f4182ebe.js"><link rel="prefetch" href="/assets/js/page-记忆术之词性串联训练.a745c123.js"><link rel="prefetch" href="/assets/js/page-记忆术基本功之归纳简化.c86b063f.js"><link rel="prefetch" href="/assets/js/page-记忆术基本功之故事法.5754dd26.js"><link rel="prefetch" href="/assets/js/page-记忆术基本功之逻辑推理记忆信息.3d5154c8.js"><link rel="prefetch" href="/assets/js/page-记忆术基本功之逻辑联想法.9d953704.js"><link rel="prefetch" href="/assets/js/page-记忆术基本功发散训练.bbad89ae.js"><link rel="prefetch" href="/assets/js/page-记忆术基础训练抽象词汇串联.ef5724db.js"><link rel="prefetch" href="/assets/js/page-记忆术的两种核心技巧，谐音和逻辑.852a0926.js"><link rel="prefetch" href="/assets/js/page-记忆术起点锁链法.da5565a2.js"><link rel="prefetch" href="/assets/js/page-记忆的宏观理论.f70ade5c.js"><link rel="prefetch" href="/assets/js/page-设计模式就该这样学：基于经典框架源码和真实业务场景.05389763.js"><link rel="prefetch" href="/assets/js/page-设计模式常用的UML图.9173a881.js"><link rel="prefetch" href="/assets/js/page-读[labuladong的算法小抄]笔记.0a4985fa.js"><link rel="prefetch" href="/assets/js/page-进程与线程基本概念.eb44ece5.js"><link rel="prefetch" href="/assets/js/page-通信工具类.65743896.js"><link rel="prefetch" href="/assets/js/page-通过配置优化ApacheNiFi性能.ed519273.js"><link rel="prefetch" href="/assets/js/page-逻辑记忆.dc5a0b49.js"><link rel="prefetch" href="/assets/js/page-重排序与happens-before.8cb1a86a.js"><link rel="prefetch" href="/assets/js/page-重新认识UML.3ecc51fd.js"><link rel="prefetch" href="/assets/js/page-锁接口和类.61e50111.js"><link rel="prefetch" href="/assets/js/page-阻塞队列.2c602116.js"><link rel="prefetch" href="/assets/js/page-随机记忆宫殿.f1659716.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.a848847f.js"><link rel="prefetch" href="/assets/js/vendors~layout-Blog~layout-Layout.29cacdf8.js"><link rel="prefetch" href="/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound.48d49e74.js"><link rel="prefetch" href="/assets/js/vendors~photo-swipe.91ebc4b1.js"><link rel="prefetch" href="/assets/js/vendors~reveal.5ebdc007.js"><link rel="prefetch" href="/assets/js/vendors~valine.c1b5ce67.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.16c2f43a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="presentation"><button class="color-button" style="display:none;"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="skin-icon"><path d="M224 800c0 9.6 3.2 44.8 6.4 54.4 6.4 48-48 76.8-48 76.8s80 41.6 147.2 0 134.4-134.4
+        38.4-195.2c-22.4-12.8-41.6-19.2-57.6-19.2C259.2 716.8 227.2 761.6 224 800zM560 675.2l-32
+        51.2c-51.2 51.2-83.2 32-83.2 32 25.6 67.2 0 112-12.8 128 25.6 6.4 51.2 9.6 80 9.6 54.4 0
+        102.4-9.6 150.4-32l0 0c3.2 0 3.2-3.2 3.2-3.2 22.4-16 12.8-35.2
+        6.4-44.8-9.6-12.8-12.8-25.6-12.8-41.6 0-54.4 60.8-99.2 137.6-99.2 6.4 0 12.8 0 22.4
+        0 12.8 0 38.4 9.6 48-25.6 0-3.2 0-3.2 3.2-6.4 0-3.2 3.2-6.4 3.2-6.4 6.4-16 6.4-16 6.4-19.2
+        9.6-35.2 16-73.6 16-115.2 0-105.6-41.6-198.4-108.8-268.8C704 396.8 560 675.2 560 675.2zM224
+        419.2c0-28.8 22.4-51.2 51.2-51.2 28.8 0 51.2 22.4 51.2 51.2 0 28.8-22.4 51.2-51.2 51.2C246.4
+        470.4 224 448 224 419.2zM320 284.8c0-22.4 19.2-41.6 41.6-41.6 22.4 0 41.6 19.2 41.6 41.6 0
+        22.4-19.2 41.6-41.6 41.6C339.2 326.4 320 307.2 320 284.8zM457.6 208c0-12.8 12.8-25.6 25.6-25.6
+        12.8 0 25.6 12.8 25.6 25.6 0 12.8-12.8 25.6-25.6 25.6C470.4 233.6 457.6 220.8 457.6 208zM128
+        505.6C128 592 153.6 672 201.6 736c28.8-60.8 112-60.8 124.8-60.8-16-51.2 16-99.2
+        16-99.2l316.8-422.4c-48-19.2-99.2-32-150.4-32C297.6 118.4 128 291.2 128 505.6zM764.8
+        86.4c-22.4 19.2-390.4 518.4-390.4 518.4-22.4 28.8-12.8 76.8 22.4 99.2l9.6 6.4c35.2 22.4
+        80 12.8 99.2-25.6 0 0 6.4-12.8 9.6-19.2 54.4-105.6 275.2-524.8 288-553.6
+        6.4-19.2-3.2-32-19.2-32C777.6 76.8 771.2 80 764.8 86.4z"></path></svg> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><ul class="themecolor-select"><label for="themecolor-select">Theme Color:</label> <li><a href="#" class="default-theme"></a></li> </ul> <div class="darkmode-toggle"><label for="darkmode-toggle" class="desc">Theme Mode:</label> <div class="darkmode-switch"><div class="item day"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon light-icon"><path d="M512 256a42.667 42.667 0 0042.667-42.667V128a42.667 42.667 0 00-85.334 0v85.333A42.667 42.667 0 00512 256zm384 213.333h-85.333a42.667 42.667 0 000 85.334H896a42.667 42.667 0 000-85.334zM256 512a42.667 42.667 0 00-42.667-42.667H128a42.667 42.667 0 000 85.334h85.333A42.667 42.667 0 00256 512zm9.387-298.667a42.667 42.667 0 00-59.307 62.72l61.44 59.307a42.667 42.667 0 0031.147 11.947 42.667 42.667 0 0030.72-13.227 42.667 42.667 0 000-60.16zm459.946 133.974a42.667 42.667 0 0029.44-11.947l61.44-59.307a42.667 42.667 0 00-57.6-62.72l-61.44 60.587a42.667 42.667 0 000 60.16 42.667 42.667 0 0028.16 13.227zM512 768a42.667 42.667 0 00-42.667 42.667V896a42.667 42.667 0 0085.334 0v-85.333A42.667 42.667 0 00512 768zm244.48-79.36a42.667 42.667 0 00-59.307 61.44l61.44 60.587a42.667 42.667 0 0029.44 11.946 42.667 42.667 0 0030.72-12.8 42.667 42.667 0 000-60.586zm-488.96 0l-61.44 59.307a42.667 42.667 0 000 60.586 42.667 42.667 0 0030.72 12.8 42.667 42.667 0 0028.587-10.666l61.44-59.307a42.667 42.667 0 00-59.307-61.44zM512 341.333A170.667 170.667 0 10682.667 512 170.667 170.667 0 00512 341.333z" fill="currentColor"></path></svg></div> <div class="item auto active"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon auto-icon"><path d="M460.864 539.072H564.8L510.592 376l-49.728 163.072zM872 362.368V149.504H659.648L510.528 0l-149.12 149.504H149.12v212.928L0 511.872l149.12 149.504v212.928h212.352l149.12 149.504 149.12-149.504h212.352V661.376l149.12-149.504L872 362.368zM614.464 693.12l-31.616-90.624H438.272l-31.616 90.624h-85.888l144.576-407.68h90.368l144.576 407.68h-85.824zm0 0" fill="currentColor"></path></svg></div> <div class="item night"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon dark-icon"><path d="M935.539 630.402c-11.43-11.432-28.674-14.739-43.531-8.354-46.734 20.103-96.363 30.297-147.508 30.297-99.59 0-193.221-38.784-263.64-109.203-108.637-108.637-139.61-270.022-78.908-411.148a39.497 39.497 0 00-51.886-51.887c-52.637 22.64-100.017 54.81-140.826 95.616-85.346 85.346-132.346 198.821-132.346 319.52 0 120.7 47.001 234.172 132.347 319.519S408.063 947.11 528.76 947.11c120.7 0 234.172-47.003 319.52-132.351 40.809-40.81 72.978-88.19 95.616-140.826a39.497 39.497 0 00-8.356-43.532z" fill="currentColor"></path></svg></div></div> <!----></div></div></div></button> <div class="presentation-content content__default"><div class="md-presentation reveal reveal-viewport loading"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" class="md-presentation-loading-icon" style="enable-background:new 0 0 50 50;"><rect height="5" width="4" x="0" y="13"><animate attributeName="height" begin="0s" dur="0.6s" repeatCount="indefinite" values="5;21;5"></animate> <animate attributeName="y" begin="0s" dur="0.6s" repeatCount="indefinite" values="13; 5; 13"></animate></rect> <rect height="5" width="4" x="10" y="13"><animate attributeName="height" begin="0.15s" dur="0.6s" repeatCount="indefinite" values="5;21;5"></animate> <animate attributeName="y" begin="0.15s" dur="0.6s" repeatCount="indefinite" values="13; 5; 13"></animate></rect> <rect height="5" width="4" x="20" y="13"><animate attributeName="height" begin="0.3s" dur="0.6s" repeatCount="indefinite" values="5;21;5"></animate> <animate attributeName="y" begin="0.3s" dur="0.6s" repeatCount="indefinite" values="13; 5; 13"></animate></rect></svg> <div class="slides" style="display:none;"><section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n--\r?\n$"><script type="text/template">
+        
+---
+
+二叉搜索树（Binary Search Tree，后文简写 BST）的特性
+
+- 对于 BST 的每一个节点node，左子树节点的值都比node的值要小，右子树节点的值都比node的值大。
+- 对于 BST 的每一个节点node，它的左侧子树和右侧子树都是 BST。
+
+&lt;font color=red&gt;从做算法题的角度来看 BST，除了它的定义，还有一个重要的性质：BST 的中序遍历结果是有序的（升序）。&lt;/font&gt;
+
+---
+
+## 230-二叉搜索树中第K小的元素
+
+给定一个二叉搜索树的根节点 root ，和一个整数 k ，请你设计一个算法查找其中第 k 个最小元素（从 1 开始计数）。
+
+--
+
+![](https://gitee.com/zhangchengk/image/raw/master/LeetCode/230/1.png)
+
+--
+
+![](https://gitee.com/zhangchengk/image/raw/master/LeetCode/230/2.png)
+
+--
+
+```java
+class Solution {
+    List&lt;Integer&gt; valList = new ArrayList();
+    public int kthSmallest(TreeNode root, int k) {
+        traverse(root);
+        return valList.get(k-1);
+    }
+
+    void traverse(TreeNode root){
+        if (null == root){
+            return;
+        }
+        traverse(root.left);
+        valList.add(root.val);
+        traverse(root.right);
+    }
+}
+```
+
+---
+
+## 538-把二叉搜索树转换为累加树(1038)
+
+给出二叉搜索树的根节点，该树的节点值各不相同，请你将其转换为累加树（Greater Sum Tree），使每个节点node的新值等于原树中大于或等于node.val的值之和。
+
+提醒一下，二叉搜索树满足下列约束条件：
+
+- 节点的左子树仅包含键 小于 节点键的节点。
+- 节点的右子树仅包含键 大于 节点键的节点。
+- 左右子树也必须是二叉搜索树。
+
+--
+
+![](https://gitee.com/zhangchengk/image/raw/master/LeetCode/538/1.png)
+
+--
+
+![](https://gitee.com/zhangchengk/image/raw/master/LeetCode/538/2.png)
+
+--
+
+```java
+class Solution {
+    public TreeNode convertBST(TreeNode root) {
+        traverse(root);
+        return root;
+    }
+    int sum =0;
+    void traverse(TreeNode root){
+        if (null == root){
+            return;
+        }
+        traverse(root.right);
+        sum+=root.val;
+        root.val = sum;
+        traverse(root.left);
+    }
+}
+```
+
+---
+
+## 判断 BST 的合法性
+
+1. 中序遍历，破坏了升序的即false
+2. 递归， 以 root 为根的子树节点必须满足 max.val &gt; root.val &gt; min.val */
+
+--
+
+```java
+boolean isValidBST(TreeNode root) {
+    return isValidBST(root, null, null);
+}
+
+/* 限定以 root 为根的子树节点必须满足 max.val &gt; root.val &gt; min.val */
+boolean isValidBST(TreeNode root, TreeNode min, TreeNode max) {
+    // base case
+    if (root == null) return true;
+    // 若 root.val 不符合 max 和 min 的限制，说明不是合法 BST
+    if (min != null &amp;&amp; root.val &lt;= min.val) return false;
+    if (max != null &amp;&amp; root.val &gt;= max.val) return false;
+    // 限定左子树的最大值是 root.val，右子树的最小值是 root.val
+    return isValidBST(root.left, min, root) 
+        &amp;&amp; isValidBST(root.right, root, max);
+}
+```
+
+---
+
+## 在 BST 中搜索一个数
+
+```java
+void BST(TreeNode root, int target) {
+    if (root.val == target)
+        // 找到目标，做点什么
+    if (root.val &lt; target) 
+        BST(root.right, target);
+    if (root.val &gt; target)
+        BST(root.left, target);
+}
+```
+
+---
+
+## 在 BST 中插入一个数
+
+```java
+TreeNode insertIntoBST(TreeNode root, int val) {
+    // 找到空位置插入新节点
+    if (root == null) return new TreeNode(val);
+    // if (root.val == val)
+    //     BST 中一般不会插入已存在元素
+    if (root.val &lt; val) 
+        root.right = insertIntoBST(root.right, val);
+    if (root.val &gt; val) 
+        root.left = insertIntoBST(root.left, val);
+    return root;
+}
+```
+
+---
+
+## 在 BST 中删除一个数
+
+找到目标节点了，比方说是节点 A，如何删除这个节点，这是难点。因为删除节点的同时不能破坏 BST 的性质。有三种情况
+- A 恰好是末端节点，两个子节点都为空，那么它可以当场去世了。
+- A 只有一个非空子节点，那么它要让这个孩子接替自己的位置。
+- A 有两个子节点，麻烦了，为了不破坏 BST 的性质，A 必须找到左子树中最大的那个节点，或者右子树中最小的那个节点来接替自己。我们以第二种方式讲解。
+```java
+TreeNode deleteNode(TreeNode root, int key) {
+    if (root == null) return null;
+    if (root.val == key) {
+        // 这两个 if 把情况 1 和 2 都正确处理了
+        if (root.left == null) return root.right;
+        if (root.right == null) return root.left;
+        // 处理情况 3
+        TreeNode minNode = getMin(root.right);
+        root.val = minNode.val;
+        root.right = deleteNode(root.right, minNode.val);
+    } else if (root.val &gt; key) {
+        root.left = deleteNode(root.left, key);
+    } else if (root.val &lt; key) {
+        root.right = deleteNode(root.right, key);
+    }
+    return root;
+}
+
+TreeNode getMin(TreeNode node) {
+    // BST 最左边的就是最小的
+    while (node.left != null) node = node.left;
+    return node;
+}
+```
+
+---
+
+## 450-删除二叉搜索树中的节点
+
+给定一个二叉搜索树的根节点 root 和一个值 key，删除二叉搜索树中的 key 对应的节点，并保证二叉搜索树的性质不变。返回二叉搜索树（有可能被更新）的根节点的引用。
+
+说明： 要求算法时间复杂度为 O(h)，h 为树的高度。
+
+--
+
+![](https://gitee.com/zhangchengk/image/raw/master/LeetCode/538/1.png)
+
+---
+
+## 701-二叉搜索树中的插入操作
+
+给定二叉搜索树（BST）的根节点和要插入树中的值，将值插入二叉搜索树。 返回插入后二叉搜索树的根节点。 输入数据 保证 ，新值和原始二叉搜索树中的任意节点值都不同。
+
+注意，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回 任意有效的结果 。
+
+--
+
+![](https://gitee.com/zhangchengk/image/raw/master/LeetCode/701/1.png)
+
+--
+
+![](https://gitee.com/zhangchengk/image/raw/master/LeetCode/701/2.png)
+
+--
+
+```java
+class Solution {
+    public TreeNode insertIntoBST(TreeNode root, int val) {
+        if (null == root){
+            return new TreeNode(val);
+        }
+        if (val &lt; root.val){
+            root.left = insertIntoBST(root.left, val);
+        } else {
+            root.right = insertIntoBST(root.right, val);
+        }
+        return root;
+    }
+}
+```
+
+---
+
+## 700-二叉搜索树中的搜索
+
+![](https://gitee.com/zhangchengk/image/raw/master/LeetCode/700/1.png)
+
+--
+
+```java
+class Solution {
+    public TreeNode searchBST(TreeNode root, int val) {
+        if (null == root){
+            return null;
+        }
+        if (val == root.val){
+            return root;
+        }
+        if (val &gt; root.val){
+            return searchBST(root.right, val);
+        } else {
+            return searchBST(root.left, val);
+        }
+    }
+}
+```
+
+---
+
+## 98-验证二叉搜索树
+
+![](https://gitee.com/zhangchengk/image/raw/master/LeetCode/98/1.png)
+
+--
+
+```java
+class Solution {
+    public boolean isValidBST(TreeNode root) {
+        return isValidBST(root, null, null);
+    }
+
+    private boolean isValidBST(TreeNode root, TreeNode min, TreeNode max){
+        if (null == root){
+            return true;
+        }
+
+        if (null != min &amp;&amp; root.val &lt;= min.val){
+            return false;
+        }
+
+        if (null != max &amp;&amp; root.val &gt;= max.val){
+            return false;
+        }
+
+        return isValidBST(root.left, min, root) &amp;&amp; isValidBST(root.right, root, max);
+    }
+}
+```
+
+      </script></section></div></div></div> <div class="menu"><button class="menu-button"><span class="icon"></span></button> <button class="back-button"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M1014.749 449.156v125.688H260.626l345.64 345.64-89.239 89.237L19.307 512l497.72-497.721 89.238 89.238-345.64 345.64h754.124z"></path></svg></button> <button class="home-button"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M780.106 420.978L506.994 147.866 233.882 420.978h.045v455.11H780.06v-455.11h.046zm90.977 90.976V876.09a91.022 91.022 0 01-91.023 91.022H233.927a91.022 91.022 0 01-91.022-91.022V511.954l-67.22 67.175-64.307-64.307 431.309-431.31c35.498-35.498 93.115-35.498 128.614 0l431.309 431.31-64.307 64.307L871.083 512z"></path></svg></button></div></div><div class="global-ui"><!----><!----><div id="pwa-install"><!----> <div id="install-modal-wrapper" style="display:none;"><div class="background"></div> <div class="install-modal"><div class="header"><button aria-label="Close" class="close-button"><svg width="23" height="22" xmlns="http://www.w3.org/2000/svg" class="icon close-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.12.358a1.224 1.224 0 011.729 0l8.92 8.914L20.686.358a1.224 1.224 0 011.73 1.728L13.497 11l8.92 8.913a1.222 1.222 0 11-1.73 1.729l-8.919-8.913-8.92 8.913a1.224 1.224 0 01-1.729-1.729L10.04 11l-8.92-8.914a1.222 1.222 0 010-1.728z" fill="currentColor"></path></svg></button> <div class="logo"><!----> <div class="title"><h1></h1> <p class="desc">This app can be installed on your PC or mobile device.  This will allow this web app to look and behave like any other installed app.  You will find it in your app lists and be able to pin it to your home screen, start menus or task bars.  This installed web app will also be able to safely interact with other apps and your operating system. </p></div></div></div> <div class="content"><div class="highlight"><!----> <!----></div> <div class="description"><h3>Description</h3> <p></p></div></div> <div class="button-wrapper"><button class="install-button">
+        Install <span></span></button> <button class="cancel-button">
+        Cancel
+      </button></div></div></div></div><div tabindex="-1" role="dialog" aria-hidden="true" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button title="Close (Esc)" class="pswp__button pswp__button--close"></button> <button title="Share" class="pswp__button pswp__button--share"></button> <button title="Toggle fullscreen" class="pswp__button pswp__button--fs"></button> <button title="Zoom in/out" class="pswp__button pswp__button--zoom"></button> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div> <button title="Previous (arrow left)" class="pswp__button pswp__button--arrow--left"></button> <button title="Next (arrow right)" class="pswp__button pswp__button--arrow--right"></button> <div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div></div></div>
+    <script src="/assets/js/app.adf127c5.js" defer></script><script src="/assets/js/layout-Slide.80a219c9.js" defer></script><script src="/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound~layout-Slide.0f08e35b.js" defer></script><script src="/assets/js/page-刷二叉搜索树.ab5c76aa.js" defer></script>
+  </body>
+</html>
