@@ -10,11 +10,11 @@ module.exports = config({
   // remove this if you are not using Vue and React in "markdownEnhance: code demo"
   head: [
     ['meta', {name: 'referrer', content: 'no-referrer'}],
-    ['link', { rel: 'icon', href: 'https://gitee.com/zhangchengk/image/raw/master/blob/logo.png' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
   ],
 
   themeConfig: {
-    logo: 'https://gitee.com/zhangchengk/image/raw/master/blob/panda.gif',
+    logo: '/panda.gif',
     hostname: "https://zhangchengk.gitee.io/",
     feed: false,
     nav: [
@@ -40,7 +40,7 @@ module.exports = config({
     author: "Panda诚",
 
     blog: {
-      avatar: "https://gitee.com/zhangchengk/image/raw/master/blob/avatar.png",
+      avatar: "/avatar.png",
       intro: "/intro/",
       sidebarDisplay: "mobile",
       links: {

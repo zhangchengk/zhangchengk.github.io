@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 读[labuladong的算法小抄]笔记
-heroImage: https://zhangchengk.gitee.io/image/blob/sf.jpg
+heroImage: blob/sf.jpg
 heroText: 算法小抄
 tagline: 让刷题不再痛苦，感受算法的魅力！
 action:

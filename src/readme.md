@@ -3,8 +3,8 @@ blog: true
 home: true
 icon: home
 title: Home
-heroImage: https://gitee.com/zhangchengk/image/raw/master/blob/avatar2.png
-bgImage: https://mmbiz.qpic.cn/mmbiz_jpg/Pa28PfXZEzWvkmBnWfl1dWiaSGbgGCpnkJ00upEKu1mNUtzIibcVLSbLbeXEp3NiaDwfbyRCeUPd0d6g8aWQY2Dwg/0?wx_fmt=jpeg
+heroImage: /avatar2.png
+bgImage: /bg2.jpg
 heroText: Panda诚的博客
 project:
   - type: book
