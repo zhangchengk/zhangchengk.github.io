@@ -20,7 +20,7 @@ Docker的三个基本概念:
 - 容器（Container）：镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的类和实例一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
 - 仓库（Repository）：仓库可看成一个代码控制中心，用来保存镜像。
 
-![](https://gitee.com/zhangchengk/image/raw/master/docker/docker简介/1.png)
+![](./img/001/1.png)
 
 
 | 概念 | 说明 |
@@ -36,9 +36,9 @@ Docker的三个基本概念:
 
 下载Docker.dmg http://mirrors.aliyun.com/docker-toolbox/mac/docker-for-mac/stable/
 
-![](https://gitee.com/zhangchengk/image/raw/master/docker/docker简介2/.png)
+![](./img/001/2.png)
 
-![](https://gitee.com/zhangchengk/image/raw/master/docker/docker简介3/.png)
+![](./img/001/3.png)
 
 ## Docker镜像加速
 

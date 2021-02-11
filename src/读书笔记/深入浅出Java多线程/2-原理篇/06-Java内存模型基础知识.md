@@ -19,7 +19,7 @@ location: BeiJing
 * 共享内存并发模型  
 
 这两种模型之间的区别如下表所示：
-![](https://gitee.com/zhangchengk/image/raw/master/读书笔记/深入浅出Java多线程/06-Java内存模型基础知识/两种并发模型的比较.png)
+![](../img/6/1.png)
 
 **在Java中，使用的是共享内存并发模型**。
 
@@ -29,7 +29,7 @@ location: BeiJing
 
 先谈一下运行时数据区，下面这张图相信大家一点都不陌生： 
 
-![](https://gitee.com/zhangchengk/image/raw/master/读书笔记/深入浅出Java多线程/06-Java内存模型基础知识/Java运行时数据区.png)
+![](../img/6/2.png)
 
 对于每一个线程来说，栈都是私有的，而堆是共有的。
 
@@ -45,7 +45,7 @@ location: BeiJing
 
 Java线程之间的通信由Java内存模型（简称JMM）控制，从抽象的角度来说，JMM定义了线程和主内存之间的抽象关系。JMM的抽象示意图如图所示：
 
-![](https://gitee.com/zhangchengk/image/raw/master/读书笔记/深入浅出Java多线程/06-Java内存模型基础知识/JMM抽象示意图.jpg)
+![](../img/6/3.jpg)
 
 从图中可以看出： 1. 所有的共享变量都存在主内存中。 2. 每个线程都保存了一份该线程使用到的共享变量的副本。 3. 如果线程A与线程B之间要通信的话，必须经历下面2个步骤： 1. 线程A将本地内存A中更新过的共享变量刷新到主内存中去。 2. 线程B到主内存中去读取线程A之前已经更新过的共享变量。
 

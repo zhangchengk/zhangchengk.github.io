@@ -13,7 +13,7 @@ publish: false
 
 ## 新建测试Spring项目
 
-![](https://gitee.com/zhangchengk/image/raw/master/读书笔记/Spring源码深度解析/4Spring中的FactoryBean/1.png)
+![](./img/4/1.png)
 
 我编译的源码是5.1.15，并install到本地仓库
 
@@ -92,7 +92,7 @@ public class BeanFactoryTest {
 
 ```
 
-![](https://gitee.com/zhangchengk/image/raw/master/读书笔记/Spring源码深度解析/4Spring中的FactoryBean/2.png)
+![](./img/4/2.png)
 
 直接使用BeanFactory作为容器对于Spring的使用来说并不多见，甚至是甚少使用，因为在企业级的应用中大多数都会使用的是ApplicationContext。
 

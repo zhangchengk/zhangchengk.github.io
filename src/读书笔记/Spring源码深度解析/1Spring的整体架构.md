@@ -12,7 +12,7 @@ location: BeiJing
 
 Spring 框架是 个分层架构，它包含一系列的功能要素，并被分为大约 20 模块
 
-![](https://gitee.com/zhangchengk/image/raw/master/读书笔记/Spring源码深度解析/1Spring的整体架构/1.png)
+![](./img/1/1.png)
 
 这些模块被总结为以下几部分
 

@@ -10,11 +10,11 @@ location: BeiJing
 
 1.右键进入软件包内容
 
-![](https://gitee.com/zhangchengk/image/raw/master/其他/其他/Mac的Mat独立版本打开失败解决方案/1.png)
+![](./img/005/1.png)
 
 2.进入目录下(如图所示)
 
-![](https://gitee.com/zhangchengk/image/raw/master/其他/其他/Mac的Mat独立版本打开失败解决方案/2.png)
+![](./img/005/2.png)
 
 3.打开命令终端 输入
 

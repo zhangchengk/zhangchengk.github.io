@@ -12,7 +12,7 @@ location: BeiJing
 
 官网的就不说了，这里推荐华为云镜像 :https://mirrors.huaweicloud.com/java/jdk/
 
-![](https://gitee.com/zhangchengk/image/raw/master/其他/Linux/linux安装jdk8/1.png)
+![](./img/001/1.png)
 
 # 2.源码包解压
 
