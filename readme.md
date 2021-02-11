@@ -1,37 +1,24 @@
-# vuepress-theme-hope template
+# Panda诚的博客
 
-**Template for [vuepress-theme-hope](https://github.com/Mister-Hope/vuepress-theme-hope).**
+<h1>Hi, I'm 诚~ </h1>
 
-You can begin your vuepress-theme-hope trip by creating a repo from this template.
+1992年生人，东北汉子，长居北京。
 
-> Please report bugs on [main repo](https://github.com/Mister-Hope/vuepress-theme-hope)
+2017年本科毕业于北京理工大学(在校期间2013~2015年间于原第38集团军服役两年)
 
-- Install deps:
+毕业后现状，目前在国内一家大企任职后端，然后头上依然顶着应届的普通级别程序开发人员，但自我定位已经要求依然是一名高级开发(但可能只是环境对比才有这样的想法，我意识里对高级开发的标准还是很高的，所以内心深处还是对自己严格要求，不断学习，不断朝心中的那个高级前进。)
 
-  Run `npm install` or `yarn install`
+我喜欢学习技术，乐于专研，能坚持自己的标准(代码洁癖)，一直向往着开源世界，膜拜着那些大神。
 
-- Dev Env:
+目前也初试牛刀，本着开源精神，促进自我学习进步，也做了一丢丢的开源工作：
 
-  Run `npm run serve` or `yarn run serve`
+- Apache NIFI Contributor(修改BUG、检验修改一些文档、提价新组件、参与一些review和dev讨论)
+- [NIFI中文资料传送门](https://nifichina.gitee.io/)
+- [Gitee Pages自动部署Java版](https://gitee.com/zhangchengk/autodeploy)
+- [vscode插件md-color](https://github.com/KuKuDeCheng/md-color)
+- [NIFI自定义开发代码结构规范](https://gitee.com/zhangchengk/custom-nar-bundles) 这是一个NIFI Maven子项目，用于自定义开发，减少对源码结构的侵入，方便NIFI升级 
+- 个人公众号
+  
+![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
 
-- Build production files:
-
-  Run `npm run build` or `yarn run build`
-
----
-
-vuepress-theme-hope 的模板。
-
-你可以直接使用它来开始你的 vuepress-theme-hope 之旅。
-
-- 安装依赖:
-
-  运行 `npm install` 或者 `yarn install`
-
-- 测试环境:
-
-  运行 `npm run serve` 或者 `yarn run serve`
-
-- 生产环境(构建文件):
-
-  运行 `npm run build` 或者 `yarn run build`
+希望自己在技术的路上，能保持初心，积极向上，勇于探索，永不放弃！
