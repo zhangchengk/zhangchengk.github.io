@@ -41,12 +41,12 @@ module.exports = config({
 
     blog: {
       avatar: "/avatar.png",
-      intro: "/intro/",
+      intro: "/about/intro/",
       sidebarDisplay: "mobile",
       links: {
         Gitee: "https://gitee.com/zhangchengk",
-        QQ: "qq",
-        Wechat: "wechat",
+        QQ: "/about/qq",
+        Wechat: "/about/wechat",
         // Csdn: "https://blog.csdn.net/weixin_36048246"
       },
     },

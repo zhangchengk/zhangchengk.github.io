@@ -177,4 +177,4 @@ XML 置文件的读取是spring重要的功能 ，因为Spring的大部分功能
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/image/raw/master/wechat.jpg)
+![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

@@ -194,11 +194,11 @@ Spec:
 Jolt在shiftr中，依据Spec处理input的时候，会时刻保持一颗动态的 WalkedPath，总体来讲是一个链表。当做新的匹配计算操作，就会把当前信息(其中有一颗refTree，refTree是input json的一个引用，还有一个subKey,是匹配到的键值)保存到WalkedPath中。当到Spec树中的树叶节点时计算完成时,也就是Spec树某一树枝下的最后一个计算操作完成时(完成包括匹配计算和输出计算)，会从WalkedPath中删除掉之前存储的当前信息。WalkedPath虽然外层是一个链表，但是因为通配符,同一级多个匹配等等的作用(代码里有递归)，画出完整的WalkedPath的轨迹图就成了一颗树。
 
 比如说我们在上面的例子里看到了一个&1，&是取相应节点的键值的意思，会在下面有详细说明。依据上面的示例，我们画一下当第一次计算到&1时的WalkedPathTree
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/20.jpg)
+![](../img/0/024/20.jpg)
 下面是程序debug到第一次计算到&1的时候的截图：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/18.png)
+![](../img/0/024/18.png)
 进一步获取&1结果的截图：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/19.png)
+![](../img/0/024/19.png)
 
 
 
@@ -244,7 +244,7 @@ Spec:
   }
 ]
 ```
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/20.png)
+![](../img/0/024/20.png)
 
 用于匹配key的一部分：
 
@@ -269,7 +269,7 @@ Spec:
 
 ```
 结果:
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/21.png)
+![](../img/0/024/21.png)
 
 #### '&'通配符
 
@@ -300,7 +300,7 @@ Spec:
 ```
 &计算取到的值是test，再去匹配test
 结果：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/1.png)
+![](../img/0/024/1.png)
 
 &在输入路径寻找值：
 ```json
@@ -437,9 +437,9 @@ Spec:
 ```
 Jolt demo注释说 '#2 means go three levels up the tree (count from 0)'，但我认为3层的叙述是模糊的，WalkedPath是一个数组，从0开始，假设长度为5，则向上2层对应的索引下标为5-1-2 = 2  向上2层的理解其实是最好的。
 其中源码关键部分如下：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/17.png)
+![](../img/0/024/17.png)
 手绘图walkedPathTree如下：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/18.jpg)
+![](../img/0/024/18.jpg)
 
 #### '|'通配符
 
@@ -482,19 +482,19 @@ Spec
 @的高级用法的标准格式是"@(3,title)"，上文中已经介绍过WalkedPathTree这个概念，3的意思在**计算到@(3,title)这一level时**，返回WalkedPathTree向上3level对应的refTree，然后在返回的数据中去匹配title。
 
 示例：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/2.png)
+![](../img/0/024/2.png)
 
 计算@(2,test)时的debug截图：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/13.png)
+![](../img/0/024/13.png)
 
 然后在最后计算@(2,test2)的时候，walkedPathTree又增加了一层(其实@(2,test2) @(3,test2)分别返回1层和0层的treeRef，都是root根节点的子树，效果是一样的，如下图：)
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/15.png)
+![](../img/0/024/15.png)
 
 将@(2,test2)换成@(3,test2)发现结果其实是一样的：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/16.png)
+![](../img/0/024/16.png)
 
 单独的@等价于@0：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/12.png)
+![](../img/0/024/12.png)
 因为@都是同一级，所以计算他们的时候WalkedPath是相同的
 
 
@@ -729,7 +729,7 @@ Spec
   }
 }
 ```
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/3.png)
+![](../img/0/024/3.png)
 
 ### 通配符
 
@@ -817,7 +817,7 @@ Spec：
   }
 }
 ```
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/4.png)
+![](../img/0/024/4.png)
 
 ### 通配符
 
@@ -861,7 +861,7 @@ Spec:
   }
 }
 ```
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/5.png)
+![](../img/0/024/5.png)
 
 比如匹配键值的一部分，输入json:
 ```json
@@ -914,14 +914,14 @@ Spec
 }
 
 ```
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/6.png)
+![](../img/0/024/6.png)
 
 再举两个匹配数组索引的例子：
 
 匹配数组每个元素删除其中一个成员:
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/7.png)
+![](../img/0/024/7.png)
 匹配删除索引为0的数组元素：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/8.png)
+![](../img/0/024/8.png)
 
 ## cardinality
 
@@ -963,7 +963,7 @@ Spec:
   }
 }
 ```
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/9.png)
+![](../img/0/024/9.png)
 
 ### 通配符
 
@@ -1008,7 +1008,7 @@ Spec
 
 排序顺序是标准的按字母顺序升序排列，带"~"前缀的键的特殊情况将被移到顶部。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/10.png)
+![](../img/0/024/10.png)
 
 ## modify
 
@@ -1168,7 +1168,7 @@ Spec 使用相应函数基本格式是  =函数名(参数1，参数2)
 ]
 
 ```
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/23.png)
+![](../img/0/024/23.png)
 
 举个例子，将一个json数组中key全部转小写:
 ```json
@@ -1322,7 +1322,7 @@ operation-name 可以是shift、default、remove、cardinality、sort、java、m
     }
 }
 ```
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/11.png)
+![](../img/0/024/11.png)
 
 再举一个我在JOLT GitHub Issue(<a href="https://github.com/bazaarvoice/jolt/issues/900">Conditional based on a input field #900</a>)上看到的一个稍微比较复杂点的实际问题
 
@@ -1435,7 +1435,7 @@ operation-name 可以是shift、default、remove、cardinality、sort、java、m
 
 ```
 结果如图：
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/JsonJOLT/22.png)
+![](../img/0/024/22.png)
 
 ## Java调用
 
@@ -1804,4 +1804,4 @@ jolt github issue上帮忙解决的第二个问题[Issue906](https://github.com/
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/image/raw/master/wechat.jpg)
+![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

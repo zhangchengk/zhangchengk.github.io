@@ -419,4 +419,4 @@ Filed里主要是一些get set方法，比如set(Object obj, Object value) setBo
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/image/raw/master/wechat.jpg)
+![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

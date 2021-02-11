@@ -81,24 +81,24 @@ n 27 milliseconds (Stop-the-world time = 4 milliseconds, Clear Edit Logs time = 
 
 我在MySQL里新建了两张表，一个叫`source`来源表,一个叫`target`目标表。两张表的结构是一样的，其中`increase`设计成自动递增的，这样`increase`是一个**增量字段**。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/2.png)
+![](../img/0/002/2.png)
 
 **增量字段**顾名思义，数据库表里每次新来的数据的这个增量字段的值，都比上一次的大，严格意义上**增量字段**是递增且不重复的。(区别于将**时间戳字段**作为增量字段，通常业务里的时间戳字段都不是严格意义上的增量字段)
 
 现在`source`表里还没有数据，这里我随意在NIFI里拉了两个组件往`source`表里写数据，你不用关心这里的处理，我只是在准备来源表的数据，你可以使用任何方式向`source`表里写数据。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/22.png)
+![](../img/0/002/22.png)
 
 最终我一共向`source`表里写了253001条数据。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/23.png)
+![](../img/0/002/23.png)
 
 
 **2.新建一个Process Group**
 
 在NIFI交互界面的顶层，有一排的可拖拽按钮，按照如下图示，拖拽一个`Process Group`出来。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/1.png)
+![](../img/0/002/1.png)
 
 我们给这个`Process Group`起一个名字叫`体验流程`，在这里你可以简单的理解`Process Group`是一个组，在这个组里面可以设计你的流程，甚至设计其他的组。
 
@@ -108,7 +108,7 @@ n 27 milliseconds (Stop-the-world time = 4 milliseconds, Clear Edit Logs time = 
 
 进入到`体验流程`这个`Process Group`后，如下图所示，我们左键点顶层第一个按钮，按住左键向空白页面拖拽，会弹出一个`Add Processor`的对话框。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/3.png)
+![](../img/0/002/3.png)
 
 在这个对话框里，我们找到`GenerateTableFetch`这个组件。
 
@@ -116,7 +116,7 @@ n 27 milliseconds (Stop-the-world time = 4 milliseconds, Clear Edit Logs time = 
 
 双击`GenerateTableFetch`这个组件，这个组件就会出现在我们的设计页面上了。双击这个`GenerateTableFetch`组件或者鼠标右键选择`Configure`，会弹出`Configure Processor`对话框。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/4.png)
+![](../img/0/002/4.png)
 
 `Configure Processor`对话框有四个页签，这里我简单说明一下，不必纠结没有提及的那些配置究竟是什么意思。其他没有提及的配置你就当成是高级应用，不明白这些配置并不影响本文的阅读
 
@@ -134,15 +134,15 @@ COMMENTS：注释，可以在里面添加一些描述信息。
 
 `SCHEDUING`页签，我们选择`Timer driven`,`Run Schedule`配置成`5 sec`,即每5秒调度一次。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/24.png)
+![](../img/0/002/24.png)
 
 `PROPERTIES`页签，如下图，我们通过`Database Connection Pooling Service`新建了一个`DBCPConnectionPool`数据库连接池服务，`Database Type`选择了`MySQL`,`Table Name`配置填写了来源表名称`source`,`Maximum-value Columns`我们配置了增量字段`increase`
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/5.png)
+![](../img/0/002/5.png)
 
 点击Apply后，回到设计页面，我们发现组件左上角是一个感叹号，感叹号你可以理解为这个组件还没有满足运行的条件，把鼠标停留在感叹号上会有提示信息
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/6.png)
+![](../img/0/002/6.png)
 
 通过提示信息我们看到两个问题，第一个是`DBCPConnectionPool`数据库连接池服务还不可用，另一个是当前的组件`success`和`failure`两个RelationShip还没有指向。
 
@@ -150,15 +150,15 @@ COMMENTS：注释，可以在里面添加一些描述信息。
 
 如下图所示，鼠标右键点击空白页面，选择`Configure`，进入`Process Group`的配置页面
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/7.png)
+![](../img/0/002/7.png)
 
 进入`Process Group`的配置页面后，选择`CONTROLLER SERVICES`页签，我们可以看到我们之前建的`DBCPConnectionPool`数据库连接池服务。点击齿轮形状的配置按钮，如下图所示会弹出`Configure Controller Service`的对话框。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/8.png)
+![](../img/0/002/8.png)
 
 点击对话框的`PROPERTIES`页签，按如下图所示配置MySQL数据库的连接信息。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/9.png)
+![](../img/0/002/9.png)
 
 这里我们把本文的数据库连接列出来
 
@@ -174,31 +174,31 @@ com.mysql.jdbc.Driver
 
 配置完毕后，点击APPLY，然后如下图，点击闪电符号按钮，启用`DBCPConnectionPool`数据库连接池服务。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/10.png)
+![](../img/0/002/10.png)
 
 **6.配置GenerateTableFetch组件RelationShip**
 
 回到设计页面，我们看到`GenerateTableFetch`这个组件黄色感叹号的提示信息关于`DBCPConnectionPool`的已经没有了，现在提示的是关于`RelationShip`的。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/11.png)
+![](../img/0/002/11.png)
 
 现在我们通过新建`GenerateTableFetch`同样的方式，在设计页面新增一个`ExecuteSQLRecord`组件，然后将鼠标停留在`GenerateTableFetch`组件上，会出现一个箭头，点击拉取这个箭头然后指向`ExecuteSQLRecord`
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/12.png)
+![](../img/0/002/12.png)
 
 指向的过程中会弹出`Create Connection`的配置页面，在里面的`For Relationships`勾选`success`(后期我们可以右键点击`Connection`进入配置页面)
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/13.png)
+![](../img/0/002/13.png)
 
 点击`ADD`后，再次回到设计页面
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/14.png)
+![](../img/0/002/14.png)
 
 我们看到`GenerateTableFetch`这个组件黄色感叹号的提示信息只剩下`failure` RelationShip的了。
 
 此时我们再次到`GenerateTableFetch`的配置页面，在`SETTINGS`页面的`Automatically Terminate Relationships`里勾选`failure`。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/15.png)
+![](../img/0/002/15.png)
 
 点击`APPLY`后，`GenerateTableFetch`这个组件黄色感叹号就会消失了。
 
@@ -208,9 +208,9 @@ com.mysql.jdbc.Driver
 
 与配置`GenerateTableFetch`配置的操作流程都是大体相似的，这里不做重复性的叙述了，看过程图就可以了。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/16.png)
+![](../img/0/002/16.png)
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/17.png)
+![](../img/0/002/17.png)
 
 **7.配置PutDatabaseRecord组件**
 
@@ -218,29 +218,29 @@ com.mysql.jdbc.Driver
 
 >简单说一下PutDatabaseRecord组件，以指定格式读取上游的数据，然后将数据`insert/update/delete`到指定的数据库表。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/18.png)
+![](../img/0/002/18.png)
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/19.png)
+![](../img/0/002/19.png)
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/20.png)
+![](../img/0/002/20.png)
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/21.png)
+![](../img/0/002/21.png)
 
 **8.运行整个数据处理流程**
 
 右键点击每个组件选择start或者点击空白出选择start
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/25.png)
+![](../img/0/002/25.png)
 
 可以看到已经有数据在流动被处理了。
 
 写入数据总是比较慢的，这个时候我们可以适当的停止`PutDatabaseRecord`组件修改配置提高它的并发任务数(注意只有stop这个组件，才可以对它进行配置)
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/26.png)
+![](../img/0/002/26.png)
 
 当我们再次运行`PutDatabaseRecord`组件，在设计页面会发现流程报错了(这并不是意外，这是我设计好展示给你们看的效果)
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/27.png)
+![](../img/0/002/27.png)
 
 我们可以看到`PutDatabaseRecord`的右上角有一个`8`,并且`GenerateTableFetch`组件右上角有一个红色告警，将鼠标停留在红色告警，会有提示信息。看报错信息的意思是说`GenerateTableFetch`无法获取到数据库连接。(`DBCPConnectionPool`数据库连接池默认是8个连接，但这8个全被`PutDatabaseRecord`拿去用了，`GenerateTableFetch`拿不到连接所以报错了。)
 
@@ -250,36 +250,36 @@ com.mysql.jdbc.Driver
 
 等待一段时间，流程中的数据都被处理完了(`Connection`中没有数据了)。然后我们去查询`target`表里一共被同步了多少数据，结果一看，也是`253001`条。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/28.png)
+![](../img/0/002/28.png)
 
 **10.持续运行**
 
 那么这就完了嘛？不，我们这个流程不是一个一次性任务，它是持续的。如下图所示
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/29.png)
+![](../img/0/002/29.png)
 
 此时我们向`source`添加一条数据，它是第`253002`条
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/30.png)
+![](../img/0/002/30.png)
 
 添加完后观察我们正在运行的流程，发现原本组件上那些`In`、`Out`已经为0的状态现在变成了1，说明刚才有数据流过了。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/31.png)
+![](../img/0/002/31.png)
 
 然后我们去查看`target`表，发现第`253002`条数据已经被同步过来了。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/32.png)
+![](../img/0/002/32.png)
 
 
 **11.GenerateTableFetch监听增量字段**
 
 这里简单说一下`GenerateTableFetch`增量同步数据的原理，右键点击`GenerateTableFetch`，选择`View state`
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/33.png)
+![](../img/0/002/33.png)
 
 如下图，我们可以看到`Compontent State`这个对话框里记录了`increase`的值。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/002-带你体验ApacheNIFI新建数据同步流程/34.png)
+![](../img/0/002/34.png)
 
 >state是NIFI提供的稳定、可靠的存储机制。它适合存储少量的数据，一般是一些状态信息。
 
@@ -296,4 +296,4 @@ com.mysql.jdbc.Driver
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/image/raw/master/wechat.jpg)
+![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

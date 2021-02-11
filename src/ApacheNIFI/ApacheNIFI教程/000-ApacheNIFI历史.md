@@ -28,7 +28,7 @@ location: BeiJing
 
 Joe Witt现在是Apache NIFI PMC和Cloudera VP Eng。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/000-ApacheNIFI历史/1.png)
+![](../img/0/000/1.png)
 
 以下是根据GitHub和领英收集到的Apache NIFI PMC(项目管理委员会)成员信息，仅供参考
 
@@ -90,7 +90,7 @@ Cloudera就不用说了，项目目前主要的贡献就是来源于Cloudera。
 
 还有很多公司可能使用了NIFI但是没有在NIFI官方和网上声明使用。
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/000-ApacheNIFI历史/2.png)
+![](../img/0/000/2.png)
 
 ## 个人看法
 

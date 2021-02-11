@@ -13,9 +13,9 @@ location: BeiJing
 一些处理器支持配置运行持续时间(`Run Duration`)。此设置告诉处理器在单个任务中继续使用同一task尽可能多地来处理来自传入队列的的FlowFiles(或成批的流文件)。
 对于处理单个任务本身非常快并且FlowFile数量也很大的处理器来说，这是一个理想的选择。
 <!-- more -->
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/013-RunDuration理解/1.png)
+![](../img/0/013/1.png)
 
-![](https://gitee.com/zhangchengk/image/raw/master/ApacheNIFI/ApacheNIFI教程/013-RunDuration理解/2.png)
+![](../img/0/013/2.png)
 
 在上面的示例中，将完全相同的FlowFiles传递到这两个处理器，这些处理器被配置为执行相同的Attribute更新。两者在过去5分钟内处理了相同数量的FlowFiles；但是，配置为运行持续时间的处理器消耗的总体CPU时间更少。并非所有处理器都支持设置`Run Duration`。处理器功能的性质，使用的方法或使用的客户端库可能决定了不支持此功能。这样的话你将无法在此类处理器上设置`Run Duration`。
 
@@ -188,4 +188,4 @@ public InvocationResult invoke() {
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/image/raw/master/wechat.jpg)
+![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

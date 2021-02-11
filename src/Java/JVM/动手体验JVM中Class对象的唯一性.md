@@ -340,4 +340,4 @@ java.lang.ClassCastException: com.myspring.service.impl.MyTestBean cannot be cas
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/image/raw/master/wechat.jpg)
+![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

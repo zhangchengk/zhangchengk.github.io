@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 算法
-heroImage: blob/sf.jpg
+heroImage: /homes/sf.jpg
 heroText: 算法总结
 tagline: 十大排序排序
 action:
