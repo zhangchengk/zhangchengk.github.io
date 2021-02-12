@@ -11,7 +11,7 @@ features:
 
   - title: 十大经典排序算法最强总结
     details: 选择、插入、冒泡
-    link: /算法/十大经典排序算法最强总结
+    link: /02算法/十大经典排序算法最强总结
 
 
 copyrightText: false
