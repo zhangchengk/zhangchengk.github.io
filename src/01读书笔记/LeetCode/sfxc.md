@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: Leetcode笔记
-heroImage: homes/sf.jpg
+heroImage: /homes/sf.jpg
 heroText: Leetcode笔记
 tagline: 让刷题不再痛苦，感受算法的魅力！
 action:
