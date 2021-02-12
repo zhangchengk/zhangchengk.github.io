@@ -20,10 +20,11 @@ let ignoreFileNameSet  = new Set()
     ignoreFileNameSet.add('wechat.md')
     ignoreFileNameSet.add('sidebar.js')
     ignoreFileNameSet.add('待完成')
-    ignoreFileNameSet.add('思维导图')
     ignoreFileNameSet.add('.DS_Store')
     ignoreFileNameSet.add('img')
+    ignoreFileNameSet.add('about')
 
+console.log(__dirname)
 let test = walk(__dirname, '')
 console.log(JSON.stringify(test.children, null, "\t"))
 
