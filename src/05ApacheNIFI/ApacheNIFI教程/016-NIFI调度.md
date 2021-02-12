@@ -4,7 +4,7 @@ date: 2020-06-08
 category: ApacheNIFI教程
 tags: 
   - Apache NIFI
-author: 张诚
+author: Panda诚
 location: BeiJing
 ---
 

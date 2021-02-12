@@ -4,7 +4,7 @@ date: 2020-05-26
 category: Java多线程
 tags: 
   - Java多线程
-author: 张诚
+author: Panda诚
 location: BeiJing
 ---
 

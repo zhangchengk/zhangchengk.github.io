@@ -4,7 +4,7 @@ date: 2020-04-13
 category: Linux
 tags: 
   - Linux
-author: 张诚
+author: Panda诚
 location: BeiJing  
 ---
 首先查询磁盘空间占用情况

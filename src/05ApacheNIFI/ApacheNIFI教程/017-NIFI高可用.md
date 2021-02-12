@@ -4,7 +4,7 @@ date: 2020-05-21
 category: ApacheNIFI教程
 tags: 
   - Apache NIFI
-author: 张诚
+author: Panda诚
 location: BeiJing
 ---
 前言：本文重点在于通过模拟事故来探索Apache NIFI集群的高可用，情景假定有一个3节点的NIFI集群，其中某个节点因为未知原因与集群失联，研究集群(两个在联节点集群）和失联的节点会发生什么，各个节点上的数据会怎样。(注意：节点因为未知原因与集群失联区别于系统管理员手动卸载节点)。除此之外，其他不做重点。

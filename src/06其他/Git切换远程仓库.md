@@ -4,7 +4,7 @@ date: 2020-04-16
 category: 其他
 tags: 
   - Git
-author: 张诚
+author: Panda诚
 location: BeiJing
 ---
 

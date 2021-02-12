@@ -4,7 +4,7 @@ date: 2020-06-06
 category: 深入浅出Java多线程
 tags: 
   - 深入浅出Java多线程
-author: 张诚
+author: Panda诚
 location: BeiJing
 layout: Slide
 reveal: 

@@ -4,7 +4,7 @@ date: 2020-12-05
 category: 1-基础篇
 tags: 
   - 深入浅出Java多线程
-author: 张诚
+author: Panda诚
 location: BeiJing
 ---
 

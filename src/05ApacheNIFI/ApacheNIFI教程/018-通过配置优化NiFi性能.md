@@ -4,7 +4,7 @@ date: 2020-06-09
 category: ApacheNIFI教程
 tags: 
   - Apache NIFI
-author: 张诚
+author: Panda诚
 location: BeiJing
 ---
 NiFi的默认设置可以满足一般的运行和测试需求，但是如果想要处理大容量数据流，那就远远不够了。本文将介绍与NiFi性能有关的几个设置参数，让NiFi可以高效运转。

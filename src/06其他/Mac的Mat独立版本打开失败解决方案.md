@@ -4,7 +4,7 @@ date: 2020-04-17
 category: 其他
 tags: 
   - MAC
-author: 张诚
+author: Panda诚
 location: BeiJing
 ---
 

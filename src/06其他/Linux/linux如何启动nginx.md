@@ -5,7 +5,7 @@ category: Linux
 tags: 
   - Linux
   - nginx
-author: 张诚
+author: Panda诚
 location: BeiJing  
 ---
 

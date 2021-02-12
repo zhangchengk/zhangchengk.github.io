@@ -4,7 +4,7 @@ date: 2020-12-08
 category: 1-软件设计前奏篇
 tags: 
   - 设计模式就该这样学
-author: 张诚
+author: Panda诚
 location: BeiJing
 ---
 ## 1.1　UML的定义

@@ -4,7 +4,7 @@ date: 2020-06-17
 category: Linux
 tags: 
   - Linux
-author: 张诚
+author: Panda诚
 location: BeiJing
 ---
 
