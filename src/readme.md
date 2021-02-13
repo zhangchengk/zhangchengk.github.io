@@ -23,9 +23,9 @@ project:
     link: 02算法/sf
 
   - type: link
-    name: md字体颜色高亮工具
-    desc: MarkDown中使用font-color给字体加颜色
-    link: 06其他/字体颜色工具
+    name: Java开发手册
+    desc: 编程规约、异常日志、单元测试、安全规约、MySQL数据库、工程结构、设计规约
+    link: /01读书笔记/阿里Java开发手册/前言
 footer: 读书又笔记
 ---
 
