@@ -23,6 +23,7 @@ let ignoreFileNameSet  = new Set()
     ignoreFileNameSet.add('.DS_Store')
     ignoreFileNameSet.add('img')
     ignoreFileNameSet.add('about')
+    ignoreFileNameSet.add('jolt')
 
 console.log(__dirname)
 let test = walk(__dirname, '')

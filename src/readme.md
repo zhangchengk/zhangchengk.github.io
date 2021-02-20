@@ -26,6 +26,16 @@ project:
     name: Java开发手册手抄版
     desc: 编程规约、异常日志、单元测试、安全规约、MySQL数据库、工程结构、设计规约
     link: /01读书笔记/阿里Java开发手册/手抄版
+
+  - type: link
+    name: Json JOLT 教程
+    desc: 国内外目前第一篇较为详细系统的讲述Java JOLT用法及部分原理的文章
+    link: /jolt/JsonJolt教程.md
+
+  - type: link
+    name: Json JOLT 教程(英文版)
+    desc: 国内外目前第一篇较为详细系统的讲述Java JOLT用法及部分原理的文章
+    link: /jolt/JsonJolt教程英文版.md
 footer: 读书又笔记
 ---
 
