@@ -30,12 +30,12 @@ project:
   - type: link
     name: Json JOLT 教程
     desc: 国内外目前第一篇较为详细系统的讲述Java JOLT用法及部分原理的文章
-    link: /jolt/JsonJolt教程.md
+    link: /jolt/JsonJolt教程
 
   - type: link
     name: Json JOLT 教程(英文版)
     desc: 国内外目前第一篇较为详细系统的讲述Java JOLT用法及部分原理的文章
-    link: /jolt/JsonJolt教程英文版.md
+    link: /jolt/JsonJolt教程英文版
 footer: 读书又笔记
 ---
 
