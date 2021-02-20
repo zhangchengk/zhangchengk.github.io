@@ -14,7 +14,7 @@ project:
 
   - type: book
     name: LeetCode
-    desc: 本集合是labuladong文章阅读笔记；关注他的公众号「labuladong」查看详情；后台回复关键词「进群」可加入算法群，大家一起刷题/内推。
+    desc: 本集合是LeetCode刷题笔记以及公众号「labuladong」文章阅读笔记。
     link: 01读书笔记/LeetCode/sfxc
 
   - type: book
@@ -23,9 +23,9 @@ project:
     link: 02算法/sf
 
   - type: link
-    name: Java开发手册
+    name: Java开发手册手抄版
     desc: 编程规约、异常日志、单元测试、安全规约、MySQL数据库、工程结构、设计规约
-    link: /01读书笔记/阿里Java开发手册/前言
+    link: /01读书笔记/阿里Java开发手册/手抄版
 footer: 读书又笔记
 ---
 
