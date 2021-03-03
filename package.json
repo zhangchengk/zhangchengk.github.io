@@ -16,9 +16,9 @@
   ],
   "dependencies": {
     "vuepress": "1.8.0",
-    "vuepress-theme-hope": "1.9.5"
+    "vuepress-theme-hope": "1.11.1"
   },
   "devDependencies": {
-    "vuepress-theme-hope": "^1.9.5"
+    "vuepress-theme-hope": "^1.11.1"
   }
 }

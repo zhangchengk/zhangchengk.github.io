@@ -170,5 +170,3 @@ public class CopyOnWriteMap<K, V> implements Map<K, V>, Cloneable {
 
 * 《Java并发编程：并发容器之CopyOnWriteArrayList》
 * [聊聊并发-Java中的Copy-On-Write容器](http://ifeve.com/java-copy-on-write/)
-
-![](https://gitee.com/zhangchengk/image/raw/master/)

@@ -259,6 +259,3 @@ private void unparkSuccessor(Node node) {
 * [JDK源码之AQS源码剖析](https://www.cnblogs.com/showing/p/6858410.html)
 * [JUC解析-AQS(1)](https://juejin.im/post/5ab92f50518825558949d1a6)
 
-
-
-![](https://gitee.com/zhangchengk/image/raw/master/)
