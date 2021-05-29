@@ -15,10 +15,10 @@
     "personal-blog"
   ],
   "dependencies": {
-    "vuepress": "1.8.0",
-    "vuepress-theme-hope": "1.11.1"
+    "vuepress": "1.8.2",
+    "vuepress-theme-hope": "1.17.2"
   },
   "devDependencies": {
-    "vuepress-theme-hope": "^1.11.1"
+    "vuepress-theme-hope": "^1.17.2"
   }
 }
