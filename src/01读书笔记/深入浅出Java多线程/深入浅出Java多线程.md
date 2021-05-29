@@ -1,219 +1,95 @@
 ---
+icon: home
 title: 深入浅出Java多线程
-date: 2020-06-06
+heroImage: /homes/ali.png
 category: 深入浅出Java多线程
 tags: 
   - 深入浅出Java多线程
-author: Panda诚
-location: BeiJing
-layout: Slide
-reveal: 
-    controlsLayout: 'edges'
-    mouseWheel: true
-    transitionSpeed: 'fast'
-    hashOneBasedIndex: true
-    hash: true
-    history: true
+heroText: 深入浅出Java多线程
+tagline: 码出高效，码出质量。
+action:
+
+features:
+
+  - title: 进程与线程基本概念 🍇
+    details: 进程与线程基本概念 🍉
+    link: /01读书笔记/深入浅出Java多线程/1-基础篇/01-进程与线程基本概念
+
+  - title: Java多线程入门类和接口 🍋
+    details: Java多线程入门类和接口 🍌
+    link: /01读书笔记/深入浅出Java多线程/1-基础篇/02-Java多线程入门类和接口
+
+  - title: 线程组和线程优先级 🍍
+    details: 线程组和线程优先级 🍎
+    link: /01读书笔记/深入浅出Java多线程/1-基础篇/03-线程组和线程优先级
+
+  - title: Java线程的状态及主要转化方法 🍑
+    details: Java线程的状态及主要转化方法 🍒
+    link: /01读书笔记/深入浅出Java多线程/1-基础篇/04-Java线程的状态及主要转化方法
+
+  - title: Java线程间的通信 🍓
+    details: Java线程间的通信 🍖
+    link: /01读书笔记/深入浅出Java多线程/1-基础篇/05-Java线程间的通信
+
+  - title: Java内存模型基础知识 🍔
+    details: Java内存模型基础知识 🍟
+    link: /01读书笔记/深入浅出Java多线程/2-原理篇/06-Java内存模型基础知识
+
+  - title: 重排序与happens-before 🍚
+    details: 重排序与happens-before 🌸
+    link: /01读书笔记/深入浅出Java多线程/2-原理篇篇/07-重排序与happens-before
+
+  - title: volatitle 💕
+    details: volatitle 💚
+    link: /01读书笔记/深入浅出Java多线程/2-原理篇/08-volatitle
+
+  - title:  synchronized与锁 🍇
+    details: synchronized与锁 🍓
+    link: /01读书笔记/深入浅出Java多线程/2-原理篇/09-synchronized与锁
+
+  - title: CAS与原子操作 🍋
+    details: CAS与原子操作 🍐
+    link: /01读书笔记/深入浅出Java多线程/2-原理篇/10-CAS与原子操作
+
+  - title: AQS 🍒
+    details: AQS 🍏
+    link: /01读书笔记/深入浅出Java多线程/2-原理篇/11-AQS
+
+  - title: 线程池原理 🍝
+    details: 线程池原理 🐏
+    link: /01读书笔记/深入浅出Java多线程/3-JDK工具篇/12-线程池原理
+
+  - title: 阻塞队列 🐤
+    details: 阻塞队列 🐶
+    link: /01读书笔记/深入浅出Java多线程/3-JDK工具篇约/13-阻塞队列
+
+  - title: 锁接口和类 🌲
+    details: 锁接口和类 🌳
+    link: /01读书笔记/深入浅出Java多线程/3-JDK工具篇/14-锁接口和类
+
+  - title: 并发容器集合 🌴
+    details: 并发容器集合 🌵
+    link: /01读书笔记/深入浅出Java多线程/3-JDK工具篇/15-并发容器集合
+
+  - title: CopyOnWrite容器 🌿
+    details: CopyOnWrite容器 🍀
+    link: /01读书笔记/深入浅出Java多线程/3-JDK工具篇/16-CopyOnWrite容器
+
+  - title: 通信工具类 🍁
+    details: 通信工具类 🍂
+    link: /01读书笔记/深入浅出Java多线程/3-JDK工具篇/17-通信工具类
+
+  - title: Fork_Join框架 🎪
+    details: Fork_Join框架 🎭
+    link: /01读书笔记/深入浅出Java多线程/3-JDK工具篇/18-Fork_Join框架
+
+  - title: Java8Stream并行计算原理 🎨
+    details: Java8Stream并行计算原理 🎰🚣
+    link: /01读书笔记/深入浅出Java多线程/3-JDK工具篇/19-Java8Stream并行计算原理
+
+  - title: 计划任务 🛀
+    details: 计划任务 🎫
+    link: /01读书笔记/深入浅出Java多线程/3-JDK工具篇/20-计划任务
+
+copyrightText: false
 ---
-
-@slidestart
-
-笔者在读完市面上关于Java并发编程的资料后，感觉有些知识点不是很清晰，于是在RedSpider社区内展开了对Java并发编程原理的讨论。鉴于开源精神，我们决定将我们讨论之后的Java并发编程原理整理成书籍，分享给大家。
-
-站在巨人的肩上，我们可以看得更远。本书内容的主要来源有博客、书籍、论文，对于一些已经叙述得很清晰的知识点我们直接引用在本书中；对于一些没有讲解清楚的知识点，我们加以画图或者编写Demo进行加工；而对于一些模棱两可的知识点，本书在查阅了大量资料的情况下，给出最合理的解释。
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.001.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.002.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.003.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.004.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.005.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.006.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.007.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.008.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.009.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.010.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.011.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.012.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.013.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.014.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.015.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.016.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.017.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.018.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.019.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.020.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.021.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.022.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.023.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.024.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.025.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.026.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.027.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.028.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.029.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.030.png)
-
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.031.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.032.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.033.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.034.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.035.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.036.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.037.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.038.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.039.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.040.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.041.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.042.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.043.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.044.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.045.png)
-
----
-
-![](https://zhangchengk.gitee.io/image/读书笔记/深入浅出Java多线程/p/p.046.png)
-
-@slideend
