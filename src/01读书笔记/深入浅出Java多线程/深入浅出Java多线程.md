@@ -1,10 +1,7 @@
 ---
+home: true
 icon: home
 title: 深入浅出Java多线程
-heroImage: /homes/ali.png
-category: 深入浅出Java多线程
-tags: 
-  - 深入浅出Java多线程
 heroText: 深入浅出Java多线程
 tagline: 码出高效，码出质量。
 action:
