@@ -10,22 +10,22 @@ project:
   - type: book
     name: 深入浅出Java多线程
     desc: RedSpider社区整理的Java多线程知识，本文是复习PPT。
-    link: 01读书笔记/深入浅出Java多线程/深入浅出Java多线程/
+    link: 读书笔记/深入浅出Java多线程/深入浅出Java多线程/
 
   - type: book
     name: LeetCode
     desc: 本集合是LeetCode刷题笔记以及公众号「labuladong」文章阅读笔记。
-    link: 01读书笔记/LeetCode/sfxc
+    link: 读书笔记/LeetCode/sfxc
 
   - type: book
     name: 算法
     desc: 本集合是算法总结
-    link: 02算法/sf
+    link: 算法/sf
 
   - type: link
     name: Java开发手册手抄版
     desc: 编程规约、异常日志、单元测试、安全规约、MySQL数据库、工程结构、设计规约
-    link: /01读书笔记/阿里Java开发手册/手抄版
+    link: /读书笔记/阿里Java开发手册/手抄版
 
   - type: link
     name: Json JOLT 教程
