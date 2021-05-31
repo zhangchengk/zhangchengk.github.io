@@ -11,6 +11,19 @@ const fs = require('fs')
 8. fs.rmdir  删除目录 
 9. fs.unlink 删除文件 
 */
+let includeCategory = new Set()
+    includeCategory.add('读书笔记')
+    includeCategory.add('算法')
+    includeCategory.add('Java')
+    includeCategory.add('Spring')
+    includeCategory.add('ApacheNIFI')
+    includeCategory.add('数据库')
+    // includeCategory.add('Hadoop')
+    // includeCategory.add('Hive')
+    // includeCategory.add('Impala')
+    includeCategory.add('Docker')
+
+
 let ignoreFileNameSet  = new Set()
     ignoreFileNameSet.add('.vuepress')
     ignoreFileNameSet.add('Readme.md')
@@ -25,12 +38,31 @@ let ignoreFileNameSet  = new Set()
     ignoreFileNameSet.add('about')
     ignoreFileNameSet.add('jolt')
 
-console.log(__dirname)
-let test = walk(__dirname, '')
-console.log(JSON.stringify(test.children, null, "\t"))
+// console.log(__dirname)
+let test = resolveSideBarTest()
+console.log(JSON.stringify(test, null, "\t"))
 
 module.exports = function resolveSideBar() {
-    let sidebars = walk(__dirname, '').children
+    let sidebars = []
+    includeCategory.forEach(function(category) {
+        console.log(category)
+        let obj = {}
+        obj.title = category
+        obj.children= walk(__dirname + '/' + category, category + '/').children
+        sidebars.push(obj)
+    })
+    return sidebars
+}
+
+function resolveSideBarTest() {
+    let sidebars = []
+    includeCategory.forEach(function(category) {
+        console.log(category)
+        let obj = {}
+        obj.title = category
+        obj.children= walk(__dirname + '/' + category, category + '/').children
+        sidebars.push(obj)
+    })
     return sidebars
 }
 
