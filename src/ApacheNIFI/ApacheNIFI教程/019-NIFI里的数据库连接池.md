@@ -202,7 +202,7 @@ public Connection getConnection() throws SQLException {
 ```
 然后在默认情况下连接池是阻塞队列，当连接池中的连接都被使用，无法立即获取到可用的连接，其中数据库连接池`Max Wait Time`配置会影响阻塞等待时间(-1是无限阻塞)，阻塞等待超过这个时间还没有可用的连接，就会抛出异常。抛出异常后，NIFI回滚事务，流文件还是回到上游。
 
-![](../img/0/019/dbcp.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/019/dbcp.png)
 
 但是，`Max Wait Time`设置成-1无限阻塞显然是不合适的，我们可以酌情设置一个时间(估计一下一般一个Connection拿出来，执行SQL，还回池里需要的事件)。最好是建流程的时候，衡量处理器和线程的数量与此连接池的最大连接数，在数据库连接的时候，让处理器处理数据的时候总是可以获取到一个连接，毕竟阻塞在那里，还是耗服务器的资源的。
 

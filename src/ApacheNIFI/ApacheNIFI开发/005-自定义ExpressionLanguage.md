@@ -13,7 +13,7 @@ location: BeiJing
 
 我们在属性中有一些中文，在流程里需要把这些值转bytes最后存储起来，那我们知道在Java中，String的getBytes()方法是得到一个操作系统默认的编码格式的字节数组。这个表示在不同OS下，返回的东西不一样！ String.getBytes(String decode)方法会根据指定的decode编码返回某字符串在该编码下的byte数组表示，那么我们就包装一个getBytes的函数
 
-![](../img/1/005/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/005/1.png)
 
 ## NIFI开发
 
@@ -118,16 +118,16 @@ outlined by the documentation.
 
 (antlr是个什么自行查询资料，也不用想太多，照着上面的流程就能自己实现自定义表达式语言函数了)
 
-![](../img/1/005/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/005/2.png)
 
-![](../img/1/005/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/005/3.png)
 
 
 ### 第二步 新建Evaluator
 
 具体该继承哪一个Evaluator，看上面的说明和源码，我这里期望getBytes返回的是byte数组的字符串
 
-![](../img/1/005/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/005/4.png)
 
 ```java
 public class GetBytesEvaluator extends StringEvaluator {
@@ -171,7 +171,7 @@ public class GetBytesEvaluator extends StringEvaluator {
 
 ### 第四步 注册getBytes函数
 
-![](../img/1/005/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/005/5.png)
 
 ### 第五步 重新编译NIFI
 
@@ -179,13 +179,13 @@ public class GetBytesEvaluator extends StringEvaluator {
 
 ### 效果展示
 
-![](../img/1/005/6.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/005/6.png)
 
-![](../img/1/005/7.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/005/7.png)
 
-![](../img/1/005/8.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/005/8.png)
 
-![](../img/1/005/9.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/005/9.png)
 
 
 ## 公众号

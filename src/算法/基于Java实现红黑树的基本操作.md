@@ -29,12 +29,12 @@ location: BeiJing
 第二，特性5，确保没有一条路径会比其他路径长出俩倍。因而，红黑树是相对是接近平衡的二叉树。
 
 结构如下图：
-![](./img/002/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/1.png)
 
 红黑树的基本操作包括删除和添加。在删除或者添加一个节点的时候就有可能打破原有的红黑树维持的平衡，那么就需要通过着色和旋转的方式来使红黑树重新达到平衡。着色是非常简单的，直接将节点的颜色改变就可以了，多以要理解红黑树，就必须需要懂得如何进行旋转，旋转又分为左旋和右转，两个操作相反的，所以理解了一个旋转的操作就很容易理解另一个旋转了。
 
 左旋：
-![](./img/002/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/2.png)
 
 如图所示，红色节点为旋转支点，支点往左子树移动即为左旋。左旋之后我们可以看到原支点的位置被原支点的右子节点代替，新支点的左子节点变为了原来为父节点的原支点，新支点的左子节点变为原支点的右子节点，因此左旋操作总共右3个节点，以为旋转前的结构举例，分别为红色节点（原支点），黄色节点（新支点）和L节点。Java代码实现如下：
 
@@ -71,7 +71,7 @@ location: BeiJing
 因为在红黑树中每个节点都有一个指针指向自己的父节点，父节点也有指针指向子节点，因为在改动一个节点的时候都需要分别改动当前节点和父节点的指向，结合左旋的示意图，用Java代码实现起来就不会很困难了。
 
 右旋:
-![](./img/002/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/3.png)
 
 右旋操作和左旋相反的，两者互反。依然是红色作为旋转支点，右旋后黄色节点代替了红色节点原来的位置，黄色节点的右节点旋转后变为红色节点的左节点。Java 代码实现如下：
 ```java
@@ -122,7 +122,7 @@ location: BeiJing
 
 　　情况4：新节点为右节点，叔叔节点为黑色；
 
-![](./img/002/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/4.png)
 
 情况1和情况3的情况是一样的，只需要变色(将父节点和叔叔节点变色为黑色，将祖父节点变色为红色)，所以我们可以将这两种情况看作是一种情况，所以我们可以归结为3种情况：
 
@@ -134,10 +134,10 @@ location: BeiJing
 
 情况1这种情况处理起来比较简单，只需要将祖父节点变为红色节点，父节点和叔叔节点变为黑色即可，这仅仅只是当整个红黑树只有这几个节点的时候是可以了，但事实并非如此，这仅仅只是达到了局部平衡。
 
-![](./img/002/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/5.png)
 
 上图，我们看到已经达到了局部的平衡，但是，我们还会有其他的情况，那就是祖父节点有可能也会有父节点。那么又会有两种情况，1是祖父节点的父节点可能是黑色的，2是可能是红色的，如果黑色那么整个红黑树就达到平衡了。不知道大家感觉到了没有，这两种情况是不是跟新插入一个节点的情况是一致的，是不是又回到了插入新节点的问题了(递归思想啊)？于是我将局部收到影响的部分画出来，如图：
-![](./img/002/6.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/6.png)
 
 图a就是将情况1从新着色后的部分受影响的节点，当然只是其中的一种情况，此时我们将已经平衡的部分去掉就变成的图b的情况，这种情况是不是很熟悉呢？我们的祖父节点当成新节点，是不是相当于上面讨论的情况1呢？不过与上面讨论的情况不同的是，这里3中可能情况都可能出现，因为叔叔节点有可能为红色或黑色。所以这时候才有可能出现真正的三种情况：
 
@@ -150,16 +150,16 @@ location: BeiJing
 　　如果为情况1的话，我们一层一层的往上平衡就可以了，当祖父节点为根节点的时候，我们直接将根节点着色为黑色即可，因为祖父节点的两个子节点都是黑色的，所以变为黑色后仍然是平衡的。
 
     接下来我们来讨论下情况2和3。
-![](./img/002/7.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/7.png)
 
     情况2以父节点为支点左旋，然后将父节点和新节点互换可以得到情况3：
-![](./img/002/8.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/8.png)
 
 情况3进行的操作是，首先将父节点着色为黑色，祖父节点着色为红色，此时破坏了特性5，父亲这个分支黑色节点总数没变，叔叔那个分支因为祖父由黑变红，少了一个黑色节点，所以希望通过旋转把父节点移到祖父的位置，来平衡两个分支的黑色节点的数量。然后以祖父为支点进行右旋
-![](./img/002/9.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/9.png)
 
 情况3旋转结束后整棵红黑也已经重新恢复平衡了。单从部分其实并看不出已经平衡了，我们可以将三个情况连起来就可以看到了，如下图：
-![](./img/002/10.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/10.png)
 
 上图中都是以n节点为参考点的，其余无关的节点就不标出来了。n节点即为插入节点，但是除了第一次操作n节点为真正的新节点，此后的操作所指的n节点只是有助于我们的理解把他当成新节点。当然，这只是其中的一种情况，其他其他的情况可以通过不断向上旋转或着色，最终也会达到这种情况或者顶部是p节点为根节点的时候，第二种情况直接将根节点着色为黑色即可。
 
@@ -250,22 +250,22 @@ location: BeiJing
 一、删除节点的兄弟节点是红色
 
 　　将兄弟节点设为黑色，父节点设为红色，以父节点为支点左旋转，然后将父节点的右节点放到兄弟节点上：
-![](./img/002/16.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/16.png)
 
 二、兄弟节点是黑色的，兄弟的两个子节点也都是黑色的
 
 　　兄弟节点设为红色，把父节点设置为新的删除节点：
-![](./img/002/17.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/17.png)
 
 三、兄弟节点是黑色的，且兄弟节点的左子节点是红色，右子节点是黑色
 
 　　将兄弟节点的左子节点设为黑色，兄弟节点设为红色，以兄弟节点为支点右旋，把父节点的右节点设置为兄弟节点
-![](./img/002/18.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/18.png)
 
 四、兄弟节点是黑色的，且兄弟节点的右子节点是红色，左子节点任意颜色
 
 　　把兄弟节点的设为父节点的颜色，父节点设为黑色，父节点的右节点设为黑色，父节点为支点左旋
-![](./img/002/19.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/算法/002/19.png)
 
 　　删除的Java代码示例：
 

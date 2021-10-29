@@ -13,7 +13,7 @@ location: BeiJing
 BeanFactory bf = new XmlBeanFactory(new ClassPathResource("beanFactoryTest.xml"));
 ```
 
-![](./img/3/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Spring源码深度解析/3/1.png)
 
 时序图从BeanFactoryTest测试类开始，通过时序图我们可以一目了然地看到整个逻辑处理顺序。在测试的BeanFactoryTest类中首先调用ClassPathResource的构造函数来构造Resource
 资源文件的实例对象，这样后续的资源处理就可以用Resource提供的各种服务来操作了，当我们有了Resource后就可以进行XmlBeanFactory的初始化了.那么Rsource资源是如何封装的呢？

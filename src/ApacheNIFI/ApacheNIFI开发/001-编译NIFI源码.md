@@ -190,19 +190,19 @@ git clone -b master git@gitee.com:mirrors/nifi.git
 
 搜一下
 
-![](../img/1/001/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/001/1.png)
 
 一般使用[https://mvnrepository.com/](https://mvnrepository.com/),查询缺失的jar，在Note找到对应的仓库就可以了。
 
-![](../img/1/001/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/001/2.png)
 
 但org.mortbay.jetty:jetty:jar:6.1.26.cloudera.4，在Spring Plugins repository (https://repo.spring.io/plugins-release/)里找不到，在Cloudera 3rd-P里可以找到。
 
-![](../img/1/001/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/001/3.png)
 
 或者直接搜到的Cloudera仓库
 
-![](../img/1/001/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/001/4.png)
 
 大体上就是这么个思路。
 

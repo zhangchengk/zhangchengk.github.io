@@ -230,7 +230,7 @@ Thread.currentThread().getContextClassLoader().loadClass(name);
 
 ## ClassLoader继承关系
 
-![](./img/2/ClassLoader.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Java类加载器/ClassLoader.png)
 
 由上面的继承关系，我们看到ExtClassLoader和AppClassLoader都继承了URLClassLoader，上面还有SecureClassLoader。
 

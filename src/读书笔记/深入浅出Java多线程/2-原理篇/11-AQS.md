@@ -31,7 +31,7 @@ compareAndSetState()
 这三种叫做均是原子操作，其中compareAndSetState的实现依赖于Unsafe的compareAndSwapInt()方法。
 
 而AQS类本身实现的是一些排队和阻塞的机制，比如具体线程等待队列的维护（如获取资源失败入队/唤醒出队等）。它内部使用了一个先进先出（FIFO）的双端队列，并使用了两个指针head和tail用于标识队列的头部和尾部。其数据结构如图：
-![](../img/11/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/深入浅出Java多线程/11/1.png)
 但它并不是直接储存线程，而是储存拥有线程的Node节点。
 
 ## 11.3 资源共享模式
@@ -215,7 +215,7 @@ final boolean acquireQueued(final Node node, int arg) {
 > 可中断的意思是，在线程中断时可能会抛出`InterruptedException`
 
 总结起来的一个流程图：
-![](../img/11/2.jpg)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/深入浅出Java多线程/11/2.jpg)
 
 ### 11.4.2 释放资源
 

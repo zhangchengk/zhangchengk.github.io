@@ -16,20 +16,20 @@ git clone -b master git@gitee.com:mirrors/spring-boot.git
 
 最新的master分支是gradle，把Git分支切到2.2x，然后使用maven clean install
 
-![](./img/1/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/springboot/1.png)
 
-![](./img/1/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/springboot/2.png)
 
 期间有可能遇到一些maven构建时的问题(我是没遇到什么问题)，得自行解决(都可以解决的，别人都可以顺顺利利的构建成功)
 
-![](./img/1/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/springboot/3.png)
 
 我这边是不到2分钟就构建完了
-![](./img/1/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/springboot/4.png)
 
 在spring-boot-project下面新建一个子moudle：spring-boot-example
 
-![](./img/1/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/springboot/5.png)
 
 pom.xml(其中设置了disable.check)
 ```xml
@@ -128,10 +128,10 @@ spring:
 
 运行Application
 
-![](./img/1/6.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/springboot/6.png)
 
 访问网页
-![](./img/1/7.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/springboot/7.png)
 
 OK 成功了。
 

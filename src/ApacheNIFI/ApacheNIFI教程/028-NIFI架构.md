@@ -8,7 +8,7 @@ author: 张诚
 location: BeiJing
 ---
 
-![](./img/zero-leader-node.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/zero-leader-node.png)
 
 NiFi在主机操作系统上的JVM中执行。JVM上NiFi的主要组件如下：
 
@@ -33,6 +33,6 @@ web服务器的目的是托管NiFi基于HTTP的命令和控制API。
 
 NiFi也可以在集群内运行。
 
-![](./img/zero-leader-cluster.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/zero-leader-cluster.png)
 
 从nifi1.0版本开始，采用了零前导聚类范式。NiFi集群中的每个节点对数据执行相同的任务，但每个节点对不同的数据集进行操作。apachezookeeper选择一个节点作为集群协调器，故障转移由ZooKeeper自动处理。所有集群节点都向集群协调器报告心跳和状态信息。集群协调器负责断开和连接节点。另外，每个集群都有一个主节点，也是由ZooKeeper选择的。作为数据流管理器，您可以通过任何节点的用户界面（UI）与NiFi集群交互。您所做的任何更改都会复制到集群中的所有节点，从而允许多个入口点。

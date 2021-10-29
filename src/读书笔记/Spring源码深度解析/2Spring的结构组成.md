@@ -12,7 +12,7 @@ location: BeiJing
 
 ## 新建测试Spring项目
 
-![](./img/2/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Spring源码深度解析/2/1.png)
 
 我编译的源码是5.1.15，并install到本地仓库
 
@@ -91,7 +91,7 @@ public class BeanFactoryTest {
 
 ```
 
-![](./img/2/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Spring源码深度解析/2/2.png)
 
 直接使用BeanFactory作为容器对于Spring的使用来说并不多见，甚至是甚少使用，因为在企业级的应用中大多数都会使用的是ApplicationContext。
 
@@ -109,17 +109,17 @@ public class BeanFactoryTest {
 - ReflectionUtil ：用于根据配置文件中的配置进行反射实例化，比如在上例中beanFactoryTest.xml出现的 `<bean id="myTestBean" class="com.myspring.service.impl.MyTestBean"></bean>`，我们就可以根据MyTestBean进行实例化
 - App ：用于完成整个逻辑的串联
 
-![](./img/2/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Spring源码深度解析/2/3.png)
 
 ## beans 包的层级结构及核心类介绍
 
 上面的测试项目我们只引入了`spring-beans`(当然spring-core是必需的)
 
-![](./img/2/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Spring源码深度解析/2/4.png)
 
 我们先看看整个beans工程的源码结构
 
-![](./img/2/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Spring源码深度解析/2/5.png)
 
 - src/main/java 用于展现Spring的主要逻辑
 - src/main/resources 用于存放系统的配置文件
@@ -130,9 +130,9 @@ public class BeanFactoryTest {
 
 XmlBeanFactory继承自DefaultListableBeanFactory，而DefaultListableBeanFactory是整个bean加载的核心部分，是Spring注册及加载bean的默认实现，而对于 XmlBeanFactory与DefaultListableBeanFactory不同的地方其实是在XmlBeanFactory中使用了自定义的XML读取器XmlBeanDefinitionReader，实现了个性化的BeanDefinitionReader读取，DefaultListableBeanFacto1y继承了AbstractAutowireCapableBeanFactory并实现了ConfigurableListableBeanFacto以及BeanDefinitionRegistry接口。
 
-![](./img/2/6.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Spring源码深度解析/2/6.png)
 
-![](./img/2/7.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Spring源码深度解析/2/7.png)
 
 让我们先简单地了解上面类图中各个类的作用
 
@@ -157,7 +157,7 @@ XmlBeanFactory继承自DefaultListableBeanFactory，而DefaultListableBeanFactor
 XML 置文件的读取是spring重要的功能 ，因为Spring的大部分功能都是以配置作为切入点的，那么我们可以从 XmlBeanDefinitionReader中梳理一下资源文件读取、解析及注册的
 大致脉络，首先我们看看各个类的功能
 
-![](./img/2/8.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Spring源码深度解析/2/8.png)
 
 - ResourceLoader ：定义资源加载器，主妥应用于根据给定的资源文件地址返回对应的Resource
 - BeanDefinitionReader ：主要定义资源文件读取并转换为BeanDefinition的各个功能

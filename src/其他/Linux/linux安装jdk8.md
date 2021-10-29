@@ -12,7 +12,7 @@ location: BeiJing
 
 官网的就不说了，这里推荐华为云镜像 :https://mirrors.huaweicloud.com/java/jdk/
 
-![](./img/001/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/linux/1.png)
 
 # 2.源码包解压
 

@@ -12,13 +12,13 @@ location: BeiJing
 
 许多第一次接触使用NIFI的同学在同步关系型数据库的某一张表的时候，可能会拖拽出类似于下面的一个流程。
 
-![](../img/0/020/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/020/1.png)
 
 这个流程大体的作用就是：监听增量字段并生成查询SQL，执行SQL，转换成JSON数据，将JOSN转换成插入SQL语句，在目标库执行SQL。
 <!-- more -->
 这显然是没什么问题的，但是如果让我来设计，就只是下面这样的流程。
 
-![](../img/0/020/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/020/2.png)
 
 ## 为什么建议使用NIFI里的Record
 
@@ -32,7 +32,7 @@ location: BeiJing
 
 ### 好处2-RecordPath
 
-![](../img/0/020/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/020/3.png)
 
 NIFI在Record的基础上，为我们提供了一套处理Record的EL表达式，提供RecordPath我们可以更灵活的去处理record数据。
 

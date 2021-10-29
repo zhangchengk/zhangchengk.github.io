@@ -54,8 +54,8 @@ location: BeiJing
 ```
 查询： 
 
-![](./img/4/1.png)
-![](./img/4/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Jvm_dump_jstack_jmap_jstat介绍与使用/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Jvm_dump_jstack_jmap_jstat介绍与使用/2.png)
 
 Java通过jvm自己管理内存，同时Java提供了一些命令行工具，用于查看内存使用情况。  
 这里主要介绍一下jstat、jmap命令以及相关工具。 
@@ -72,11 +72,11 @@ Java通过jvm自己管理内存，同时Java提供了一些命令行工具，用
 
 在linux操作系统下（已安装jdk），执行jps命令，列出正在运行的java程序的进程ID。
 
-![](./img/4/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Jvm_dump_jstack_jmap_jstat介绍与使用/3.png)
 
 使用top查看目前正在运行的进程使用系统资源情况。
 
-![](./img/4/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Jvm_dump_jstack_jmap_jstat介绍与使用/4.png)
 
 其中进程号为24660的进程，jps输出列表和top列表中都出现，并且在top列表中显示是由java COMMAND启动的。
 
@@ -208,7 +208,7 @@ Options 参数如下：
 ```
 每5 秒一次显示进程号为 12538的 java进程的 GC情况，结果如下图：
 
-![](./img/4/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Jvm_dump_jstack_jmap_jstat介绍与使用/5.png)
 
 结果说明
 
