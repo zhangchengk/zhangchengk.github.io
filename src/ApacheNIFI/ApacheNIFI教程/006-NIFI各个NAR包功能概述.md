@@ -1,5 +1,5 @@
 ---
-title: NIFI各个NAR包功能概述
+title: 各个NAR包功能概述
 date: 2020-05-21
 category: ApacheNIFI教程
 tags: 

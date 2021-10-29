@@ -1,5 +1,5 @@
 --- 
-title: 深入理解Apache NIFI Connection
+title: 深入理解Connection
 date: 2020-05-21
 category: ApacheNIFI教程
 tags: 

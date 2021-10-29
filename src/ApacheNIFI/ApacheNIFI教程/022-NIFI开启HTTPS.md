@@ -1,5 +1,5 @@
 ---
-title: Apache NIFI开启HTTPS
+title: NIFI开启HTTPS
 date: 2020-05-21
 category: ApacheNIFI教程
 tags: 

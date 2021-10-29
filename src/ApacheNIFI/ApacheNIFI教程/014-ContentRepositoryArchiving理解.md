@@ -1,5 +1,5 @@
 ---
-title: 理解 Content Repository Archiving 工作原理（译）
+title: ContentRepositoryArchiving工作原理(译)
 date: 2020-05-21
 category: ApacheNIFI教程
 tags: 

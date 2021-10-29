@@ -1,5 +1,5 @@
 ---
-title: Apache NIFI Run Duration深入理解
+title: Run Duration深入理解
 date: 2020-05-21
 category: ApacheNIFI教程
 tags: 

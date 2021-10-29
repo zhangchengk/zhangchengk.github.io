@@ -1,5 +1,5 @@
 ---
-title: NIFI自定义开发规范
+title: 自定义开发规范
 date: 2020-05-21
 category: ApacheNIFI开发
 tags: 

@@ -1,5 +1,5 @@
 ---
-title: 探索 Apache NIFI 集群的高可用
+title: 探索NIFI集群的高可用
 date: 2020-05-21
 category: ApacheNIFI教程
 tags: 

@@ -1,5 +1,5 @@
 ---
-title: 通过配置优化Apache NiFi性能
+title: 通过配置优化NiFi性能
 date: 2020-06-09
 category: ApacheNIFI教程
 tags: 

@@ -1,5 +1,5 @@
 ---
-title: 深入解析Apache NIFI的调度策略
+title: 深入解析调度策略
 date: 2020-06-08
 category: ApacheNIFI教程
 tags: 

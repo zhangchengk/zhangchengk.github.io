@@ -1,5 +1,5 @@
 ---
-title: ApacheNIFI读完即入门
+title: NIFI读完即入门
 date: 2020-05-21
 category: ApacheNIFI教程
 tags: 

@@ -37,22 +37,22 @@ var flagMap = new Map();
     flagMap.set('技术汇总', '💼')
         flagMap.set('操作系统', '🖥')
     flagMap.set('其他', '🚬')
-        flagMap.set('Linux', '🇱')
-        flagMap.set('Maven', 'Ⓜ')
+        flagMap.set('Linux', '📲')
+        flagMap.set('Maven', '👁')
     flagMap.set('数据库', '💿️')
     flagMap.set('算法', '🧮')
     flagMap.set('ApacheNIFI', '💧')
         flagMap.set('ApacheNIFI教程', '🐡')
         flagMap.set('ApacheNIFI开发', '🐠')
     flagMap.set('Docker', '🐳')
-    flagMap.set('Java', '☕')
-        flagMap.set('IO', 'ℹ')
-        flagMap.set('Java多线程', '🀅')
+    flagMap.set('Java', '🍵')
+        flagMap.set('IO', '🥢')
+        flagMap.set('Java多线程', '🧶')
         flagMap.set('Java反射', '🏹')
         flagMap.set('Java规范', '⚪')
-        flagMap.set('Jvm', '🂫')
+        flagMap.set('Jvm', '✌🏻')
     flagMap.set('Spring', '🍃')
-        flagMap.set('Spring中文文档', '☘')
+        flagMap.set('Spring中文文档', '🌿')
         flagMap.set('SpringBoot', '🍀')
 
 
@@ -78,7 +78,7 @@ module.exports = function resolveSideBar() {
     let sidebars = []
     includeCategory.forEach(function(category) {
         let obj = {}
-        obj.title = "🐼" + category
+        obj.title = "🐼  " + category
         obj.children= walk(__dirname + '/' + category, category + '/').children
         sidebars.push(obj)
     })
@@ -89,7 +89,7 @@ function resolveSideBarTest() {
     let sidebars = []
     includeCategory.forEach(function(category) {
         let obj = {}
-        obj.title = "🐼" + category
+        obj.title = "🐼  " + category
         obj.children= walk(__dirname + '/' + category, category + '/').children
         sidebars.push(obj)
     })
@@ -109,9 +109,9 @@ function walk(dir, sidebarDir) {
                 let obj = {}
                 let flag = flagMap.get(filename)
                 if (flag) {
-                    obj.title = flag + filename
+                    obj.title = flag + " " + filename
                 } else {
-                    obj.title = "🐾" + filename
+                    obj.title = "🐾  " + filename
                 }
                 
                 let result = walk(path, sidebarDir + filename + '/')

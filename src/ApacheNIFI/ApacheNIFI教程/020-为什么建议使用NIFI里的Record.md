@@ -1,5 +1,5 @@
 ---
-title: 为什么建议使用NIFI里的Record
+title: 建议使用NIFI里的Record
 date: 2020-11-19
 category: ApacheNIFI教程
 tags: 

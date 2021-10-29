@@ -1,5 +1,5 @@
 ---
-title: Nar包下的MANIFEST.MF-NIFI启动时有用到
+title: Nar包下的MANIFEST.MF
 date: 2020-05-21
 category: ApacheNIFI教程
 tags: 

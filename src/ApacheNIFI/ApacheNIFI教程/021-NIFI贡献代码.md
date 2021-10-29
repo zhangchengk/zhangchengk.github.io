@@ -1,5 +1,5 @@
 ---
-title: 如何给Apache NIFI贡献代码
+title: 如何给NIFI贡献代码
 date: 2020-06-03
 category: ApacheNIFI教程
 tags: 

@@ -1,5 +1,5 @@
 ---
-title: Apache NIFI Processor情况
+title: Processor情况
 date: 2020-06-30
 category: ApacheNIFI教程
 tags: 
