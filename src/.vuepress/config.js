@@ -12,6 +12,13 @@ module.exports = config({
     ['meta', {name: 'referrer', content: 'no-referrer'}],
     ['link', { rel: 'icon', href: '/logo.png' }],
   ],
+  
+  locales: {
+    "/": {
+      // 设置需要的语言
+      lang: "zh-CN",
+    },
+  },
 
   themeConfig: {
     logo: '/panda.gif',
