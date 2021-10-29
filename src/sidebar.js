@@ -13,15 +13,47 @@ const fs = require('fs')
 */
 let includeCategory = new Set()
     includeCategory.add('读书笔记')
+    includeCategory.add('技术汇总')
+    includeCategory.add('其他')
+    includeCategory.add('数据库')
     includeCategory.add('算法')
+    includeCategory.add('ApacheNIFI')
+    includeCategory.add('Docker')
     includeCategory.add('Java')
     includeCategory.add('Spring')
-    includeCategory.add('ApacheNIFI')
-    includeCategory.add('数据库')
-    // includeCategory.add('Hadoop')
-    // includeCategory.add('Hive')
     // includeCategory.add('Impala')
-    includeCategory.add('Docker')
+
+var flagMap = new Map();
+    flagMap.set('读书笔记', '📚')
+        flagMap.set('阿里Java开发手册', '📔')
+        flagMap.set('高效使用Java', '📕')
+        flagMap.set('记忆宫殿', '📖')
+        flagMap.set('设计模式就该这样学', '📗')
+        flagMap.set('深入浅出Java多线程', '📘')
+        flagMap.set('数据结构', '📙')
+        flagMap.set('Java核心技术面试精讲', '📓')
+        flagMap.set('LeetCode', '📃')
+        flagMap.set('Spring源码深度解析', '📒')
+    flagMap.set('技术汇总', '💼')
+        flagMap.set('操作系统', '🖥')
+    flagMap.set('其他', '🚬')
+        flagMap.set('Linux', '🇱')
+        flagMap.set('Maven', 'Ⓜ')
+    flagMap.set('数据库', '💿️')
+    flagMap.set('算法', '🧮')
+    flagMap.set('ApacheNIFI', '💧')
+        flagMap.set('ApacheNIFI教程', '🐡')
+        flagMap.set('ApacheNIFI开发', '🐠')
+    flagMap.set('Docker', '🐳')
+    flagMap.set('Java', '☕')
+        flagMap.set('IO', 'ℹ')
+        flagMap.set('Java多线程', '🀅')
+        flagMap.set('Java反射', '🏹')
+        flagMap.set('Java规范', '⚪')
+        flagMap.set('Jvm', '🂫')
+    flagMap.set('Spring', '🍃')
+        flagMap.set('Spring中文文档', '☘')
+        flagMap.set('SpringBoot', '🍀')
 
 
 let ignoreFileNameSet  = new Set()
@@ -45,9 +77,8 @@ console.log(JSON.stringify(test, null, "\t"))
 module.exports = function resolveSideBar() {
     let sidebars = []
     includeCategory.forEach(function(category) {
-        console.log(category)
         let obj = {}
-        obj.title = category
+        obj.title = "🐼" + category
         obj.children= walk(__dirname + '/' + category, category + '/').children
         sidebars.push(obj)
     })
@@ -57,9 +88,8 @@ module.exports = function resolveSideBar() {
 function resolveSideBarTest() {
     let sidebars = []
     includeCategory.forEach(function(category) {
-        console.log(category)
         let obj = {}
-        obj.title = category
+        obj.title = "🐼" + category
         obj.children= walk(__dirname + '/' + category, category + '/').children
         sidebars.push(obj)
     })
@@ -77,7 +107,13 @@ function walk(dir, sidebarDir) {
             var stat = fs.statSync(path)
             if (stat && stat.isDirectory()) {
                 let obj = {}
-                obj.title = filename
+                let flag = flagMap.get(filename)
+                if (flag) {
+                    obj.title = flag + filename
+                } else {
+                    obj.title = "🐾" + filename
+                }
+                
                 let result = walk(path, sidebarDir + filename + '/')
                 obj.children = result.children
                 returnValue.children.push(obj)
