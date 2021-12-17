@@ -21,7 +21,7 @@ let includeCategory = new Set()
     includeCategory.add('Docker')
     includeCategory.add('Java')
     includeCategory.add('Spring')
-    // includeCategory.add('Impala')
+    includeCategory.add('jolt')
 
 var flagMap = new Map();
     flagMap.set('读书笔记', '📚')
