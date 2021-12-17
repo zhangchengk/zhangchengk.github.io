@@ -31,17 +31,6 @@ module.exports = config({
     ],
     sidebar: {
       "/": resolveSideBar(),
-      // [
-      //   "",
-      //   "home",
-      //   "slides",
-      //   {
-      //     title: "Guide",
-      //     icon: "creative",
-      //     prefix: "guide/",
-      //     children: ["", "page", "markdown", "disable", "encrypt"],
-      //   },
-      // ],
     },
 
     author: "Panda诚",
@@ -92,8 +81,8 @@ module.exports = config({
     },
 
     pwa: {
-      favicon: "/panda.gif",
-      cachePic: false,
+      favicon: "/logo.png",
+      cachePic: true,
       apple: {
         icon: "/assets/icon/apple-icon-152.png",
         statusBarColor: "black",
@@ -148,6 +137,9 @@ module.exports = config({
             ],
           },
         ],
+      },
+      generateSwConfig: {
+        skipWaiting: true,
       },
     },
 
