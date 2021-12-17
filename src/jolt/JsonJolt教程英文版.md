@@ -1,7 +1,7 @@
 ---
 title: Json JOLT 教程(英文版)
 date: 2020-05-21
-category: ApacheNIFI教程
+category: Jolt
 tags: 
   - Jolt
 author: Panda诚
