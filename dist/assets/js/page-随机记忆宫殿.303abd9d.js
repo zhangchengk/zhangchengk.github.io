@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[285],{999:function(t,e,n){"use strict";n.r(e);var s=n(1),l=Object(s.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[e("p",[this._v("万事万物其实都可以转化为随机记忆宫殿。")])])}),[],!1,null,null,null);e.default=l.exports}}]);
