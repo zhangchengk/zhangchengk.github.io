@@ -220,3 +220,10 @@ VALUES
 - https://dev.mysql.com/doc/refman/8.0/en/data-types.html
 - https://zhuanlan.zhihu.com/p/159332687
 - http://idber.github.io/2019/05/10-MySQL%E7%9A%84%E4%BC%AAutf8%E5%AD%97%E7%AC%A6%E9%9B%86.html
+
+
+## 公众号
+
+关注公众号 得到第一手文章/文档更新推送。
+
+![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
