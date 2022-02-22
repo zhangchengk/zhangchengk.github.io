@@ -61,7 +61,7 @@ public class VolatileExample {
 
 假设在时间线上，线程A先执行方法`writer`方法，线程B后执行`reader`方法。那必然会有下图：
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/深入浅出Java多线程/8/1.jpg)
+![](https://gitee.com/zhangchengk/img/raw/master/深入浅出Java多线程/8/1.jpg)
 
 而如果`flag`变量**没有**用`volatile`修饰，在step 2，线程A的本地内存里面的变量就不会立即更新到主内存，那随后线程B也同样不会去主内存拿最新的值，仍然使用线程B本地内存缓存的变量的值`a = 0，flag = false`。
 
@@ -95,7 +95,7 @@ public class VolatileExample {
 * 在每个volatile读操作后再插入一个LoadStore屏障。
 
 大概示意图是这个样子：
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/深入浅出Java多线程/8/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/深入浅出Java多线程/8/2.png)
 
 > 再逐个解释一下这几个屏障。注：下述Load代表读操作，Store代表写操作
 >

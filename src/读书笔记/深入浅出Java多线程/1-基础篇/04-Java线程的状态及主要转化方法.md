@@ -13,7 +13,7 @@ location: BeiJing
 
 > 在现在的操作系统中，线程是被视为轻量级进程的，所以**操作系统线程的状态其实和操作系统进程的状态是一致的**。
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/深入浅出Java多线程/4/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/深入浅出Java多线程/4/1.png)
 
 操作系统线程主要有以下三个状态：
 
@@ -187,7 +187,7 @@ public static State toThreadState(int var0) {
 ## 4.3 线程状态的转换
 
 根据上面关于线程状态的介绍我们可以得到下面的**线程状态转换图**： 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/深入浅出Java多线程/4/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/深入浅出Java多线程/4/2.png)
 
 ### 4.3.1 BLOCKED与RUNNABLE状态的转换
 

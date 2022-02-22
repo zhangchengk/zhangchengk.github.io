@@ -1,5 +1,5 @@
 ---
-title: MySQL全字段测试(NIFI 1.15.3)
+title: MySQL全字段读写测试(NIFI 1.15.3)
 date: 2022-02-10
 category: ApacheNIFI教程
 tags: 
@@ -7,7 +7,6 @@ tags:
 author: 张诚
 location: BeiJing
 ---
-
 
 ## 准备
 
@@ -171,13 +170,303 @@ VALUES
 | c_json | Y | Y |
 
 
-### 读数据结果
+### 读数据结果及不支持字段
 
 avro.schema
 ```json
-{"type":"record","name":"nifiRecord","namespace":"org.apache.nifi","fields":[{"name":"c_bit","type":["null","boolean"]},{"name":"c_bit_m","type":["null","boolean"]},{"name":"c_tinyint","type":["null","int"]},{"name":"c_bool","type":["null","int"]},{"name":"c_smallint","type":["null","int"]},{"name":"c_mediumint","type":["null","int"]},{"name":"c_int","type":"int"},{"name":"c_bigint","type":["null","string"]},{"name":"c_decimal","type":["null",{"type":"bytes","logicalType":"decimal","precision":10,"scale":5}]},{"name":"c_float","type":["null","float"]},{"name":"c_double","type":["null","double"]},{"name":"c_date","type":["null",{"type":"int","logicalType":"date"}]},{"name":"c_datetime","type":{"type":"long","logicalType":"timestamp-millis"}},{"name":"c_timestamp","type":{"type":"long","logicalType":"timestamp-millis"}},{"name":"c_time","type":["null",{"type":"int","logicalType":"time-millis"}]},{"name":"c_year","type":["null",{"type":"int","logicalType":"date"}]},{"name":"c_char","type":["null","string"]},{"name":"c_varchar","type":["null","string"]},{"name":"c_binary","type":["null","bytes"]},{"name":"c_varbinary","type":["null","bytes"]},{"name":"c_tinyblob","type":["null","bytes"]},{"name":"c_tinytext","type":["null","string"]},{"name":"c_blob","type":["null","bytes"]},{"name":"c_text","type":["null","string"]},{"name":"c_mediumblob","type":["null","bytes"]},{"name":"c_mediumtext","type":["null","string"]},{"name":"c_longblob","type":["null","bytes"]},{"name":"c_longtext","type":["null","string"]},{"name":"c_enum","type":["null","string"]},{"name":"c_set","type":["null","string"]},{"name":"c_geometry","type":["null","bytes"]},{"name":"c_point","type":["null","bytes"]},{"name":"c_linestring","type":["null","bytes"]},{"name":"c_polygon","type":["null","bytes"]},{"name":"c_multipoint","type":["null","bytes"]},{"name":"c_multilinestring","type":["null","bytes"]},{"name":"c_multipolygon","type":["null","bytes"]},{"name":"c_geometrycollection","type":["null","bytes"]},{"name":"c_json","type":["null","string"]}]}
+{
+    "type": "record",
+    "name": "nifiRecord",
+    "namespace": "org.apache.nifi",
+    "fields": [
+        {
+            "name": "c_bit",
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        {
+            "name": "c_bit_m",
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        {
+            "name": "c_tinyint",
+            "type": [
+                "null",
+                "int"
+            ]
+        },
+        {
+            "name": "c_bool",
+            "type": [
+                "null",
+                "int"
+            ]
+        },
+        {
+            "name": "c_smallint",
+            "type": [
+                "null",
+                "int"
+            ]
+        },
+        {
+            "name": "c_mediumint",
+            "type": [
+                "null",
+                "int"
+            ]
+        },
+        {
+            "name": "c_int",
+            "type": "int"
+        },
+        {
+            "name": "c_bigint",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "c_decimal",
+            "type": [
+                "null",
+                {
+                    "type": "bytes",
+                    "logicalType": "decimal",
+                    "precision": 10,
+                    "scale": 5
+                }
+            ]
+        },
+        {
+            "name": "c_float",
+            "type": [
+                "null",
+                "float"
+            ]
+        },
+        {
+            "name": "c_double",
+            "type": [
+                "null",
+                "double"
+            ]
+        },
+        {
+            "name": "c_date",
+            "type": [
+                "null",
+                {
+                    "type": "int",
+                    "logicalType": "date"
+                }
+            ]
+        },
+        {
+            "name": "c_datetime",
+            "type": {
+                "type": "long",
+                "logicalType": "timestamp-millis"
+            }
+        },
+        {
+            "name": "c_timestamp",
+            "type": {
+                "type": "long",
+                "logicalType": "timestamp-millis"
+            }
+        },
+        {
+            "name": "c_time",
+            "type": [
+                "null",
+                {
+                    "type": "int",
+                    "logicalType": "time-millis"
+                }
+            ]
+        },
+        {
+            "name": "c_year",
+            "type": [
+                "null",
+                {
+                    "type": "int",
+                    "logicalType": "date"
+                }
+            ]
+        },
+        {
+            "name": "c_char",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "c_varchar",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "c_binary",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_varbinary",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_tinyblob",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_tinytext",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "c_blob",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_text",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "c_mediumblob",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_mediumtext",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "c_longblob",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_longtext",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "c_enum",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "c_set",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "c_geometry",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_point",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_linestring",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_polygon",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_multipoint",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_multilinestring",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_multipolygon",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_geometrycollection",
+            "type": [
+                "null",
+                "bytes"
+            ]
+        },
+        {
+            "name": "c_json",
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    ]
+}
 ```
-
+读取数据结果展示：
 ```json
 [ {
   "c_bit" : false,
@@ -224,6 +513,7 @@ avro.schema
 
 #### bit(m) m>1
 
+报错日志
 ```log
 2022-02-10 07:50:33,530 ERROR [Timer-Driven Process Thread-4] o.a.n.p.standard.ExecuteSQLRecord ExecuteSQLRecord[id=e297af85-017e-1000-33fd-32eea74adb5e] Unable to execute SQL select query SELECT * FROM test WHERE c_int <= 5 ORDER BY c_int LIMIT 10000 for StandardFlowFileRecord[uuid=2303cacc-c84b-455e-ae02-58fc9d3f8792,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1644479395111-1, container=default, section=1], offset=0, length=62],offset=0,name=2303cacc-c84b-455e-ae02-58fc9d3f8792,size=62] due to org.apache.nifi.processor.exception.ProcessException: java.io.IOException: org.apache.nifi.serialization.record.util.IllegalTypeConversionException: Cannot convert value [[B@2ab9022f] of type class [B to Boolean for field c_bit_m; routing to failure: org.apache.nifi.serialization.record.util.IllegalTypeConversionException: Cannot convert value [[B@2ab9022f] of type class [B to Boolean for field c_bit_m
 ↳ causes: java.io.IOException: org.apache.nifi.serialization.record.util.IllegalTypeConversionException: Cannot convert value [[B@2ab9022f] of type class [B to Boolean for field c_bit_m
@@ -273,12 +563,13 @@ Caused by: org.apache.nifi.serialization.record.util.IllegalTypeConversionExcept
 
 实际存储精度可达到微妙级别，但读取出来的数据最多到毫秒。有可能丢失精度。
 
-### 写数据结果
+### 写数据结果及不支持字段
 
 ![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/037/5.png)
 
 #### year
 
+报错日志
 ```log
 2022-02-10 11:01:28,626 ERROR [Timer-Driven Process Thread-9] o.a.n.p.standard.PutDatabaseRecord PutDatabaseRecord[id=e29c741b-017e-1000-9b5f-741c90f15ca5] Failed to put Records to database for StandardFlowFileRecord[uuid=1468e8c8-f3a6-4b24-bc3d-552c914be23a,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1644479395111-1, container=default, section=1], offset=3603, length=1691],offset=0,name=711bd6ec-9ffa-47fd-a995-a18c29c2da61,size=1691]. Routing to failure.: java.sql.BatchUpdateException: Data truncated for column 'c_year' at row 1
 java.sql.BatchUpdateException: Data truncated for column 'c_year' at row 1
@@ -334,6 +625,7 @@ Caused by: java.sql.SQLException: Data truncated for column 'c_year' at row 1
 
 `GEOMETRY` `POINT` `LINESTRING` `POLYGON` `MULTIPOINT` `MULTILINESTRING` `MULTIPOLYGON` `GEOMETRYCOLLECTION`
 
+报错日志
 ```log
 2022-02-10 11:04:08,004 ERROR [Timer-Driven Process Thread-5] o.a.n.p.standard.PutDatabaseRecord PutDatabaseRecord[id=e29c741b-017e-1000-9b5f-741c90f15ca5] Failed to put Records to database for StandardFlowFileRecord[uuid=880102bf-77d1-43ae-af79-64feb9adc184,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1644479395111-1, container=default, section=1], offset=5334, length=1691],offset=0,name=12ba4906-c3bc-4e7a-86ff-7d2065596e16,size=1691]. Routing to failure.: java.sql.BatchUpdateException: Data truncation: Cannot get geometry object from data you send to the GEOMETRY field
 java.sql.BatchUpdateException: Data truncation: Cannot get geometry object from data you send to the GEOMETRY field
@@ -386,13 +678,15 @@ Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Cannot get geome
 
 #### varbinary
 
-原表值是`abcde`，到目标表值是`[Ljava.lang.Object;@626e64ed`
+原表值是`abcde`，到目标表值是`[Ljava.lang.Object;@626e64ed`。对比看到写到目标表的值是错误的。
 
 #### blob mediumblob longblob
 
 ![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/037/6.png)
 
 ![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/037/7.png)
+
+对比看到写到目标表的值是错误的。
 
 ## 公众号
 
