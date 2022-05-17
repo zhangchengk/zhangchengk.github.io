@@ -31,7 +31,7 @@ Exception 又分为可检查（checked）异常和不检查（unchecked）异常
 
 很多面试官会进一步追问一些细节，比如，你了解哪些 Error、Exception 或者 RuntimeException？我画了一个简单的类图，并列出来典型例子，可以给你作为参考，至少做到基本心里有数。
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/Java核心技术面试精讲/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/Java核心技术面试精讲/2.png)
 
 其中有些子类型，最好重点理解一下，比如 NoClassDefFoundError 和 ClassNotFoundException 有什么区别，这也是个经典的入门题目。
 >NoClassDefFoundError 是个Error，是指一个class在编译时存在，在运行时找不到了class文件了；ClassNotFoundException 是个Exception，是使用类似Class.foName()等方法时的checked exception。

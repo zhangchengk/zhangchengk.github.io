@@ -14,9 +14,9 @@ location: BeiJing
 
 打开任意一个Processsor，在其配置页面SCHEDULING页签我们可以配置它的调度策略，如下图所示：
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/1.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/2.png)
 
 在流程中有一类的Processor的实例是不允许传入FlowFIle的，我们姑且可以称之为`流程源结点`(第一个节点)。这类Processor实例的调度策略只有两种，而其他的Processor实例的调度策略有三种。(注意，这里强调的是Processor实例，有些Processor在`源组件`位置时是两种调度策略，没有Event策略，而当这些Processor不处于`源组件`位置时，它会有三种调度策略)
 
@@ -73,11 +73,11 @@ session.transfer(flowFile, REL_SUCCESS)
 ```
 点击运行后生成了三个流文件
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/3.png)
 
 我们分别来看一下这3个流文件的`Time`属性
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/4.png)
 
 ```
 1591270393098
@@ -108,11 +108,11 @@ nifi.bored.yield.duration=10 millis
 
 看到这里使用过Apache NIFI的人可能会有疑问了，怎么会这样，我们在运行流程的时候，比如下图`UpdateAttribute`设置的每0秒运行一次，它的上游Connection是空的，**我们观察它并没有被调度啊？**(组件方块右上角根本没有显示任何数字)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/5.png)
 
 然后我们要明确一点，Processor右上角的那个数字的含义是`Active Tasks`
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/6.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/6.png)
 
 >`Active Tasks`：**该处理器**当前正在执行的任务数(有几个任务在调用Processor的onTrigger方法)。此数字受Processor配置对话框的`Scheduling`选项卡中的`Concurrent tasks`设置约束。在这里，我们可以看到处理器当前正在执行一项任务。如果NiFi实例是集群的，则此值表示集群中所有节点上当前正在执行的任务数。
 
@@ -173,11 +173,11 @@ session.transfer(flowFile, REL_SUCCESS)
 
 然后在`ExecuteGroovyScript`上游添加一个组件`GenerateFlowFile`用于生成流文件。这是持续一段时间后的截图，我们观察组件右上角并没有日志输出表明这个组件的onTrigger并没有被调用
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/7.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/7.png)
 
 作为对比，我们发送一个流文件，就能观察到日志输出：
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/8.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/8.png)
 
 总结一下：我们配置了处理器每0秒运行一次，但当Processor没有工作要做时，它会等`10 millis`然后再**检查**一次是否有工作要做，是不会触发Processor运行任务的(不会调Processor的onTrigger方法)。
 
@@ -189,9 +189,9 @@ session.transfer(flowFile, REL_SUCCESS)
 
 首先我们看到，一个叫`ConnectableTask`的实例会去调用`StandardProcessorNode`的`onTrigger`方法，执行的地方叫`invoke()`
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/9.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/9.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/10.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/10.png)
 
 而调用`ConnectableTask`的`invoke()`方法的有两个agent：`QuartzSchedulingAgent`对应**CRON driven** `TimerDrivenSchedulingAgent`对应**Timer driven**。先不管agent,在`invoke()`方法会调用`isWorkToDo()`来判断这个组件实例是否有工作要做。
 
@@ -346,7 +346,7 @@ private Runnable createTrigger(final ConnectableTask connectableTask, final Life
 
 在NIFI中我们设置有且只有4个正在运行的但不处理数据的Processor，如图：
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/11.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/11.png)
 
 按照下面四个步骤修改一下代码：
 
@@ -391,15 +391,15 @@ if (noWorkYieldNanos > 0L && invocationResult.isYield()) {
 
 编译后运行日志截图如下:
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/13.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/13.png)
 
 使用PostMan做Get请求结果如图：
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/14.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/14.png)
 
 如果我们不按第四步修改代码，日志会很快很快的打印`当前组件没有工作可以做，进入当前处理逻辑，防止处理太快我们查不到正在运行的线程，我们睡眠2秒`,并且我们通过Rest接口查询的结果通常就是0
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/12.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/12.png)
 
 源码分析与动手验证都证实了我们之前的结论，当这个组件启动但是没有处理数据，检测这个组件有没有工作可做也是占用线程池的一部分资源的。
 
@@ -414,9 +414,9 @@ if (noWorkYieldNanos > 0L && invocationResult.isYield()) {
 
 动手验证很简单，基于疑问5搭建的验证场景，我们将四个运行的组件变成一个，这个组件运行的周期设置为`1000 sec`。然后我们观察日志，如果日志输出的多条日志之间是1000多秒，那么证明我们上面说的结论是错误的，如果日志之间是2秒多，那么说明`检测`组件是否有工作的动作的频率应该还是10ms。
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/15.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/15.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/16.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/16.png)
 
 总结一下：检测组件是否有工作的动作的周期是与组件配置的周期时间无关的，默认的就是10ms
 
@@ -578,7 +578,7 @@ try {
 session.transfer(flowFile, REL_SUCCESS)
 ```
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/19.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/19.png)
 
 我们得到4个流文件，一下依次是每个流文件的Time属性值
 ```
@@ -603,9 +603,9 @@ session.transfer(flowFile, REL_SUCCESS)
 
 如果我们选择了`Event driven`，我们会看到`Concurrent tasks`的默认值变成了0.这里我们测试配置`Concurrent tasks`为2会不会生效。
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/17.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/17.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/016/18.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/016/18.png)
 
 我们看到`Concurrent tasks`配置成2是有效的。
 

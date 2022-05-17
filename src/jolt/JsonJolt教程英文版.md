@@ -202,11 +202,11 @@ This part of the content is in the study of part of the source code and practice
 Jolt in shiftr, when processing input according to Spec, keeps a dynamic WalkedPath at all times, which is generally a linkedList.As a new match calculation operation, the current information (including a refTree, which is a reference to the input json, and a subKey, which is the key value matched) is saved to the WalkedPath。When the calculation is completed at the leaf node in the Spec tree(including the matching calculation and the output calculation),the current stored information is removed from the WalkedPath.Although the outer layer of the WalkedPath is a linked list, drawing the entire WalkedPath path becomes a tree because of wildcards, multiple matches at the same level, and so on (recursion is in the code).
 
 For example, we saw an &1 in the above example, and & means to take the key value of the corresponding node, as explained below.Based on the example above, let's draw the WalkedPathTree when we first compute to &1
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/20.jpg)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/20.jpg)
 Here is a screenshot of the program from debug to the first time it was calculated to &1:
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/18.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/18.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/19.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/19.png)
 
 
 
@@ -252,7 +252,7 @@ Spec:
   }
 ]
 ```
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/20.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/20.png)
 
 '*' wildcard as part of a key:
 
@@ -277,7 +277,7 @@ Spec:
 
 ```
 output:
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/21.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/21.png)
 
 #### '&'wildcard
 
@@ -307,7 +307,7 @@ Spec:
 ]
 ```
 output：
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/1.png)
 
 '&' Path lookup：As Shiftr processes data and walks down the spec, it maintains a data structure describing the path it has walked.The '&' wildcard can access data from that path in a 0 major, upward oriented way.
 ```json
@@ -443,9 +443,9 @@ output json:
 Jolt demo said '#2 means go three levels up the tree (count from 0)'.But I think 'three levels up' is ambiguous, WalkedPath is an array, starting from 0, assuming the length is 5, then the index corresponding to 'two levels up' is labeled 5-1-2 = 2 ,So I think 'two levels up' is actually the best way to read it.
 
 The key parts of the source code are as follows:
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/17.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/17.png)
 Hand-drawn drawings of walkedPathTree are as follows:
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/18.jpg)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/18.jpg)
 
 #### '|'Wildcard
 
@@ -488,19 +488,19 @@ Thus the '@' wildcard is the mean "copy the value of the data at this level in t
 Advanced '@' sign wildcard.The format is lools like "@(3,title)", where  "3" means go up the WalkedPath tree 3 levels and then lookup the key  "title" and use the value at that key.
 
 eg：
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/2.png)
 
 Debug screenshot when calculating @(2,test)：
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/13.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/13.png)
 
 Then, at the end of the calculation @(2,test2), walkedPathTree adds another level (in fact, @(2,test2), @(3,test2) returns treeRef at level 1 and treeRef at level 0, both subtrees are the root node, the effect is the same, as shown below :)
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/15.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/15.png)
 
 Replace @(2,test2) with @(3,test2) and the result is the same:
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/16.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/16.png)
 
 The @ alone is equivalent to @0:
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/12.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/12.png)
 
 
 Examples of @ wildcard in RHS:
@@ -728,7 +728,7 @@ Spec
   }
 }
 ```
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/3.png)
 
 ### wildcard 
 
@@ -816,7 +816,7 @@ Spec：
   }
 }
 ```
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/4.png)
 
 ### Wildcard
 
@@ -860,7 +860,7 @@ Spec:
   }
 }
 ```
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/5.png)
 
 '*' wildcard as part of a key :
 ```json
@@ -913,14 +913,14 @@ desired oiuput json:
 }
 
 ```
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/6.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/6.png)
 
 Here are two more examples of matching array indexes:
 
 Delete one member of each element of the array:
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/7.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/7.png)
 Remove array elements with index 0:
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/8.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/8.png)
 
 ## cardinality
 
@@ -960,7 +960,7 @@ output:
   }
 }
 ```
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/9.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/9.png)
 
 ### Wildcards
 
@@ -1003,7 +1003,7 @@ Note this will make a copy of the input Map and List objects.
 
 The sort order is standard alphabetical ascending, with a special case for "~" prefixed keys to be bumped to the top.
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/10.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/10.png)
 
 ## modify
 
@@ -1248,7 +1248,7 @@ Example：
     }
 }
 ```
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/11.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/11.png)
 
 Let's take another example of a slightly more complicated practical Issue I saw on the JOLT GitHub Issue(<a href="https://github.com/bazaarvoice/jolt/issues/900">Conditional based on a input field #900</a>)
 
@@ -1361,7 +1361,7 @@ The Spec scheme I have given is as follows. This Spec concatenates the three ope
 
 ```
 result：
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/jolt/22.png)
+![](https://gitee.com/zhangchengk/img/raw/master/jolt/22.png)
 
 ## Java call
 

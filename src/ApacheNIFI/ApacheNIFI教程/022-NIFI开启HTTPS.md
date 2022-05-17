@@ -20,21 +20,21 @@ location: BeiJing
 
 1. 使用内外穿透工具 花生壳(自行下载安装)，获取映射到本地的一个域名。
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/022//1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/022//1.png)
 
 2. 带着这个域名去[来此加密](https://letsencrypt.osfipin.com/)上申请一个正式的证书(3个月得有效期)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/022//2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/022//2.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/022//3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/022//3.png)
 
 3. 本地起一个简单的80端口的Spring Boot ,做一个Get请求
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/022//4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/022//4.png)
 
 4. 验证成功后获取证书
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/022//5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/022//5.png)
 
 5. 生产jks文件
 
@@ -174,9 +174,9 @@ authorizers.xml修改
 
 启动NIFI 即可进入登录页面 root/admin 开始使用用户管理模块 权限管理模块
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/022//6.png)
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/022//7.png)
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/022//8.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/022//6.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/022//7.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/022//8.png)
 
 
 ## 公众号

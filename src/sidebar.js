@@ -1,6 +1,6 @@
 const fs = require('fs')
 /* 
-![](https://gitee.com/zhangchengk/image/raw/master/
+![](https://gitee.com/zhangchengk/img/raw/master/
 1. fs.stat  检测是文件还是目录(目录 文件是否存在) 
 2. fs.mkdir  创建目录 （创建之前先判断是否存在） 
 3. fs.writeFile  写入文件(文件不存在就创建,但不能创建目录) 

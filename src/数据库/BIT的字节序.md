@@ -65,15 +65,15 @@ protected Object convertBits(Column column, Field fieldDefn, Object data, int nu
 
 ## MySQL bit 字节序
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/数据库/字节序/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/数据库/字节序/1.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/数据库/字节序/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/数据库/字节序/2.png)
 
 MySQL通过JDBC读取到的是大端字节序`[1,3]`。
 
 再查看binlog日志解析得到的`byte[]`得到的是小端字节序`[3,1]`
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/数据库/字节序/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/数据库/字节序/5.png)
 
 >之前用的解析binlog的第三方jar都是
 >```xml
@@ -100,12 +100,12 @@ SQL Server的bit就只能存1,0 NULL。
 
 ## Postgre SQL
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/数据库/字节序/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/数据库/字节序/3.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/数据库/字节序/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/数据库/字节序/4.png)
 
 Pg(Gp)通过JDBC读取到的是大端字节序`[1,3]`。
 
 通过插槽CDC获得是小端字节序`[3,1]`
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/数据库/字节序/6.png)
+![](https://gitee.com/zhangchengk/img/raw/master/数据库/字节序/6.png)

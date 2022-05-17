@@ -13,8 +13,8 @@ location: BeiJing
 ## onTrigger 
 
 我们自定义Processor时最常用的是继承AbstractProcessor，首先看一下AbstractProcessor的继承关系:
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/003/1.png)
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/003/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/003/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/003/2.png)
 
 ```java
 public abstract class AbstractProcessor extends AbstractSessionFactoryProcessor {
@@ -42,7 +42,7 @@ public abstract class AbstractProcessor extends AbstractSessionFactoryProcessor 
 我们先看在画布上拖拽出一个新的Processor会发什么。
 
 在浏览器中创建一个Processor我们可以看到调用的API是
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/003/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/003/3.png)
 源码(部分省略)ProcessGroupResource.java如下：
 ```java 
     /**
@@ -285,11 +285,11 @@ AbstractSessionFactoryProcessor源码中init方法是留给子类去覆盖实现
     }
 ```
 我们知道在组件(Processor，ControllerService，ReportingTask)的属性配置中右上角会有一个加号，点击加号会增加一行配置
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/003/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/003/4.png)
 首先，每个组件都是支持这个自定义添加属性，我们都是能够点击加号增加一行的，只是有没有意义而已。我们手动点击加号填写的东西都会传到后台，由后台逻辑来判断它有没有意义
 
 比如我们点击加号后点击apply，会先发出一个Get请求,这个过程会有调用getSupportedDynamicPropertyDescriptor()方法
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/003/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/003/5.png)
 返回的json
 ```json
 {

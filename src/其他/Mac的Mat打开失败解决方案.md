@@ -10,11 +10,11 @@ location: BeiJing
 
 1.右键进入软件包内容
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/其他/005/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/其他/005/1.png)
 
 2.进入目录下(如图所示)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/其他/005/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/其他/005/2.png)
 
 3.打开命令终端 输入
 

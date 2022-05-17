@@ -120,7 +120,7 @@ sudo yum install docker-ce-3:19.03.9-3.el7 docker-ce-cli-3:19.03.9-3.el7 contain
 sudo systemctl start docker
 ```
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/镜像/k8s/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/镜像/k8s/1.png)
 
 ### 安装 kubeadm、kubelet 和 kubectl
 
@@ -156,7 +156,7 @@ sudo systemctl enable --now kubelet
 >通过运行命令 setenforce 0 和 sed ... 将 SELinux 设置为 permissive 模式 可以有效地将其禁用。 这是允许容器访问主机文件系统所必需的，而这些操作时为了例如 Pod 网络工作正常。你必须这么做，直到 kubelet 做出对 SELinux 的支持进行升级为止。
 >如果你知道如何配置 SELinux 则可以将其保持启用状态，但可能需要设定 kubeadm 不支持的部分配置
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/镜像/k8s/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/镜像/k8s/3.png)
 
 配置 Docker 守护程序，尤其是使用 systemd 来管理容器的 cgroup。
 
@@ -207,7 +207,7 @@ cgroupDriver: systemd
 kubeadm init --config kubeadm-config.yaml
 ```
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/镜像/k8s/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/镜像/k8s/4.png)
 
 >Kubeadm 对集群所有的节点，使用相同的 KubeletConfiguration。 KubeletConfiguration 存放于 kube-system 命名空间下的某个 ConfigMap 对象中。
 >执行 init、join 和 upgrade 等子命令会促使 kubeadm 将 KubeletConfiguration 写入到文件 /var/lib/kubelet/config.yaml 中， 继而把它传递给本地节点的 kubelet。

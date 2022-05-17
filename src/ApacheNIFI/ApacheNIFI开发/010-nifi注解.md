@@ -11,7 +11,7 @@ location: BeiJing
 阅读这篇文章之前如果对Java注解没有什么深入了解，建议看一看java注解
 
 开始之前，看一下源码结构，nifi的注解都是在nifi-api moudle中的。
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/010/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/010/1.png)
 从截图中可以看出，nifi自定义的注解主要有5类
 
 * behavior 行为类，指明一个组件应该有什么样的行为
@@ -483,7 +483,7 @@ public @interface Restricted {
 public class InvokeScriptedProcessor extends AbstractSessionFactoryProcessor {
 ```
 这类组件在UI上会有一个特殊的标记
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/010/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/010/2.png)
 
 ### SupportsBatching
 
@@ -502,7 +502,7 @@ public @interface SupportsBatching {
 }
 ```
 这里额外提一点，比如SplitText有这个注解，那么可以配置批处理持续时间来提高吞吐量
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/1/010/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/010/3.png)
 
 
 ### SideEffectFree

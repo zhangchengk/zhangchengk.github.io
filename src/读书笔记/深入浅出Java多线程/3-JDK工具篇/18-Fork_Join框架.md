@@ -80,7 +80,8 @@ public final ForkJoinTask<V> fork() {
 ```java
 public final V join() {
     int s;
-    // doJoin()方法来获取当前任务的执行状态if ((s = doJoin() & DONE_MASK) != NORMAL)
+    // doJoin()方法来获取当前任务的执行状态
+    if ((s = doJoin() & DONE_MASK) != NORMAL)
         // 任务异常，抛出异常
         reportException(s);
     // 任务正常完成，获取返回值

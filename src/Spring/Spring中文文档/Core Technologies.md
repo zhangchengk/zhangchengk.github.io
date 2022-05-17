@@ -44,7 +44,7 @@ Spring提供几个开箱即用的`ApplicationContext`接口的实现类。在独
 在大多数的应用程序中,并不需要用显式的代码去实例化一个或多个的Spring IoC 容器实例。比如在web应用场景中,在`web.xml`中简单的8行(或多点)样板式的xml配置文件就可以搞定(参见[ApplicationContext在WEB应用中的实例化](#_1-15-4-applicationcontext在web应用中的实例化))。如果你正在使用Eclipse开发环境中的[Spring Tool Suite](https://spring.io/tools/sts)插件,你只需要鼠标点点或者键盘敲敲就能轻松搞定这几行配置。
 
 下图显示了Spring的工作原理。你的应用程序中的`类`与`配置元数据`结合在一起,以便在创建和初始化`ApplicationContext`之后,你将拥有一个完全配置且可执行的系统或应用程序。
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/spring中文文档/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/spring中文文档/1.png)
 
 #### 1.2.1. 配置元数据
 
@@ -1270,7 +1270,7 @@ public class ReplacementComputeValue implements MethodReplacer {
 
 当一个bean的作用域为singleton, 那么Spring IoC容器中只会存在一个共享的bean实例，并且所有对bean的请求，只要id与该bean定义相匹配，则只会返回bean的同一实例。换言之，当把一个bean定义设置为singlton作用域时，Spring IoC容器只会创建该bean定义的唯一实例。这个单一实例会被存储到单例缓存（singleton cache）中，并且所有针对该bean的后续请求和引用都将返回被缓存的对象实例。
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/spring中文文档/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/spring中文文档/2.png)
 
 请注意Spring的singleton bean概念与"Gang of Four"（GoF）模式一书中定义的Singleton模式是完全不同的。经典的GoF Singleton模式中所谓的对象范围是指在每一个ClassLoader中指定class创建的实例有且仅有一个。把Spring的singleton作用域描述成一个container对应一个bean实例最为贴切。亦即，假如在单个Spring容器内定义了某个指定class的bean，那么Spring容器将会创建一个且仅有一个由该bean定义指定的类实例。Singleton作用域是Spring中的缺省作用域。要在XML中将bean定义成singleton，可以这样配置：
 ```xml
@@ -1284,7 +1284,7 @@ public class ReplacementComputeValue implements MethodReplacer {
 
 Prototype作用域的bean会导致在每次对该bean请求（将其注入到另一个bean中，或者以程序的方式调用容器的getBean()方法）时都会创建一个新的bean实例。根据经验，对有状态的bean应该使用prototype作用域，而对无状态的bean则应该使用singleton作用域。下图演示了Spring的prototype作用域。请注意，通常情况下，DAO不会被配置成prototype，因为DAO通常不会持有任何会话状态，因此应该使用singleton作用域。
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/spring中文文档/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/spring中文文档/3.png)
 
 要在XML中将bean定义成prototype，可以这样配置：
 ```xml

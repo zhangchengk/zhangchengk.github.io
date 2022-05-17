@@ -8,8 +8,8 @@ action:
 
 features:
 
-  - title: 进程与线程基本概念 🍇
-    details: 进程与线程基本概念 🍉
+  - title: spring-retry 🍇
+    details: spring-retry 🍉
     link: /读书笔记/深入浅出Java多线程/1-基础篇/01-进程与线程基本概念
 
 #   - title: Java多线程入门类和接口 🍋

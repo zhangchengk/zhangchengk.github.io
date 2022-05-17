@@ -30,11 +30,11 @@ location: BeiJing
 
 总而言之，言而总之，就是要 `唯一`、`唯一`、还是`唯一`。（我习惯直接使用当前的Long型的时间戳填进去。）并且是合格的long值，因为代码里对这个配置进行了Long值校验。
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/032/1.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/032/1.png)
 
 那我不唯一能咋地？能咋地？(这里就是贱贱的反问，不是打错字)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/032/2.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/032/2.png)
 
 还能咋地，报错呗。
 
@@ -52,13 +52,13 @@ location: BeiJing
 
 答案你可能想不到！真相只有一个！NIFI关于CaptureChangeMySQL组件功能描述没写全！！ 惊不惊喜？意不意外？
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/032/3.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/032/3.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/032/4.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/032/4.png)
 
 什么？正则表达式怎么写？？
 
-![](https://gitee.com/zhangchengk/img/raw/master/img//Users/zhangcheng/vscodeProjects/image/nifi/032/5.png)
+![](https://gitee.com/zhangchengk/img/raw/master/nifi/032/5.png)
 
 我也记不住，复杂点的也是查教程，然后试着试着就写出来了。
 
