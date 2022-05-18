@@ -5,7 +5,7 @@ module.exports = config({
   title: "Panda诚的博客",
   description: "古来圣贤皆贫贱 何况我辈孤且直",
   base: "/",
-  dest: "./dist",
+  dest: "./docs",
   
   // remove this if you are not using Vue and React in "markdownEnhance: code demo"
   head: [
@@ -22,7 +22,7 @@ module.exports = config({
 
   themeConfig: {
     logo: '/panda.gif',
-    hostname: "https://zhangchengk.gitee.io/",
+    hostname: "https://zhangchengk.github.io/",
     feed: false,
     nav: [
       { text: "Home", link: "/", icon: "home" },
@@ -40,7 +40,7 @@ module.exports = config({
       intro: "/about/intro/",
       sidebarDisplay: "mobile",
       links: {
-        Gitee: "https://gitee.com/zhangchengk",
+        github: "https://github.com/zhangchengk",
         QQ: "/about/qq",
         Wechat: "/about/wechat",
         // Csdn: "https://blog.csdn.net/weixin_36048246"

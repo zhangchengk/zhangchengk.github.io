@@ -12,7 +12,7 @@ location: BeiJing
 
 国内拉取源码还是建议用码云
 ```
-git clone -b master git@gitee.com:mirrors/nifi.git
+git clone -b master git@github.com:mirrors/nifi.git
 ```
 
 如果网络环境(翻的速度也很好)很好，那可以直接用IDE打开项目，构建maven项目。
@@ -190,19 +190,19 @@ git clone -b master git@gitee.com:mirrors/nifi.git
 
 搜一下
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/001/1.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/1/001/1.png)
 
 一般使用[https://mvnrepository.com/](https://mvnrepository.com/),查询缺失的jar，在Note找到对应的仓库就可以了。
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/001/2.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/1/001/2.png)
 
 但org.mortbay.jetty:jetty:jar:6.1.26.cloudera.4，在Spring Plugins repository (https://repo.spring.io/plugins-release/)里找不到，在Cloudera 3rd-P里可以找到。
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/001/3.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/1/001/3.png)
 
 或者直接搜到的Cloudera仓库
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/1/001/4.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/1/001/4.png)
 
 大体上就是这么个思路。
 
@@ -210,4 +210,4 @@ git clone -b master git@gitee.com:mirrors/nifi.git
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

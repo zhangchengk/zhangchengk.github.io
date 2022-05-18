@@ -109,19 +109,19 @@ VALUES
 ```
 
 原表数据(blob和text就不展示出来了)
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/037/4.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/037/4.png)
 
 ## 创建测试FLOW
 
 搭建一个简单的测试flow如下
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/037/1.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/037/1.png)
 
 查询原表数据组件配置如下
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/037/2.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/037/2.png)
 
 执行写入目标表组件配置如下
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/037/3.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/037/3.png)
 
 ## 测试
 
@@ -565,7 +565,7 @@ Caused by: org.apache.nifi.serialization.record.util.IllegalTypeConversionExcept
 
 ### 写数据结果及不支持字段
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/037/5.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/037/5.png)
 
 #### year
 
@@ -682,9 +682,9 @@ Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Cannot get geome
 
 #### blob mediumblob longblob
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/037/6.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/037/6.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/037/7.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/037/7.png)
 
 对比看到写到目标表的值是错误的。
 
@@ -692,4 +692,4 @@ Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Cannot get geome
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

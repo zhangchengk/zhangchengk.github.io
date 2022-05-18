@@ -16,12 +16,12 @@ icon: info
 目前也初试牛刀，本着开源精神，促进自我学习进步，也做了一丢丢的开源工作：
 
 - Apache NIFI Contributor(修改BUG、检验修改一些文档、提价新组件、参与一些review和dev讨论)
-- [NIFI中文资料传送门](https://nifichina.gitee.io/)
-- [Gitee Pages自动部署Java版](https://gitee.com/zhangchengk/autodeploy)
+- [NIFI中文资料传送门](https://nifichina.github.io/)
+- [github Pages自动部署Java版](https://github.com/zhangchengk/autodeploy)
 - [vscode插件md-color](https://github.com/KuKuDeCheng/md-color)
-- [NIFI自定义开发代码结构规范](https://gitee.com/zhangchengk/custom-nar-bundles) 这是一个NIFI Maven子项目，用于自定义开发，减少对源码结构的侵入，方便NIFI升级 
+- [NIFI自定义开发代码结构规范](https://github.com/zhangchengk/custom-nar-bundles) 这是一个NIFI Maven子项目，用于自定义开发，减少对源码结构的侵入，方便NIFI升级
 - 个人公众号
   
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
 
 希望自己在技术的路上，能保持初心，积极向上，勇于探索，永不放弃！

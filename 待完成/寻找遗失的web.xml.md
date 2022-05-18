@@ -13,7 +13,7 @@ publish: false
 
 今天我们来放松下心情，不聊分布式，云原生，来聊一聊初学者接触的最多的 java web 基础。几乎所有人都是从 servlet，jsp，filter 开始编写自己的第一个 hello world 工程。那时，还离不开 web.xml 的配置，在 xml 文件中编写繁琐的 servlet 和 filter 的配置。随着 spring 的普及，配置逐渐演变成了两种方式—java configuration 和 xml 配置共存。现如今，springboot 的普及，java configuration 成了主流，xml 配置似乎已经“灭绝”了。不知道你有没有好奇过，这中间都发生了哪些改变，web.xml 中的配置项又是被什么替代项取代了？  
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/寻找遗失的web.xml/1.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/寻找遗失的web.xml/1.png)
 
 ### servlet3.0 以前的时代
 
@@ -106,7 +106,7 @@ public class HelloWorldFilter implements Filter {
 
 ### servlet3.0 新特性
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/寻找遗失的web.xml/2.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/寻找遗失的web.xml/2.png)
 
 Servlet 3.0 作为 Java EE 6 规范体系中一员，随着 Java EE 6 规范一起发布。该版本在前一版本（Servlet 2.5）的基础上提供了若干新特性用于简化 Web 应用的开发和部署。其中一项新特性便是提供了无 xml 配置的特性。
 

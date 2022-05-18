@@ -1,5 +1,5 @@
 ---
-title: Gitee Pages自动部署
+title: github Pages自动部署
 date: 2020-04-14
 category: 其他
 tags: 
@@ -7,13 +7,13 @@ tags:
 author: Panda诚
 location: BeiJing  
 ---
-# 自动部署Gitee Pages
+# 自动部署github Pages
 
-[https://gitee.com/zhangchengk/autodeploy](https://gitee.com/zhangchengk/autodeploy)
+[https://github.com/zhangchengk/autodeploy](https://github.com/zhangchengk/autodeploy)
 
 下载项目
 ```
-git clone -b master git@gitee.com:zhangchengk/autodeploy.git
+git clone -b master git@github.com:zhangchengk/autodeploy.git
 ```
 
 Maven构建项目
@@ -23,7 +23,7 @@ mvn clean package
 
 运行jar包
 ```
-java -DgiteeUserName=你的gitee账号 -DgiteePwd=你的密码 -DgiteeName=你的gitee名词 -DrepoName=仓库名称 -jar autodeploy-jar-with-dependencies.jar
+java -DgithubUserName=你的github账号 -DgithubPwd=你的密码 -DgithubName=你的github名词 -DrepoName=仓库名称 -jar autodeploy-jar-with-dependencies.jar
 ```
 
 # 原理
@@ -33,7 +33,7 @@ java -DgiteeUserName=你的gitee账号 -DgiteePwd=你的密码 -DgiteeName=你�
 # 代码实现
 
 ```java
-package gitee.autodeploy;
+package github.autodeploy;
 
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.NicelyResynchronizingAjaxController;
@@ -63,11 +63,11 @@ import java.util.logging.Level;
 
 
 /**
- * 自动部署Gitee pages
+ * 自动部署github pages
  *
  * @author zhangcheng
  */
-public class GiteeDeployMain {
+public class githubDeployMain {
 
     private static final String PARAMS = "branch=master&build_directory=&force_https=true";
     private static final String LOGIN_XPATH = "/html/body/header/div/div/div[5]/a[1]";
@@ -77,7 +77,7 @@ public class GiteeDeployMain {
 
     private static Map<String, String> header = new HashMap<>(16);
 
-    private static Log log = LogFactory.getLog(GiteeDeployMain.class);
+    private static Log log = LogFactory.getLog(githubDeployMain.class);
 
     static {
         header.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
@@ -88,8 +88,8 @@ public class GiteeDeployMain {
         header.put("Accept-Encoding", "gzip, deflate, br");
         header.put("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7,und;q=0.6,de;q=0.5");
         header.put("Connection", "keep-alive");
-        header.put("Host", "gitee.com");
-        header.put("Origin", "https://gitee.com");
+        header.put("Host", "github.com");
+        header.put("Origin", "https://github.com");
         header.put("Sec-Fetch-Dest", "empty");
         header.put("Sec-Fetch-Mode", "cors");
         header.put("Sec-Fetch-Site", "same-origin");
@@ -98,10 +98,10 @@ public class GiteeDeployMain {
     }
 
     public static void main(String[] args) {
-        log.info("开始自动部署Gitee Pages ...[忽略Gitee登陆警告邮件或微信等信息]");
-        String giteeUserName = System.getProperty("giteeUserName");
-        String giteePwd = System.getProperty("giteePwd");
-        String giteeName = System.getProperty("giteeName");
+        log.info("开始自动部署github Pages ...[忽略github登陆警告邮件或微信等信息]");
+        String githubUserName = System.getProperty("githubUserName");
+        String githubPwd = System.getProperty("githubPwd");
+        String githubName = System.getProperty("githubName");
         String repoName = System.getProperty("repoName");
 
         Set<Cookie> cookies;
@@ -123,9 +123,9 @@ public class GiteeDeployMain {
             webClient.getOptions().setRedirectEnabled(true);
             //允许cookie
             webClient.getCookieManager().setCookiesEnabled(true);
-            log.info("准备使用[" + giteeUserName + "]账号登陆Gitee");
+            log.info("准备使用[" + githubUserName + "]账号登陆github");
             //开始请求网站
-            HtmlPage page = webClient.getPage("https://gitee.com");
+            HtmlPage page = webClient.getPage("https://github.com");
             //点击首页上的登陆按钮，跳转到登陆页面
             HtmlPage loginPage = ((DomElement) page.getByXPath(LOGIN_XPATH).get(0)).click();
             /*
@@ -142,8 +142,8 @@ public class GiteeDeployMain {
             //密码input
             HtmlPasswordInput password = (HtmlPasswordInput) form.getElementsByAttribute("input", "id", "user_password").get(0);
             //设置input的value
-            username.setValueAttribute(giteeUserName);
-            password.setValueAttribute(giteePwd);
+            username.setValueAttribute(githubUserName);
+            password.setValueAttribute(githubPwd);
             //登陆
             HtmlPage home = ((DomElement) loginPage.getByXPath(LOGIN_INPUT_XPATH).get(0)).click();
             log.info("登陆成功，准备自动部署Pages...");
@@ -153,14 +153,14 @@ public class GiteeDeployMain {
             List<BasicClientCookie> cookieList = new ArrayList<>();
             cookies.forEach(c -> {
                 BasicClientCookie cookie = new BasicClientCookie(c.getName(), c.getValue());
-                cookie.setDomain("gitee.com");
+                cookie.setDomain("github.com");
                 cookie.setAttribute(ClientCookie.DOMAIN_ATTR, "true");
                 cookieList.add(cookie);
             });
             String token = list.get(0).getAttribute("content");
             header.put("X-CSRF-Token", token);
-            header.put("Referer", getReferUrl(giteeName, repoName));
-            HttpPost httpPost = new HttpPost(getPostUrl(giteeName, repoName));
+            header.put("Referer", getReferUrl(githubName, repoName));
+            HttpPost httpPost = new HttpPost(getPostUrl(githubName, repoName));
             // 设置参数
             StringEntity stringEntity = new StringEntity(PARAMS, StandardCharsets.UTF_8);
             stringEntity.setContentType("application/x-www-form-urlencoded; charset=UTF-8");
@@ -179,12 +179,12 @@ public class GiteeDeployMain {
         }
     }
 
-    private static String getPostUrl(String giteeName, String repoName) {
-        return String.format("https://gitee.com/%s/%s/pages/rebuild", giteeName, repoName);
+    private static String getPostUrl(String githubName, String repoName) {
+        return String.format("https://github.com/%s/%s/pages/rebuild", githubName, repoName);
     }
 
-    private static String getReferUrl(String giteeName, String repoName) {
-        return String.format("https://gitee.com/%s/%s/pages", giteeName, repoName);
+    private static String getReferUrl(String githubName, String repoName) {
+        return String.format("https://github.com/%s/%s/pages", githubName, repoName);
     }
 
     /**
@@ -223,4 +223,4 @@ public class GiteeDeployMain {
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

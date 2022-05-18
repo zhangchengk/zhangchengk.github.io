@@ -23,4 +23,4 @@ NIFI提供了一套的用户认证权限认证的功能，但这些都是使用H
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

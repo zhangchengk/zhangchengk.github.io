@@ -1100,7 +1100,7 @@
     "@mr-hope/vuepress-types" "1.18.0"
     "@vssue/api-bitbucket-v2" "^1.4.7"
     "@vssue/api-gitea-v1" "^1.4.7"
-    "@vssue/api-gitee-v5" "^1.4.7"
+    "@vssue/api-github-v5" "^1.4.7"
     "@vssue/api-github-v3" "^1.4.7"
     "@vssue/api-github-v4" "^1.4.7"
     "@vssue/api-gitlab-v4" "^1.4.7"
@@ -1621,9 +1621,9 @@
     "@vssue/utils" "^1.4.7"
     axios "^0.21.1"
 
-"@vssue/api-gitee-v5@^1.4.7":
+"@vssue/api-github-v5@^1.4.7":
   version "1.4.7"
-  resolved "https://registry.yarnpkg.com/@vssue/api-gitee-v5/-/api-gitee-v5-1.4.7.tgz#2bb0be18ef131fea109156c6792c16bea22dd4c9"
+  resolved "https://registry.yarnpkg.com/@vssue/api-github-v5/-/api-github-v5-1.4.7.tgz#2bb0be18ef131fea109156c6792c16bea22dd4c9"
   integrity sha512-R2O3sbrMOcIl13+PyNqWBY49u3rX4fZ545kMCvdmuIPzkd5zZp7U0bnOvtkCdk9SSGg2nFu5Tg16PpdtwWj91A==
   dependencies:
     "@vssue/utils" "^1.4.7"

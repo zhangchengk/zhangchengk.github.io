@@ -848,7 +848,7 @@ end
 
 下面的示例中假设我们有两个定义为"myProperty1"和"myProperty2"的属性:
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/023//1.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/023//1.png)
 
 ### 获取一个动态属性的值
 
@@ -994,7 +994,7 @@ oldMap = context.stateManager.getState(Scope::LOCAL).toMap()
 
 ExecuteScript的新实例运行时，StateMap版本将为-1，因此，在一次执行后，如果右键单击ExecuteScript处理器并选择"查看状态"，则应该看到类似以下内容：
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/023//2.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/023//2.png)
 
 Examples:
 
@@ -1094,11 +1094,11 @@ context.stateManager.clear(Scope::LOCAL)
 
 如下所示。这些示例将使用一个名为"distMapClient"的DistributedMapCacheClientService实例(缓存服务)，连接到一个DistributedMapCacheServer实例(标准默认值为localhost：4557，本地启动的一个缓存服务器)，其中该客户端实例的ID为93db6734-0159-1000-b46f-78a8af3b69ed：
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/023//3.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/023//3.png)
 
 在ExecuteScript配置中，创建一个动态属性，称为"clientServiceId"，并将其设置为93db6734-0159-1000-b46f-78a8af3b69ed：
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/023//4.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/023//4.png)
 
 然后，我们可以使用clientServiceId.asControllerService(DistributedMapCacheClient)，方法中的参数是对DistributedMapCacheClient的Class对象的引用。
 
@@ -1209,4 +1209,4 @@ log.info('Result = ' + result)
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

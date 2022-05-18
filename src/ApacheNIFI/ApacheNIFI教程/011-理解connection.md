@@ -16,7 +16,7 @@ NiFi `Connection`是在两个已连接的NiFi处理器组件之间临时保存Fl
 
 首先看一下下面这张说明图
 
-![](https://gitee.com/zhangchengk/img/raw/master/nifi/011/1.png)
+![](https://github.com/zhangchengk/img/raw/master/nifi/011/1.png)
 
 NiFi FlowFiles由FlowFile内容和FlowFile属性/元数据组成。 FlowFile内容永远不会保存在`Connection`中。`Connection`仅将FlowFile属性/元数据放置在堆中。
 
@@ -67,4 +67,4 @@ nifi.queue.swap.threshold=20000
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

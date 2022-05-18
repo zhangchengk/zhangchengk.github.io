@@ -228,7 +228,7 @@ public interface ProvenanceRepository extends ProvenanceEventRepository {
 
 ProvenanceRepository接口实现类
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/ProvenanceRepository/3.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/ProvenanceRepository/3.png)
 
 VolatileProvenanceRepository:存储内存中
 

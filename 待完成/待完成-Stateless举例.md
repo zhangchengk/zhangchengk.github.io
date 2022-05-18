@@ -19,52 +19,52 @@ publish: false
 
 处理器配置中的参数显示为＃{broker} 
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/1.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/1.png)
 
 参数上下文已连接到进程组，控制器服务，...
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/2.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/2.png)
 
 应用这些参数
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/3.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/3.png)
 
 参数（eter）现在是属性的选项
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/4.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/4.png)
 
 使用参数的弹出提示
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/5.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/5.png)
 
 在参数上下文中编辑参数
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/6.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/6.png)
 
 我们也可以在Controller Services中配置参数。
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/7.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/7.png)
 
 选择一个现有的参数。
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/8.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/8.png)
 
 将它们用于可以更改的任何内容，或者你​​不想对其进行硬编码的东西。
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/9.png)
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/10.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/9.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/10.png)
 
 这是一个简单的两步Apache NiFi流程，可从Kafka读取并将输出发送到接收器（例如，文件）。
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/11.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/11.png)
 
 确保我们使用该参数上下文
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/12.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/12.png)
 
 要构建JSON配置文件，你将需要Apache NiFi注册表中的存储区ID和流ID。你还将需要该注册表的URL。你可以使用类似于http：//tspann-mbp15-hw14277：18080的URL浏览该注册表。
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/13.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/13.png)
 
 我的命令：
 ```
@@ -130,11 +130,11 @@ cat output/247361879273711.statelessFlowFile
 
 ```
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/14.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/14.png)
 
 在此示例中，我们还可以运行一次以发送一条Kafka消息。
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/Stateless举例/15.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/Stateless举例/15.png)
 
 命令
 ```

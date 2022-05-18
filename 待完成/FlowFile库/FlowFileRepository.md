@@ -168,7 +168,7 @@ public interface FlowFileRepository extends Closeable {
 
 FlowFileRepository接口实现类
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/FlowFileRepository/2.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/FlowFileRepository/2.png)
 
 WriteAheadFlowFileRepository:预写日志方式 写到文件里
 

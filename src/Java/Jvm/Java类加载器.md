@@ -230,7 +230,7 @@ Thread.currentThread().getContextClassLoader().loadClass(name);
 
 ## ClassLoader继承关系
 
-![](https://gitee.com/zhangchengk/img/raw/master/Java类加载器/ClassLoader.png)
+![](https://github.com/zhangchengk/img/raw/master/Java类加载器/ClassLoader.png)
 
 由上面的继承关系，我们看到ExtClassLoader和AppClassLoader都继承了URLClassLoader，上面还有SecureClassLoader。
 
@@ -242,7 +242,7 @@ ClassLoader是一个抽象类，很多方法是空的没有实现，比如 findC
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
 
 参考：
 

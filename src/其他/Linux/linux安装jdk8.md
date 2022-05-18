@@ -12,7 +12,7 @@ location: BeiJing
 
 官网的就不说了，这里推荐华为云镜像 :https://mirrors.huaweicloud.com/java/jdk/
 
-![](https://gitee.com/zhangchengk/img/raw/master/linux/1.png)
+![](https://github.com/zhangchengk/img/raw/master/linux/1.png)
 
 # 2.源码包解压
 
@@ -69,4 +69,4 @@ Esc --> :wq
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

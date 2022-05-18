@@ -13,24 +13,24 @@ location: BeiJing
 `List`的行为和数组几乎完全相同：`List`内部按照放入元素的先后顺序存放，每个元素都可以通过索引确定自己的位置，`List`的索引和数组一样，从`0`开始。
 
 数组和`List`类似，也是有序结构，如果我们使用数组，在添加和删除元素的时候，会非常不方便。例如，从一个已有的数组`{'A', 'B', 'C', 'D', 'E'}`中删除索引为`2`的元素：
-![](https://gitee.com/zhangchengk/img/raw/master/使用List/1.png)
+![](https://github.com/zhangchengk/img/raw/master/使用List/1.png)
 
 这个“删除”操作实际上是把`'C'`后面的元素依次往前挪一个位置，而“添加”操作实际上是把指定位置以后的元素都依次向后挪一个位置，腾出来的位置给新加的元素。这两种操作，用数组实现非常麻烦。
 
 因此，在实际应用中，需要增删元素的有序列表，我们使用最多的是`ArrayList`。实际上，`ArrayList`在内部使用了数组来存储所有元素。例如，一个ArrayList拥有5个元素，实际数组大小为`6`（即有一个空位）：
-![](https://gitee.com/zhangchengk/img/raw/master/使用List/2.png)
+![](https://github.com/zhangchengk/img/raw/master/使用List/2.png)
 
 当添加一个元素并指定索引到ArrayList时，ArrayList自动移动需要移动的元素：
-![](https://gitee.com/zhangchengk/img/raw/master/使用List/3.png)
+![](https://github.com/zhangchengk/img/raw/master/使用List/3.png)
 
 然后，往内部指定索引的数组位置添加一个元素，然后把`size`加`1`：
-![](https://gitee.com/zhangchengk/img/raw/master/使用List/4.png)
+![](https://github.com/zhangchengk/img/raw/master/使用List/4.png)
 
 继续添加元素，但是数组已满，没有空闲位置的时候，`ArrayList`先创建一个更大的新数组，然后把旧数组的所有元素复制到新数组，紧接着用新数组取代旧数组：
-![](https://gitee.com/zhangchengk/img/raw/master/使用List/5.png)
+![](https://github.com/zhangchengk/img/raw/master/使用List/5.png)
 
 现在，新数组就有了空位，可以继续添加一个元素到数组末尾，同时`size`加`1`：
-![](https://gitee.com/zhangchengk/img/raw/master/使用List/6.png)
+![](https://github.com/zhangchengk/img/raw/master/使用List/6.png)
 
 可见，`ArrayList`把添加和删除的操作封装起来，让我们操作`List`类似于操作数组，却不用关心内部元素如何移动。
 
@@ -44,7 +44,7 @@ location: BeiJing
 * 获取链表大小（包含元素的个数）：`int size()`
 
 但是，实现`List`接口并非只能通过数组（即`ArrayList`的实现方式）来实现，另一种`LinkedList`通过“链表”也实现了List接口。在`LinkedList`中，它的内部每个元素都指向下一个元素：
-![](https://gitee.com/zhangchengk/img/raw/master/使用List/7.png)
+![](https://github.com/zhangchengk/img/raw/master/使用List/7.png)
 
 
 我们来比较一下`ArrayList`和`LinkedList`：

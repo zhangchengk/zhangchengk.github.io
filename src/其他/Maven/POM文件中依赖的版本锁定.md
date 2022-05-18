@@ -36,7 +36,7 @@ pom.xml中依赖的定义样例：
 
 实际项目开发中，一个项目包含很多模块，不同模块有不同的依赖，也有多个模块存在共同的依赖。如：
 
-![](https://gitee.com/zhangchengk/img/raw/master/maven/1.png)
+![](https://github.com/zhangchengk/img/raw/master/maven/1.png)
 
 希望一个项目中，不同模块使用的同一依赖采用相同的版本。可以：
 
@@ -96,4 +96,4 @@ pom.xml中依赖的定义样例：
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

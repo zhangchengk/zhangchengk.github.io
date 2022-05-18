@@ -12,7 +12,7 @@ location: BeiJing
 
 Spring 框架是 个分层架构，它包含一系列的功能要素，并被分为大约 20 模块
 
-![](https://gitee.com/zhangchengk/img/raw/master/Spring源码深度解析/1/1.png)
+![](https://github.com/zhangchengk/img/raw/master/Spring源码深度解析/1/1.png)
 
 这些模块被总结为以下几部分
 
@@ -87,4 +87,4 @@ Test模块支持使用JUnit、TestNG对Spring组件进行测试。
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

@@ -11,25 +11,25 @@ location: BeiJing
 源码的搭建还是很简单的  使用码云急速下载源码
 
 ```
-git clone -b master git@gitee.com:mirrors/spring-boot.git
+git clone -b master git@github.com:mirrors/spring-boot.git
 ```
 
 最新的master分支是gradle，把Git分支切到2.2x，然后使用maven clean install
 
-![](https://gitee.com/zhangchengk/img/raw/master/springboot/1.png)
+![](https://github.com/zhangchengk/img/raw/master/springboot/1.png)
 
-![](https://gitee.com/zhangchengk/img/raw/master/springboot/2.png)
+![](https://github.com/zhangchengk/img/raw/master/springboot/2.png)
 
 期间有可能遇到一些maven构建时的问题(我是没遇到什么问题)，得自行解决(都可以解决的，别人都可以顺顺利利的构建成功)
 
-![](https://gitee.com/zhangchengk/img/raw/master/springboot/3.png)
+![](https://github.com/zhangchengk/img/raw/master/springboot/3.png)
 
 我这边是不到2分钟就构建完了
-![](https://gitee.com/zhangchengk/img/raw/master/springboot/4.png)
+![](https://github.com/zhangchengk/img/raw/master/springboot/4.png)
 
 在spring-boot-project下面新建一个子moudle：spring-boot-example
 
-![](https://gitee.com/zhangchengk/img/raw/master/springboot/5.png)
+![](https://github.com/zhangchengk/img/raw/master/springboot/5.png)
 
 pom.xml(其中设置了disable.check)
 ```xml
@@ -128,10 +128,10 @@ spring:
 
 运行Application
 
-![](https://gitee.com/zhangchengk/img/raw/master/springboot/6.png)
+![](https://github.com/zhangchengk/img/raw/master/springboot/6.png)
 
 访问网页
-![](https://gitee.com/zhangchengk/img/raw/master/springboot/7.png)
+![](https://github.com/zhangchengk/img/raw/master/springboot/7.png)
 
 OK 成功了。
 
@@ -139,4 +139,4 @@ OK 成功了。
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://gitee.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)

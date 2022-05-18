@@ -284,7 +284,7 @@ public interface ContentRepository {
 
 ContentRepository接口实现类
 
-![](https://gitee.com/zhangchengk/image/raw/master/待完成/ContentRepository/1.png)
+![](https://github.com/zhangchengk/image/raw/master/待完成/ContentRepository/1.png)
 
 VolatileContentRepository：易挥发的->不保存到磁盘上->内存
 

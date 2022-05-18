@@ -24,7 +24,7 @@ location: BeiJing
 
 回忆一下几年前遍地都是的**运营商劫持**，当你访问一个本来很正常的网页，但页面上却莫名其妙出现了一些广告标签、跳转脚本、欺骗性的红包按钮，甚至有时候本来要下载一个文件，最后下下来却变成了另外一个完全不同的东西，这些都是被运营商劫持了HTTP明文数据的现象。
 
-![](https://gitee.com/zhangchengk/img/raw/master/其他/003/1.png)
+![](https://github.com/zhangchengk/img/raw/master/其他/003/1.png)
 
 还有各大公司的员工**安全培训**里都有一条「不要连陌生的WiFi」，也是类似的原因，恶意WiFi的控制者可以看到和篡改HTTP明文传输的信息。
 
@@ -42,7 +42,7 @@ SSL（Secure Sockets Layer）安全套接层和TLS（Transport Layer Security）
 
 我们先来看看HTTPS的加解密流程。
 
-![](https://gitee.com/zhangchengk/img/raw/master/其他/003/1.png)
+![](https://github.com/zhangchengk/img/raw/master/其他/003/1.png)
 
 1.  用户在浏览器发起HTTPS请求（如 https://www.mogu.com/），默认使用服务端的443端口进行连接；
 
@@ -120,7 +120,7 @@ SSL（Secure Sockets Layer）安全套接层和TLS（Transport Layer Security）
 
 而浏览器此时一无所知，傻乎乎地使用公钥B1加密了密钥K发送出去，又被**中间人截获**，中间人利用自己的私钥B2解密，得到密钥K，再使用服务端的公钥A1加密传送给服务端，完成了通信链路，而服务端和客户端毫无感知。
 
-![](https://gitee.com/zhangchengk/img/raw/master/其他/003/3.png)
+![](https://github.com/zhangchengk/img/raw/master/其他/003/3.png)
 
 出现这一问题的核心原因是**客户端无法确认收到的公钥是不是真的是服务端发来的**。为了解决这个问题，互联网引入了一个公信机构，这就是CA。
 
@@ -160,7 +160,7 @@ SSL（Secure Sockets Layer）安全套接层和TLS（Transport Layer Security）
 
 有些老旧的网站会要求使用前下载安装他自己的根证书，这就是这个网站使用的证书并不能在系统内置的CA机构和根证书之间形成一条信任链，需要自己安装根证书来构成信任链，这里的风险就要**使用者自己承担**了。
 
-![](https://gitee.com/zhangchengk/img/raw/master/其他/003/4.png)
+![](https://github.com/zhangchengk/img/raw/master/其他/003/4.png)
 
 ### 总结
 
