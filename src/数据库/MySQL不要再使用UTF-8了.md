@@ -98,4 +98,4 @@ https://mathiasbynens.be/notes/mysql-utf8mb4#utf8-to-utf8mb4
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk.github.io/raw/master/img/wechat.jpg)

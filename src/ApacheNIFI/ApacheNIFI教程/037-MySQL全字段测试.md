@@ -692,4 +692,4 @@ Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Cannot get geome
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk.github.io/raw/master/img/wechat.jpg)

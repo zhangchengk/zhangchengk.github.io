@@ -158,4 +158,4 @@ HTTPS 需要做到足够好的保密性。
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk.github.io/raw/master/img/wechat.jpg)

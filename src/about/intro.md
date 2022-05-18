@@ -22,6 +22,6 @@ icon: info
 - [NIFI自定义开发代码结构规范](https://github.com/zhangchengk/custom-nar-bundles) 这是一个NIFI Maven子项目，用于自定义开发，减少对源码结构的侵入，方便NIFI升级
 - 个人公众号
   
-![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk.github.io/raw/master/img/wechat.jpg)
 
 希望自己在技术的路上，能保持初心，积极向上，勇于探索，永不放弃！

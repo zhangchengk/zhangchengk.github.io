@@ -1804,4 +1804,4 @@ jolt github issue上帮忙解决的第二个问题[Issue906](https://github.com/
 
 关注公众号 得到第一手文章/文档更新推送。
 
-![](https://github.com/zhangchengk/zhangchengk/raw/master/img/wechat.jpg)
+![](https://github.com/zhangchengk/zhangchengk.github.io/raw/master/img/wechat.jpg)
