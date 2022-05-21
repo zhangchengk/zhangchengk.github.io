@@ -65,17 +65,14 @@ var flagMap = new Map();
     
 let ignoreFileNameSet  = new Set()
     ignoreFileNameSet.add('.vuepress')
-    ignoreFileNameSet.add('Readme.md')
-    ignoreFileNameSet.add('readme.md')
+    ignoreFileNameSet.add('README.md')
     ignoreFileNameSet.add('intro.md')
     ignoreFileNameSet.add('qq.md')
     ignoreFileNameSet.add('wechat.md')
     ignoreFileNameSet.add('sidebar.js')
     ignoreFileNameSet.add('待完成')
-    ignoreFileNameSet.add('.DS_Store')
     ignoreFileNameSet.add('img')
     ignoreFileNameSet.add('about')
-    ignoreFileNameSet.add('jolt')
 
 // console.log(__dirname)
 // let test = resolveSideBarTest()
