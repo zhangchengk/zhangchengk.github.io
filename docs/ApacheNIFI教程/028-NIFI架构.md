@@ -2,10 +2,7 @@
 title: NIFI架构
 date: 2021-03-02
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
 author: 张诚
-location: BeiJing
 ---
 
 ![](./img/zero-leader-node.png)

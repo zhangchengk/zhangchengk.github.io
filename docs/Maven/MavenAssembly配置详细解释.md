@@ -2,10 +2,6 @@
 title: MavenAssembly配置详细解释
 date: 2020-04-22
 category: Maven
-tags: 
-  - Maven
-author: Panda诚
-location: BeiJing
 ---
 
 ```xml

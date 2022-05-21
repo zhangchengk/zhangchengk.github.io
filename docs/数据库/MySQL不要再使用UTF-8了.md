@@ -2,10 +2,6 @@
 title: MySQL不要再使用UTF-8了
 date: 2020-04-14
 category: 数据库
-tags: 
-  - 数据库
-author: Panda诚
-location: BeiJing
 ---
 
 # MySQL的“utf8”实际上不是真正的UTF-8

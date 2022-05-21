@@ -2,10 +2,6 @@
 title: NiFi.java 源码解读 
 date: 2020-05-21
 category: ApacheNIFI开发
-tags: 
-  - Apache NIFI
-author: Panda诚
-location: BeiJing
 ---
 
 在RunNiFi.java源码解读中有提到，最终RunNiFi进程在主程序中启动了新的进程NiFi,并循环监听NIFI进程的状态，直到NIFI进程不在运行，RunNiFi主程序才结束。

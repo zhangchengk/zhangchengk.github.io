@@ -2,10 +2,6 @@
 title: Java线程的状态及主要转化方法
 date: 2020-12-05
 category: 深入浅出Java多线程
-tags: 
-  - 深入浅出Java多线程
-author: Panda诚
-location: BeiJing
 ---
 
 ## 4.1 操作系统中的线程状态转换

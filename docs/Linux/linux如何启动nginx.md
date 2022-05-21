@@ -2,11 +2,7 @@
 title: linux如何启动nginx
 date: 2020-04-08
 category: Linux
-tags: 
-  - Linux
-  - nginx
-author: Panda诚
-location: BeiJing  
+  - nginx  
 ---
 
 第一次启动：

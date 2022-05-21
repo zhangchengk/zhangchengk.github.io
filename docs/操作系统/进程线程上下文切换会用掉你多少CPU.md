@@ -2,10 +2,6 @@
 title: 进程线程上下文切换会用掉你多少CPU
 date: 2021-03-19
 category: 技术汇总
-tags: 
-  - 技术汇总
-author: 张诚
-location: BeiJing
 ---
 
 ## 概述

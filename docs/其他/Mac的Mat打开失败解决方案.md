@@ -2,10 +2,6 @@
 title: Mac的Mat独立版本打开失败解决方案
 date: 2020-04-17
 category: 其他
-tags: 
-  - MAC
-author: Panda诚
-location: BeiJing
 ---
 
 1.右键进入软件包内容

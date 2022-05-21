@@ -2,10 +2,6 @@
 title: Run Duration深入理解
 date: 2020-05-21
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
-author: Panda诚
-location: BeiJing
 ---
 
 ## Run Duration

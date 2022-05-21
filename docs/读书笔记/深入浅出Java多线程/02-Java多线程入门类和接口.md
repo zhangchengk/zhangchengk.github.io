@@ -2,10 +2,6 @@
 title: Java多线程入门类和接口
 date: 2020-12-05
 category: 深入浅出Java多线程
-tags: 
-  - 深入浅出Java多线程
-author: Panda诚
-location: BeiJing
 ---
 
 ## 2.1 Thread类和Runnable接口

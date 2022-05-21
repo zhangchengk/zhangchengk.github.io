@@ -1,11 +1,7 @@
 ---
 title: linux安装jdk8
 date: 2020-04-08
-category: Linux
-tags: 
-  - Linux
-author: Panda诚
-location: BeiJing  
+category: Linux  
 ---
 
 # 1.下载jdk8
@@ -64,7 +60,5 @@ Esc --> :wq
 ```
 [root@localhost local]# javac
 ```
-
-# 公众号
 
 

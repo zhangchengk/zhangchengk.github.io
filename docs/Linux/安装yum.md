@@ -2,10 +2,7 @@
 title: 安装yum
 date: 2022-01-14
 category: Linux
-tags: 
-  - Linux
 author: 张诚
-location: BeiJing
 ---
 
 

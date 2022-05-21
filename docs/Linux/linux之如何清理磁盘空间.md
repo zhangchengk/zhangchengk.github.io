@@ -1,11 +1,7 @@
 ---
 title: linux之如何清理磁盘空间
 date: 2020-04-13
-category: Linux
-tags: 
-  - Linux
-author: Panda诚
-location: BeiJing  
+category: Linux  
 ---
 首先查询磁盘空间占用情况
 ```

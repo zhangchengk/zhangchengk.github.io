@@ -1,11 +1,7 @@
 ---
 title: Jvm dump jstack jmap jstat
 date: 2020-04-14
-category: JVM
-tags: 
-  - JVM
-author: Panda诚
-location: BeiJing  
+category: Java  
 ---
 
 这个问题阿里经常问，参考：[阿里面试](https://www.cnblogs.com/aspirant/p/8625810.html)
@@ -18,7 +14,7 @@ location: BeiJing
 
 (3)jstat查看gc情况，`jstat -gc  <PID> `间隔毫秒数 比如  `jstat -gc 12345 5000`  也就是每隔5秒打印进程12345的 gc情况
 
-#### 一、看一下 jstack
+## 一、看一下 jstack
 ```
     jstack -m \<pid\> >jvm_deadlocks.txt   
     jstack -l \<pid\> >jvm_listlocks.txt   
@@ -82,7 +78,7 @@ Java通过jvm自己管理内存，同时Java提供了一些命令行工具，用
 
 其中%MEM为2.9，说明占用系统内存为2.9%，当前系统大概8G内存；另外%CPU指的是当前进程使用CPU资源百分比；
 
-#### 二、看一下jmap:
+## 二、看一下jmap:
 
 使用  `jmap -heap pid` ，可以查看各个代的内存使用情况。
 ```
@@ -165,7 +161,7 @@ concurrent mark-sweep generation:
 
 将生成的heap.bin文件，使用ha456.jar工具打开分析。java -jar -Xmx3000m ha456.jar
 
-#### 三、jstat查看 gc实时执行情况
+## 三、jstat查看 gc实时执行情况
 
 jstat命令命令格式：
 ```

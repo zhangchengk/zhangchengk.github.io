@@ -1,11 +1,7 @@
 ---
 title: java.sql.Types的具体对应值(jdbcType)
 date: 2020-04-01
-category: 数据库
-tags: 
-  - 数据库
-author: Panda诚
-location: BeiJing  
+category: 数据库  
 ---
 
 ```java

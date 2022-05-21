@@ -2,10 +2,7 @@
 title: 七 Commons IO 2.5-FileUtils
 date: 2021-03-03
 category: Java
-tags: 
-  - Java IO流
 author: 张诚
-location: BeiJing
 ---
 
 > 转自：http://blog.csdn.net/zhaoyanjun6/article/details/54972773  

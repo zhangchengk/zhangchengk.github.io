@@ -2,10 +2,6 @@
 title: 打印Java对象头
 date: 2021-01-26
 category: Java
-tags: 
-  - Java
-author: Panda诚
-location: BeiJing
 ---
 
 ## 对象头形式

@@ -1,11 +1,7 @@
 ---
 title: sqlserver数据库类型对应Java中的数据类型
 date: 2020-04-01
-category: 数据库
-tags: 
-  - 数据库
-author: Panda诚
-location: BeiJing  
+category: 数据库  
 ---
 
 下表列出了基本 SQL Server、JDBC 和 Java 编程语言数据类型之间的默认映射：

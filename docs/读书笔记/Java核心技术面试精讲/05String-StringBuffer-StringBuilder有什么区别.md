@@ -1,11 +1,8 @@
 ---
 title: String-StringBuffer-StringBuilder
 date: 2021-02-27
-category: 极客时间
-tags: 
-  - Java核心技术面试精讲
+category: 极客时间核心技术面试精讲
 author: 张诚
-location: BeiJing
 ---
 
 今天我会聊聊日常使用的字符串，别看它似乎很简单，但其实字符串几乎在所有编程语言里都是个特殊的存在，因为不管是数量还是体积，字符串都是大多数应用中的重要组成。

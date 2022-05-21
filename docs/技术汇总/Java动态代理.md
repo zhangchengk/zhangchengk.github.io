@@ -2,15 +2,12 @@
 title: Java动态代理
 date: 2021-04-21
 category: 技术汇总
-tags: 
-  - 技术汇总
 author: 张诚
-location: BeiJing
 ---
 
 ## 什么是动态代理(dynamic proxy)
 
-动态代理（以下称代理），利用Java的<font color=red>反射技术(Java Reflection)</font>，在运行时**创建一个实现某些给定接口的新类**（也称“动态代理类”）及其实例（对象）(Using Java Reflection to create dynamic implementations of interfaces at runtime)。<font color=orange>代理的是接口(Interfaces)，不是类(Class)，更不是抽象类。</font>
+动态代理（以下称代理），利用Java的反射技术(Java Reflection)，在运行时**创建一个实现某些给定接口的新类**（也称“动态代理类”）及其实例（对象）(Using Java Reflection to create dynamic implementations of interfaces at runtime)。代理的是接口(Interfaces)，不是类(Class)，更不是抽象类。
 
 ## 动态代理有什么用
 
@@ -134,8 +131,8 @@ public class Main {
 可以看出，对IVehical接口的调用，会交由Proxy的invoke方法处理，并在不改变run()的源代码下，新增了动态的逻辑（before running/after running)，这正式AOP所做的。
 
 深入讲，Proxy.newInstance(ClassLoader loader, Class<?>[] interfaces, InvocationHandler h)做了以下几件事.
-- (1)根据参数loader和interfaces调用方法 getProxyClass(loader, interfaces)创建代理类$Proxy. $Proxy0类实现了interfaces的接口,并继承了Proxy类.
-- (2)实例化$Proxy0并在构造方法中把BusinessHandler传过去,接着$Proxy0调用父类Proxy的构造器,为h赋值,如下:
+- (1)根据参数loader和interfaces调用方法 getProxyClass(loader, interfaces)创建代理类$Proxy. `$Proxy0`类实现了interfaces的接口,并继承了Proxy类.
+- (2)实例化`$Proxy0`并在构造方法中把BusinessHandler传过去,接着`$Proxy0`调用父类Proxy的构造器,为h赋值,如下:
 ```java
 class Proxy{
    InvocationHandler h=null;

@@ -2,10 +2,6 @@
 title: maven压缩解压使jar文件损坏
 date: 2020-04-22
 category: Maven
-tags: 
-  - Maven
-author: Panda诚
-location: BeiJing
 ---
 
 问题描述：在NIFI开源项目中，我想把自定义的Moudle和一些静态资源都打成一个zip包，然后解压到NIFI的安装包里，然后在启动的过程中

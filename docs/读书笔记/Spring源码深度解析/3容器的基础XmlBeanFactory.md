@@ -2,10 +2,6 @@
 title: 容器的基础XmlBeanFactory
 date: 2020-06-15
 category: Spring源码深度解析
-tags: 
-  - Spring源码深度解析
-author: Panda诚
-location: BeiJing
 ---
 
 本文深入分析这段代码

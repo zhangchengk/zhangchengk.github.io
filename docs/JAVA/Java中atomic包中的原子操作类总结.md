@@ -1,11 +1,7 @@
 ---
 title: Java中atomic包中的原子操作类总结
 date: 2020-05-26
-category: Java多线程
-tags: 
-  - Java多线程
-author: Panda诚
-location: BeiJing
+category: Java
 ---
 
 ## 原子操作类介绍

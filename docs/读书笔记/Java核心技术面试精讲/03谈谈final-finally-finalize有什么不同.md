@@ -1,11 +1,8 @@
 ---
 title: 谈谈final-finally-finalize有什么不同
 date: 2021-02-27
-category: 极客时间
-tags: 
-  - Java核心技术面试精讲
+category: 极客时间核心技术面试精讲
 author: 张诚
-location: BeiJing
 ---
 
 Java 语言有很多看起来很相似，但是用途却完全不同的语言要素，这些内容往往容易成为面试官考察你知识掌握程度的切入点。

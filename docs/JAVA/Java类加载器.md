@@ -1,11 +1,7 @@
 ---
 title: Java类加载器
 date: 2020-07-10
-category: JVM
-tags: 
-  - JVM
-author: Panda诚
-location: BeiJing
+category: Java
 ---
 
 ## 什么是类加载器
@@ -237,11 +233,6 @@ Thread.currentThread().getContextClassLoader().loadClass(name);
 SecureClassLoader 继承ClassLoader,新增了几个与使用相关的代码源(对代码源的位置及其证书的验证)和权限定义类验证(主要指对class源码的访问权限)的方法，一般我们不会直接跟这个类打交道，更多是与它的子类URLClassLoader有所关联。
 
 ClassLoader是一个抽象类，很多方法是空的没有实现，比如 findClass()、findResource()等。而URLClassLoader这个实现类为这些方法提供了具体的实现，并新增了URLClassPath类协助取得Class字节码流等功能，在编写自定义类加载器时，如果没有太过于复杂的需求，可以直接继承URLClassLoader类，这样就可以避免自己去编写findClass()方法及其获取字节码流的方式，使自定义类加载器编写更加简洁。
-
-
-
-
-
 
 参考：
 

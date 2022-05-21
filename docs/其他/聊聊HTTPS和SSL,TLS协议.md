@@ -2,10 +2,6 @@
 title: 聊聊HTTPS和SSL,TLS协议
 date: 2020-06-09
 category: 其他
-tags: 
-  - HTTP
-author: Panda诚
-location: BeiJing
 ---
 
 (原文)https://www.techug.com/post/https-ssl-tls.html

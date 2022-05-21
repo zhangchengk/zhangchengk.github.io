@@ -2,15 +2,12 @@
 title: Java中的锁
 date: 2021-03-05
 category: Java
-tags: 
-  - Java多线程
 author: Jakob Jenkov
-location: BeiJing
 ---
 
 原文:http://tutorials.jenkov.com/java-concurrency/locks.html
 
-<font color=green>锁</font>像synchronized同步块一样，是一种<font color=royalblue>线程同步机制</font>，但比Java中的synchronized同步块更复杂。因为锁（以及其它更高级的线程同步机制）是由synchronized同步块的方式实现的，所以我们还不能完全摆脱synchronized关键字（译者注：这说的是Java 5之前的情况）。
+锁像synchronized同步块一样，是一种线程同步机制，但比Java中的synchronized同步块更复杂。因为锁（以及其它更高级的线程同步机制）是由synchronized同步块的方式实现的，所以我们还不能完全摆脱synchronized关键字（译者注：这说的是Java 5之前的情况）。
 
 自Java 5开始，java.util.concurrent.locks包中包含了一些锁的实现，因此你不用去实现自己的锁了。但是你仍然需要去了解怎样使用这些锁，且了解这些实现背后的理论也是很有用处的。可以参考我对java.util.concurrent.locks.Lock的介绍，以了解更多关于锁的信息。
 
@@ -66,9 +63,9 @@ public class Lock{
 	}
 }
 ```
-注意其中的while(isLocked)循环，它又被叫做<font color=seagreen>自旋锁</font>。自旋锁以及wait()和notify()方法在[线程通信](./线程通信.md)这篇文章中有更加详细的介绍。当isLocked为true时，调用lock()的线程在wait()调用上阻塞等待。为防止该线程没有收到notify()调用也从wait()中返回（也称作<font color=plum>虚假唤醒</font>），这个线程会重新去检查isLocked条件以决定当前是否可以安全地继续执行还是需要重新保持等待，而不是认为线程被唤醒了就可以安全地继续执行了。如果isLocked为false，当前线程会退出while(isLocked)循环，并将isLocked设回true，让其它正在调用lock()方法的线程能够在Lock实例上加锁。
+注意其中的while(isLocked)循环，它又被叫做自旋锁。自旋锁以及wait()和notify()方法在[线程通信](./线程通信.md)这篇文章中有更加详细的介绍。当isLocked为true时，调用lock()的线程在wait()调用上阻塞等待。为防止该线程没有收到notify()调用也从wait()中返回（也称作虚假唤醒），这个线程会重新去检查isLocked条件以决定当前是否可以安全地继续执行还是需要重新保持等待，而不是认为线程被唤醒了就可以安全地继续执行了。如果isLocked为false，当前线程会退出while(isLocked)循环，并将isLocked设回true，让其它正在调用lock()方法的线程能够在Lock实例上加锁。
 
-当线程完成了<font color=tomato>临界区</font>（位于lock()和unlock()之间）中的代码，就会调用unlock()。执行unlock()会重新将isLocked设置为false，并且通知（唤醒）其中一个（若有的话）在lock()方法中调用了wait()函数而处于等待状态的线程。
+当线程完成了临界区（位于lock()和unlock()之间）中的代码，就会调用unlock()。执行unlock()会重新将isLocked设置为false，并且通知（唤醒）其中一个（若有的话）在lock()方法中调用了wait()函数而处于等待状态的线程。
 
 ## 锁的可重入性
 
@@ -168,7 +165,7 @@ public class Lock{
 
 ## 锁的公平性
 
-Java的synchronized块并不保证尝试进入它们的线程的顺序。因此，如果多个线程不断竞争访问相同的synchronized同步块，就存在一种风险，其中一个或多个线程永远也得不到访问权 —— 也就是说访问权总是分配给了其它线程。这种情况被称作线程饥饿。为了避免这种问题，锁需要实现公平性。本文所展现的锁在内部是用synchronized同步块实现的，因此它们也不保证公平性。[饥饿和公平]()中有更多关于该内容的讨论。
+Java的synchronized块并不保证尝试进入它们的线程的顺序。因此，如果多个线程不断竞争访问相同的synchronized同步块，就存在一种风险，其中一个或多个线程永远也得不到访问权 —— 也就是说访问权总是分配给了其它线程。这种情况被称作线程饥饿。为了避免这种问题，锁需要实现公平性。本文所展现的锁在内部是用synchronized同步块实现的，因此它们也不保证公平性。`饥饿和公平`中有更多关于该内容的讨论。
 
 
 ## 在finally语句中调用unlock()

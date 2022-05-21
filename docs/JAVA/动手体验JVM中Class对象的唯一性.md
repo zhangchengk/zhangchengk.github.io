@@ -1,11 +1,7 @@
 ---
 title: 动手体验JVM中Class对象的唯一性
 date: 2020-07-10
-category: JVM
-tags: 
-  - JVM
-author: Panda诚
-location: BeiJing
+category: Java
 ---
 
 ## 概述

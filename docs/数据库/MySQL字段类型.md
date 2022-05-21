@@ -2,10 +2,7 @@
 title: MySQL字段类型
 date: 2022-02-09
 category: 数据库
-tags: 
-  - 数据库
 author: 张诚
-location: BeiJing
 ---
 
 >基于8.0版本

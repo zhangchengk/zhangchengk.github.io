@@ -1,11 +1,7 @@
 ---
 title: Java导入语句中不宜使用通配符
 date: 2020-05-29
-category: Java规范
-tags: 
-  - Java规范
-author: Panda诚
-location: BeiJing
+category: Java
 ---
 
 1.  它有助于识别类名冲突：在不同包中具有相同名称的两个类。这可以用*import。

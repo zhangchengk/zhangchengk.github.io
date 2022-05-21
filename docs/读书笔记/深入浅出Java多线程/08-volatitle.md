@@ -2,10 +2,6 @@
 title: volatitle
 date: 2020-12-08
 category: 深入浅出Java多线程
-tags: 
-  - 深入浅出Java多线程
-author: Panda诚
-location: BeiJing
 ---
 
 ## 8.1 几个基本概念

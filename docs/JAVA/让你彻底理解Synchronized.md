@@ -1,11 +1,7 @@
 ---
 title: 彻底理解Synchronized
 date: 2020-05-26
-category: Java多线程
-tags: 
-  - Java多线程
-author: Panda诚
-location: BeiJing
+category: Java
 ---
 
 ## synchronized简介

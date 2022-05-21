@@ -2,10 +2,7 @@
 title: 安装k8s
 date: 2022-01-14
 category: 容器
-tags: 
-  - 容器
 author: 张诚
-location: BeiJing
 ---
 
 

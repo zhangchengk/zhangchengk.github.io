@@ -2,10 +2,7 @@
 title: 三 缓冲流BufferedInputStream与BufferedOutputStream
 date: 2021-03-03
 category: Java
-tags: 
-  - Java IO流
 author: 张诚
-location: BeiJing
 ---
 
 

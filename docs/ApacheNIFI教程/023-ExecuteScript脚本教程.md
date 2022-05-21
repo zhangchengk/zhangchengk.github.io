@@ -2,10 +2,6 @@
 title: ExecuteScript组件脚本使用教程
 date: 2020-05-21
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
-author: Panda诚
-location: BeiJing
 ---
 
 本文通过Groovy，Jython，Javascript(Nashorn)和JRuby中的代码示例，介绍了有关如何使用Apache NiFi处理器ExecuteScript完成某些任务的各种方法。本文中的内容包括：

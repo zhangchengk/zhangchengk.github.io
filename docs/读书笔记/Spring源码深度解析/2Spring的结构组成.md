@@ -2,10 +2,6 @@
 title: Spring的结构组成
 date: 2020-06-12
 category: Spring源码深度解析
-tags: 
-  - Spring源码深度解析
-author: Panda诚
-location: BeiJing
 ---
 
 如何安装Gradle、下载Spring源码，构建源码等等就不记录的。用惯了Maven，用Gradle编译确实一开始有些懵，但其实IDEA的强大使这些都变得非常简单了。

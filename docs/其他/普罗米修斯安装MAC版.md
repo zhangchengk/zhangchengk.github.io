@@ -3,9 +3,7 @@ title: 普罗米修斯安装MAC版
 date: 2020-04-09
 category: 其他
 tags: 
- - 普罗米修斯
-author: Panda诚
-location: BeiJing  
+ - 普罗米修斯  
 ---
 
 之前需要有Go环境

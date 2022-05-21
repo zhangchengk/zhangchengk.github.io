@@ -2,10 +2,6 @@
 title: WEB简史
 date: 2020-07-25
 category: Java
-tags: 
-  - Java
-author: Panda诚
-location: BeiJing
 ---
 
 ## 起因

@@ -2,10 +2,6 @@
 title: 如何给NIFI贡献代码
 date: 2020-06-03
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
-author: Panda诚
-location: BeiJing
 ---
 
 简介：根据个人的一些提交代码的经历,分享一下给Apache社区贡献代码的小经验。

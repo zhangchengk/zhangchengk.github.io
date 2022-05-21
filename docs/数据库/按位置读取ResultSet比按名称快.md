@@ -1,11 +1,7 @@
 ---
 title: 为什么按位置读取JDBC ResultSet的速度比按名称读取的速度快
 date: 2020-04-14
-category: 数据库
-tags: 
-  - 数据库
-author: Panda诚
-location: BeiJing  
+category: 数据库  
 ---
 
 为什么快？

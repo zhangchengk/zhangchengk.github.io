@@ -1,11 +1,7 @@
 ---
 title: github Pages自动部署
 date: 2020-04-14
-category: 其他
-tags: 
-  - Git
-author: Panda诚
-location: BeiJing  
+category: 其他  
 ---
 # 自动部署github Pages
 

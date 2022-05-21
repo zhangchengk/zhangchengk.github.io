@@ -2,10 +2,6 @@
 title: 深入HTTPS加解密原理
 date: 2020-04-14
 category: 其他
-tags: 
-  - HTTP
-author: Panda诚
-location: BeiJing
 ---
 
 1.  HTTPS 到底解决了什么问题

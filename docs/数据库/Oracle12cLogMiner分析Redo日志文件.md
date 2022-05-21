@@ -1,11 +1,7 @@
 ---
 title: Oracle(12c)使用LogMiner分析Redo日志文件
 date: 2020-06-09
-category: 数据库
-tags: 
-  - 数据库
-author: Panda诚
-location: BeiJing  
+category: 数据库  
 ---
 
 官方文档(https://docs.oracle.com/database/121/SUTIL/GUID-3417B738-374C-4EE3-B15C-3A66E01AE2B5.htm#SUTIL019)

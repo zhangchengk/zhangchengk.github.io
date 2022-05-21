@@ -1,11 +1,7 @@
 ---
 title: Java内存模型原理
 date: 2020-05-26
-category: JVM
-tags: 
-  - JVM
-author: Panda诚
-location: BeiJing
+category: Java
 ---
 
 ## 一、内存模型产生背景

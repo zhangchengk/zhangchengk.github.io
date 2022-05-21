@@ -11,16 +11,22 @@ const fs = require('fs')
 9. fs.unlink 删除文件 
 */
 let includeCategory = new Set()
+    includeCategory.add('操作系统')
     includeCategory.add('读书笔记')
     includeCategory.add('技术汇总')
     includeCategory.add('其他')
+    includeCategory.add('容器')
     includeCategory.add('数据库')
     includeCategory.add('算法')
-    includeCategory.add('ApacheNIFI')
-    includeCategory.add('容器')
-    includeCategory.add('Java')
-    includeCategory.add('Spring')
-    includeCategory.add('jolt')
+    includeCategory.add('ApacheNIFI教程')
+    includeCategory.add('ApacheNIFI开发')
+    includeCategory.add('HikariCP')
+    includeCategory.add('IO流(java)')
+    includeCategory.add('JAVA')
+    includeCategory.add('JOLT')
+    includeCategory.add('Linux')
+    includeCategory.add('Maven')
+    
 
 var flagMap = new Map();
     flagMap.set('读书笔记', '📚')
@@ -72,8 +78,8 @@ let ignoreFileNameSet  = new Set()
     ignoreFileNameSet.add('jolt')
 
 // console.log(__dirname)
-let test = resolveSideBarTest()
-console.log(JSON.stringify(test, null, "\t"))
+// let test = resolveSideBarTest()
+// console.log(JSON.stringify(test, null, "\t"))
 
 module.exports = function resolveSideBar() {
     let sidebars = []

@@ -2,10 +2,7 @@
 title: MySQL全字段读写测试(NIFI 1.15.3)
 date: 2022-02-10
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
 author: 张诚
-location: BeiJing
 ---
 
 ## 准备

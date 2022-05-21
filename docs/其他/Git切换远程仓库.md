@@ -2,10 +2,6 @@
 title: Git切换远程仓库
 date: 2020-04-16
 category: 其他
-tags: 
-  - Git
-author: Panda诚
-location: BeiJing
 ---
 
 使用以下命令 重置url

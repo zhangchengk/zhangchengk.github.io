@@ -2,10 +2,6 @@
 title: Java8_JVM内存模型
 date: 2021-10-28
 category: JVM
-tags: 
-  - JVM
-author: Panda诚
-location: BeiJing
 ---
 
 ![](./img/Java8_内存模型/1.png)
@@ -133,7 +129,7 @@ JVM栈是线程私有的内存区域。它描述的是**java方法执行**的内
 * 普通调用指令
 
     * invokestatic：调用静态方法，解析阶段确定唯一方法版本
-    * invokesopecial：调用<init>方法、私有即父类犯法，解析阶段确定唯一方法版本
+    * invokesopecial：调用`<init>`方法、私有即父类犯法，解析阶段确定唯一方法版本
     * invokevirtual：调用所有虚方法
     * invokeinterface：调用接口方法
 

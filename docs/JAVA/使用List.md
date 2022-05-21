@@ -2,10 +2,6 @@
 title: 使用List
 date: 2020-04-15
 category: Java
-tags: 
-  - Java
-author: Panda诚
-location: BeiJing
 ---
 
 在集合类中，`List`是最基础的一种集合：它是一种有序链表。

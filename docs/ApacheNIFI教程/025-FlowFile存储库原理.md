@@ -2,10 +2,7 @@
 title: FlowFile存储库原理
 date: 2021-03-01
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
 author: 张诚
-location: BeiJing
 ---
 
 ## FlowFile Repository

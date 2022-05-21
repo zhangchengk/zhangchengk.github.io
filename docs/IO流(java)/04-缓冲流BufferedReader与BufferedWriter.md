@@ -2,10 +2,7 @@
 title: 四 缓冲流BufferedReader与BufferedWriter
 date: 2021-03-03
 category: Java
-tags: 
-  - Java IO流
 author: 张诚
-location: BeiJing
 ---
 
 

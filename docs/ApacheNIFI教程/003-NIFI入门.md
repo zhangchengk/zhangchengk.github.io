@@ -2,10 +2,6 @@
 title: NIFI读完即入门
 date: 2020-05-21
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
-author: Panda诚
-location: BeiJing
 ---
 
 我将在本文中介绍：

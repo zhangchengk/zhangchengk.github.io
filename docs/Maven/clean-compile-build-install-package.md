@@ -1,11 +1,7 @@
 ---
 title: clean-compile-build-install-package区别
 date: 2020-04-14
-category: Maven
-tags: 
-  - Maven
-author: Panda诚
-location: BeiJing  
+category: Maven  
 ---
 
 clean： 执行该命令会删除项目路径下的target文件，但是不会删除本地的maven仓库已经生成的jar文件

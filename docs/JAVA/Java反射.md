@@ -1,11 +1,7 @@
 ---
 title: java反射原理
 date: 2020-07-05
-category: Java反射
-tags: 
-  - Java反射
-author: Panda诚
-location: BeiJing
+category: Java
 ---
 
 有了反射，我们的Java世界才变得更加多姿多彩。
@@ -414,7 +410,3 @@ Filed里主要是一些get set方法，比如set(Object obj, Object value) setBo
 ## 总结
 
 我们先获取到类型A的Class对象，通过Class对象的newInstance方法可以得到A的实例。通过Class对象可以获取到Constructor对象，进一步可以使用Constructor对象来得到A的实例。通过Class对象可以获取到Method对象，通过Method的invoke方法我们可以调用一些方法。通过Class对象可以获取到Field对象，我们可以对这个实例的一些字段进行赋值取值操作。这样我们就基本掌握了反射的使用方法了。
-
-
-
-

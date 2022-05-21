@@ -2,10 +2,7 @@
 title: NIFI事务原理
 date: 2021-03-09
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
 author: 张诚
-location: BeiJing
 ---
 
 Apache NIFI 处理数据的最小单位叫`FlowFile`，每一次调度里所处理的`FlowFile`(有可能是多个，即为`批`)是支持事务的，就是说：要么我完成处理FlowFile这个动作，得到了结果，要么不完成。从宏观角度可以将这个过程看成一个原子操作。

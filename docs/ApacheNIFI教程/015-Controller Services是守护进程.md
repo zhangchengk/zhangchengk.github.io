@@ -2,10 +2,6 @@
 title: Controller Services是守护进程
 date: 2020-06-30
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
-author: Panda诚
-location: BeiJing
 ---
 
 今天只是扯扯淡，顺便记录一下我突然想到的一个low疑问。

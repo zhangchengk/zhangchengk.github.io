@@ -2,10 +2,6 @@
 title: CAS与原子操作
 date: 2020-12-08
 category: 深入浅出Java多线程
-tags: 
-  - 深入浅出Java多线程
-author: Panda诚
-location: BeiJing
 ---
 
 ## 10.1 乐观锁与悲观锁的概念

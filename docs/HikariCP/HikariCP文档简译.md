@@ -2,10 +2,7 @@
 title: HikariCP文档简译
 date: 2021-05-31
 category:  HikariCP
-tags: 
-  - HikariCP
 author: 张诚
-location: BeiJing
 ---
 
 快速、简单、可靠。 HikariCP是一个"zero-overhead"的JDBC连接池应用。该库大约为130Kb，非常轻巧。

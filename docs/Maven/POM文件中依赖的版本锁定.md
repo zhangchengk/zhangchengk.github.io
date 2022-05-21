@@ -2,10 +2,6 @@
 title: Maven依赖管理-POM文件中依赖的版本锁定
 date: 2020-04-15
 category: Maven
-tags: 
-  - Maven
-author: Panda诚
-location: BeiJing
 ---
 
 pom.xml中依赖的定义样例：

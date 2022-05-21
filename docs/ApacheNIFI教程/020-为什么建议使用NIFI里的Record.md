@@ -2,10 +2,6 @@
 title: 建议使用NIFI里的Record
 date: 2020-11-19
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
-author: Panda诚
-location: BeiJing
 ---
 
 ## 引子

@@ -2,10 +2,6 @@
 title: Maven Mirror 高级配置
 date: 2020-04-15
 category: Maven
-tags: 
-  - Maven
-author: Panda诚
-location: BeiJing
 ---
 
 用mirror强制项目只使用一个仓库，To achieve this, set `mirrorOf` to `*`.

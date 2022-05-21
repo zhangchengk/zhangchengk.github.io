@@ -2,10 +2,6 @@
 title: Spring 整体架构
 date: 2020-06-11
 category: Spring源码深度解析
-tags: 
-  - Spring源码深度解析
-author: Panda诚
-location: BeiJing
 ---
 
 ## Spring 整体架构图

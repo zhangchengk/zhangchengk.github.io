@@ -2,10 +2,6 @@
 title: synchronized与锁
 date: 2020-12-08
 category: 深入浅出Java多线程
-tags: 
-  - 深入浅出Java多线程
-author: Panda诚
-location: BeiJing
 ---
 
 这篇文章我们来聊一聊Java多线程里面的“锁”。

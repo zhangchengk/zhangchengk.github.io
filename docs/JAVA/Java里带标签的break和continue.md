@@ -1,11 +1,7 @@
 ---
 title: Java里带标签的break和continue
 date: 2020-04-14
-category: Java
-tags: 
-  - Java
-author: Panda诚
-location: BeiJing  
+category: Java  
 ---
 
 break和continue是老生常谈的东西，break是终止这层循环，包括之后的本层循环，continue是终止本次循环的语句，继续之后的本层循环。

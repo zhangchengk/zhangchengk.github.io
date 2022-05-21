@@ -2,10 +2,6 @@
 title: 深入了解Java锁
 date: 2021-01-26
 category: Java
-tags: 
-  - Java
-author: Panda诚
-location: BeiJing
 ---
 
 继[打印Java对象头](./打印Java对象头.md)，我们再深入探索一下Java锁。无锁状态我们就不说了，下面我们一一打印偏向锁、轻量锁，重量锁的对象头。

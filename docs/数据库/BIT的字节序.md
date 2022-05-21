@@ -2,10 +2,7 @@
 title: BIT的字节序
 date: 2021-11-25
 category: 数据库
-tags: 
-  - 数据库
 author: 张诚
-location: BeiJing
 ---
 
 ## 前言

@@ -2,10 +2,6 @@
 title: Java 8 Stream并行计算原理
 date: 2020-12-10
 category: 深入浅出Java多线程
-tags: 
-  - 深入浅出Java多线程
-author: Panda诚
-location: BeiJing
 ---
 
 ## 19.1 Java 8 Stream简介

@@ -2,10 +2,6 @@
 title: NIFI简史
 date: 2020-06-24
 category: ApacheNIFI教程
-tags: 
-  - Apache NIFI
-author: Panda诚
-location: BeiJing
 ---
 
 ## Apache NIFI简要历史

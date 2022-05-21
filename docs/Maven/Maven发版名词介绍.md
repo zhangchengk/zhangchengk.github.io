@@ -2,10 +2,6 @@
 title: Maven发版名词介绍
 date: 2020-04-15
 category: Maven
-tags: 
-  - Maven
-author: Panda诚
-location: BeiJing
 ---
 
 版本名称    | 介绍  | 说明                   

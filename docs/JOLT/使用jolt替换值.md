@@ -2,10 +2,7 @@
 title: 使用jolt替换值
 date: 2021-12-16
 category: Jolt
-tags: 
-  - Jolt
 author: 张诚
-location: BeiJing
 ---
 
 ## 场景需求

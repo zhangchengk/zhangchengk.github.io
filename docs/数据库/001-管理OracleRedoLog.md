@@ -2,10 +2,6 @@
 title: 管理OracleRedoLog
 date: 2020-06-09
 category: 数据库
-tags: 
-  - 数据库
-author: Panda诚
-location: BeiJing
 ---
 
 通过完成诸如创建重做日志组和成员、重新定位和重命名重做日志成员、删除重做日志组和成员以及强制切换日志等任务，您可以管理重做日志。

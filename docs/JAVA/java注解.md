@@ -1,11 +1,7 @@
 ---
 title: java注解
 date: 2020-04-09
-category: Java
-tags: 
-  - Java
-author: Panda诚
-location: BeiJing  
+category: Java  
 ---
 
 注解，也叫元数据。一种代码级别的说明，在JDK1.5之后引入的特性，与类、接口、枚举同一层次。可以声明在包、类、字段、方法、局部变量、方法参数等前面，来对这些元素进行说明，注释等。

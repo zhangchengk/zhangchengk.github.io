@@ -2,10 +2,6 @@
 title: nifi-env脚本解读
 date: 2020-05-21
 category: ApacheNIFI开发
-tags: 
-  - Apache NIFI
-author: Panda诚
-location: BeiJing
 ---
 
 ```bash
