@@ -2,7 +2,6 @@
 title: CAS底层原理
 date: 2021-03-15
 category: Java
-author: 张诚
 ---
 
 ## CAS是个啥？

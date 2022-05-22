@@ -2,7 +2,6 @@
 title: 从硬件层面理解memory barrier
 date: 2021-03-18
 category: 技术汇总
-author: 张诚
 ---
 
 ## cache架构

@@ -2,7 +2,6 @@
 title: Contended
 date: 2021-03-18
 category: 技术汇总
-author: 张诚
 ---
 
 解决伪共享问题。

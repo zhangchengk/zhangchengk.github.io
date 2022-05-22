@@ -2,7 +2,6 @@
 title: Java动态代理
 date: 2021-04-21
 category: 技术汇总
-author: 张诚
 ---
 
 ## 什么是动态代理(dynamic proxy)
