@@ -18,7 +18,7 @@ category: ApacheNIFI教程
 
 ### 获取安装包
 
-- 我是直接编译的1.11.4的源码获取的安装包，将zip包上传到Linux，解压即可。如何下载源码及编译看[编译NIFI源码](./编译NIFI源码.md)
+- 我是直接编译的1.11.4的源码获取的安装包，将zip包上传到Linux，解压即可。如何下载源码及编译看[编译NIFI源码](../ApacheNIFI开发/001-编译NIFI源码.md)
 
 - 通过官方网站下载对应的NIFI安装包:[官网下载](https://nifi.apache.org/download.html)
 
@@ -285,7 +285,7 @@ com.mysql.jdbc.Driver
 
 如果说你跟着本文一起操作或者仔细的阅读了整篇文章，那么我相信你已经入门Apache NIFI了 。
 
-好吧，我是骗你的，你还没有入门。这篇文章只是简单带你(替你)体验了一把Apache NIFI，如果想要入门，请看这篇文章[Apache NIFI入门(读完即入门)](./NIFI入门.md)
+好吧，我是骗你的，你还没有入门。这篇文章只是简单带你(替你)体验了一把Apache NIFI，如果想要入门，请看这篇文章[Apache NIFI入门(读完即入门)](./003-NIFI入门.md)
 
 
 

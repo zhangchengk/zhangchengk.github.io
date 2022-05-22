@@ -88,7 +88,7 @@ bundled-dependencies目录下是组件的jar包及其依赖的其他jar包，这
 
 在NIFI启动时，会把lib目录下的nar文件都解压到work/nar目录下。其中`nifi-framework-nar-1.11.4.nar`会单独解压到`work/nar/framework/`下，其他的nar文件都解压到`work/nar/extensions/`下，对应的目录类似于`nifi-flume-nar-1.11.4.ar-unpacked`。
 
-在[NIFI启动源码解读](../启动源码/21NIFI启动源码.md)的[NiFi.java 源码解读](../启动源码/NIFI源码.md)和[NIFI Nar包加载机制源码解读](../开发/18Nar包加载机制源码解读.md)中我们说过每一个nar包对应创建一个类加载器，使用不同的类加载器去加载这个nar资源。
+在[NIFI启动源码解读](../ApacheNIFI开发/006-NIFI启动源码.md)的[NiFi.java 源码解读](../ApacheNIFI开发/009-NiFi源码.md)和[NIFI Nar包加载机制源码解读](./007-Nar包加载机制源码解读.md)中我们说过每一个nar包对应创建一个类加载器，使用不同的类加载器去加载这个nar资源。
 
 ## NarClassLoader
 

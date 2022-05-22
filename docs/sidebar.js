@@ -64,6 +64,7 @@ var flagMap = new Map();
     flagMap.set('Spring学习随笔', '🍀')
     
 let ignoreFileNameSet  = new Set()
+    ignoreFileNameSet.add('.DS_Store')
     ignoreFileNameSet.add('.vuepress')
     ignoreFileNameSet.add('README.md')
     ignoreFileNameSet.add('intro.md')

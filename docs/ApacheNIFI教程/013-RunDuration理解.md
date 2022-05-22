@@ -25,7 +25,7 @@ category: ApacheNIFI教程
 
 ## 这对于堆使用意味着什么
 
-1. 由于它仅处理`Active queue`中的传入FlowFiles，因此此处没有增加堆压力。(`Active queue`中的FlowFiles已经在堆空间中，关于`Active queue`请看[深入理解Apache NIFI Connection](./3理解connection.md))。
+1. 由于它仅处理`Active queue`中的传入FlowFiles，因此此处没有增加堆压力。(`Active queue`中的FlowFiles已经在堆空间中，关于`Active queue`请看[深入理解Apache NIFI Connection](./011-理解connection.md))。
 
 2. 新生成的FlowFiles(如果有的话，取决于处理器功能)全部保留在堆中，直到最终提交为止。这可能会带来一些额外的堆压力，因为所有新生成的FlowFiles都将保留在堆中，直到在运行时间结束时将它们全部提交给输出关系为止(尤其是新FlowFile的content，还没有刷到repository)。
 
@@ -43,7 +43,7 @@ category: ApacheNIFI教程
 public class UpdateAttribute extends AbstractProcessor implements Searchable {
 ```
 
-重点看在哪里处理了这个`SupportsBatching`注解，在(深入解析Apache NIFI的调度策略)[./9NIFI调度.md]一文中，我们在讲解`Timer driven`的时候有提到`ConnectableTask.invoke`方法，是线程执行调度具体Processor的ontrigger方法前的处理(里面有检测Processor是否有工作可做)，下面我们看一下这个方法：
+重点看在哪里处理了这个`SupportsBatching`注解，在(深入解析Apache NIFI的调度策略)[./016-NIFI调度.md]一文中，我们在讲解`Timer driven`的时候有提到`ConnectableTask.invoke`方法，是线程执行调度具体Processor的ontrigger方法前的处理(里面有检测Processor是否有工作可做)，下面我们看一下这个方法：
 
 ```java
 public InvocationResult invoke() {

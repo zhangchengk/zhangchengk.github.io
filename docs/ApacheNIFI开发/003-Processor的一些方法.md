@@ -324,7 +324,7 @@ AbstractSessionFactoryProcessor源码中init方法是留给子类去覆盖实现
     }
 ```
 ## onScheduled
-在[nifi注解](./nifi注解.md)一文中我们提到了@OnScheduled，它的意思是指示在计划运行组件时调用此方法。它将在任何对“onTrigger”的调用之前被调用，并且将在计划运行组件时被调用一次。
+在[nifi注解](./010-nifi注解.md)一文中我们提到了@OnScheduled，它的意思是指示在计划运行组件时调用此方法。它将在任何对“onTrigger”的调用之前被调用，并且将在计划运行组件时被调用一次。
 
 onScheduled方法一般都是被注解@onScheduled标注了的，没有这样的需求的组件可以不用写。
 
@@ -343,7 +343,7 @@ onScheduled方法一般都是被注解@onScheduled标注了的，没有这样的
 
 ## stop shutdown
 
-在[nifi注解](./nifi注解.md)一文中我们提到了@OnStopped，指示当组件不再计划运行时应调用某个方法。每次组件停止时，都将调用标记了此注释的方法，并且仅在从onTrigger方法返回最后一个线程后才调用此方法
+在[nifi注解](./010-nifi注解.md)一文中我们提到了@OnStopped，指示当组件不再计划运行时应调用某个方法。每次组件停止时，都将调用标记了此注释的方法，并且仅在从onTrigger方法返回最后一个线程后才调用此方法
 
 比如GeneralTableFetch组建中
 ```java
