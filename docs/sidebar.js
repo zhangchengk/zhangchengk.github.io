@@ -64,6 +64,7 @@ var flagMap = new Map();
     flagMap.set('Spring学习随笔', '🍀')
     
 let ignoreFileNameSet  = new Set()
+    ignoreFileNameSet.add('about')
     ignoreFileNameSet.add('.DS_Store')
     ignoreFileNameSet.add('.vuepress')
     ignoreFileNameSet.add('README.md')
@@ -76,8 +77,8 @@ let ignoreFileNameSet  = new Set()
     ignoreFileNameSet.add('about')
 
 // console.log(__dirname)
-// let test = resolveSideBarTest()
-// console.log(JSON.stringify(test, null, "\t"))
+let test = resolveSideBarTest()
+console.log(JSON.stringify(test, null, "\t"))
 
 module.exports = function resolveSideBar() {
     let sidebars = []
