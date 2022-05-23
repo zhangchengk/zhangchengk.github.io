@@ -1,1 +1,0 @@
-import{_ as t}from"./plugin-vue_export-helper.21dcd24c.js";import{r as o,o as _,f as n}from"./app.5c332ac6.js";const r={};function a(c,s){const e=o("Presentation");return _(),n(e,{id:"presentation-1a96284a","data-code":"%0A---%0A%0A%0A",theme:"auto"})}var i=t(r,[["render",a],["__file","\u56DE\u6EAF\u7B97\u6CD5\u8BE6\u89E3.html.vue"]]);export{i as default};
