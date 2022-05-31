@@ -183,7 +183,7 @@ return this.beanFactory.resolveDependency(
 ```
 如果用调试视图，我们则可以看到更多的信息：
 
-![](./img/003004.png)
+![](./img/002004.png)
 
 如图所示，上述的调用即是根据参数来寻找对应的 Bean，在本案例中，如果找不到对应的 Bean 就会抛出异常，提示装配失败。
 
