@@ -2,6 +2,7 @@
 title: nifi-env脚本解读
 date: 2020-05-21
 category: ApacheNIFI开发
+tag: NIFI
 ---
 
 ```bash

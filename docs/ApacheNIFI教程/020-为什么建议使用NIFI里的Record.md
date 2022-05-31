@@ -2,6 +2,7 @@
 title: 建议使用NIFI里的Record
 date: 2020-11-19
 category: ApacheNIFI教程
+tag: NIFI
 ---
 
 ## 引子

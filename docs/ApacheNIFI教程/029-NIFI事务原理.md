@@ -2,6 +2,7 @@
 title: NIFI事务原理
 date: 2021-03-09
 category: ApacheNIFI教程
+tag: NIFI
 author: 张诚
 ---
 

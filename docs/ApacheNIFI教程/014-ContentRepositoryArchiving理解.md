@@ -2,6 +2,7 @@
 title: ContentRepositoryArchiving工作原理(译)
 date: 2020-05-21
 category: ApacheNIFI教程
+tag: NIFI
 ---
 
 ## 什么是内容存储库归档？

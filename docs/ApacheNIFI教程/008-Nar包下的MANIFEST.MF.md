@@ -2,6 +2,7 @@
 title: Nar包下的MANIFEST.MF
 date: 2020-05-21
 category: ApacheNIFI教程
+tag: NIFI
 ---
 
 NIFI启动时有部分逻辑去读取nar包配置信息，比如名称 版本 包名等等。。。

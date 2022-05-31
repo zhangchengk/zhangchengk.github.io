@@ -2,6 +2,7 @@
 title: Debezium详细嵌入NIFI
 date: 2021-11-01
 category: ApacheNIFI开发
+tag: NIFI
 ---
 
 # 一、嵌入NIFI整体思路

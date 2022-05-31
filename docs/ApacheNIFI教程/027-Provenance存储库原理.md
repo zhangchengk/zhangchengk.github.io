@@ -2,6 +2,7 @@
 title: Provenance存储库原理
 date: 2021-03-02
 category: ApacheNIFI教程
+tag: NIFI
 author: 张诚
 ---
 

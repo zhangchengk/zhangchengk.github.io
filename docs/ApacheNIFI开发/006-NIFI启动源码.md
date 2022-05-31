@@ -2,6 +2,7 @@
 title: NIFI启动源码解读
 date: 2020-05-21
 category: ApacheNIFI开发
+tag: NIFI
 ---
 
 本文仅限于针对NIFI最常见的启动方式的分析，即使用以下命令启动。

@@ -2,6 +2,7 @@
 title: 最大线程池和处理器并发任务设置
 date: 2020-05-21
 category: ApacheNIFI教程
+tag: NIFI
 ---
 
 ## Max Timer Driven Thread Count 和 Max Event Driven Thread Count

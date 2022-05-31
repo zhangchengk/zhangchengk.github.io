@@ -2,6 +2,7 @@
 title: NIFI简史
 date: 2020-06-24
 category: ApacheNIFI教程
+tag: NIFI
 ---
 
 ## Apache NIFI简要历史

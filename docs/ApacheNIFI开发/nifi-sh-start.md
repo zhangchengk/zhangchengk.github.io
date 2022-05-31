@@ -2,6 +2,7 @@
 title: nifi.sh start 解读 
 date: 2020-05-21
 category: ApacheNIFI开发
+tag: NIFI
 ---
 以下是我们执行nifi.sh start的时候最后执行的命令：
 

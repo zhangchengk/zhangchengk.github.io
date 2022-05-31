@@ -2,6 +2,7 @@
 title: CaptureChangeMySQL
 date: 2021-08-13
 category: ApacheNIFI教程
+tag: NIFI
 author: 张诚
 ---
 
