@@ -76,6 +76,8 @@ let ignoreFileNameSet  = new Set()
     ignoreFileNameSet.add('待完成')
     ignoreFileNameSet.add('img')
     ignoreFileNameSet.add('about')
+    ignoreFileNameSet.add('yms')
+    ignoreFileNameSet.add('ucf')
 
 // console.log(__dirname)
 let test = resolveSideBarTest()

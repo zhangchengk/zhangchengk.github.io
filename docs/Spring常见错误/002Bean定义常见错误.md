@@ -1,6 +1,6 @@
 ---
 title: Bean 定义常见错误
-date: 2020-05-31
+date: 2022-05-31
 category: Spring常见错误
 tag: Spring
 ---
