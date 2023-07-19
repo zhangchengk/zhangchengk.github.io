@@ -1,0 +1,1 @@
+import{_}from"./plugin-vue_export-helper.21dcd24c.js";import{o as e,c as r}from"./app.e98d52ae.js";const t={};function c(o,a){return e(),r("div")}var m=_(t,[["render",c],["__file","005Bean\u751F\u547D\u5468\u671F\u5E38\u89C1\u9519\u8BEF.html.vue"]]);export{m as default};
