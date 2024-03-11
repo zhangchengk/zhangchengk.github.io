@@ -11,17 +11,17 @@ projects:
   - type: book
     name: 深入浅出Java多线程
     desc: RedSpider社区整理的Java多线程知识，本文是复习PPT。
-    link: 读书笔记/深入浅出Java多线程/深入浅出Java多线程.md
+    link: /深入浅出Java多线程/深入浅出Java多线程.md
 
-  - type: book
-    name: 深入浅出计算机组成原理
-    desc: 练拳不练功，到老一场空。
-    link: 读书笔记/深入浅出计算机组成原理/深入浅出计算机组成原理.md
+  # - type: book
+  #   name: 深入浅出计算机组成原理
+  #   desc: 练拳不练功，到老一场空。
+  #   link: 读书笔记/深入浅出计算机组成原理/深入浅出计算机组成原理.md
 
-  - type: book
-    name: LeetCode
-    desc: 本集合是LeetCode刷题笔记以及公众号「labuladong」文章阅读笔记。
-    link: 读书笔记/LeetCode/sfxc.md
+  # - type: book
+  #   name: LeetCode
+  #   desc: 本集合是LeetCode刷题笔记以及公众号「labuladong」文章阅读笔记。
+  #   link: 读书笔记/LeetCode/sfxc.md
 
   - type: book
     name: 算法
@@ -31,7 +31,7 @@ projects:
   - type: link
     name: Java开发手册手抄版
     desc: 编程规约、异常日志、单元测试、安全规约、MySQL数据库、工程结构、设计规约
-    link: /读书笔记/阿里Java开发手册/手抄版.md
+    link: /阿里Java开发手册/手抄版.md
 
   - type: link
     name: Json JOLT 教程
