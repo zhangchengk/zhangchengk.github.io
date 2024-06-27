@@ -3,6 +3,7 @@ title: 编译NIFI源码
 date: 2020-05-21
 category: ApacheNIFI开发
 tag: NIFI
+order: 1
 ---
 
 最近新来了一次代码，构建的时候心血来潮，又重新过了一遍(回想17年刚毕业的时候构建的是一塌糊涂。。。啥也不知道，懵懵的)

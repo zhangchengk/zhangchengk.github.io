@@ -3,6 +3,7 @@ title: Processor情况
 date: 2020-06-30
 category: ApacheNIFI教程
 tag: NIFI
+order: 10
 ---
 
 以下是基于最新版Apache NIFI，依据所在Nar包分类的组件说明情况，组件包括：Processor，Controller Service，ReportingTask

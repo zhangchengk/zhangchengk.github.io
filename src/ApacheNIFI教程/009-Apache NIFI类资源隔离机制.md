@@ -3,6 +3,7 @@ title: NIFI类资源隔离机制
 date: 2020-07-11
 category: ApacheNIFI教程
 tag: NIFI
+order: 9
 ---
 
 本文简单的讨论一下Apache NIFI项目结构的类资源隔离机制，适合接触过源码的同学阅读。

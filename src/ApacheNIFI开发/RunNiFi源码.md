@@ -3,6 +3,7 @@ title: RunNiFi.java 源码解读
 date: 2020-05-21
 category: ApacheNIFI开发
 tag: NIFI
+order: 15
 ---
 
 RunNiFi类是由 nifi.sh脚本执行java命令指定的主类，RunNiFi类主要是干一些 查找文件，接受脚本指令，启动停止NIFI进程(主类 org.apache.nifi.NiFi)，自动重启NIFI，发送NIFI通知等等操作；

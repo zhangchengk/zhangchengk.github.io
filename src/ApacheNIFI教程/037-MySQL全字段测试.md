@@ -4,6 +4,7 @@ date: 2022-02-10
 category: ApacheNIFI教程
 tag: NIFI
 author: 张诚
+order: 37
 ---
 
 ## 准备

@@ -3,6 +3,7 @@ title: Run Duration深入理解
 date: 2020-05-21
 category: ApacheNIFI教程
 tag: NIFI
+order: 13
 ---
 
 ## Run Duration

@@ -2,6 +2,7 @@
 title: Java内存模型基础知识
 date: 2020-12-06
 category: 深入浅出Java多线程
+order: 6
 ---
 
 ## 6.1 并发编程模型的两个关键问题

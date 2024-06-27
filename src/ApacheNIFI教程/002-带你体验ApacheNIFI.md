@@ -3,6 +3,7 @@ title: 带你体验Apache NIFI
 date: 2020-05-27
 category: ApacheNIFI教程
 tag: NIFI
+order: 2
 star: 1
 ---
 

@@ -2,6 +2,7 @@
 title: Java线程的状态及主要转化方法
 date: 2020-12-05
 category: 深入浅出Java多线程
+order: 4
 ---
 
 ## 4.1 操作系统中的线程状态转换

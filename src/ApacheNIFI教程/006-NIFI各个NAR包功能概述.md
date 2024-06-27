@@ -3,6 +3,7 @@ title: 各个NAR包功能概述
 date: 2020-05-21
 category: ApacheNIFI教程
 tag: NIFI
+order: 6
 ---
 
 以下表格现有版本1.8为基础，同时参照 1.9、1.10版本，概述了nifi nar包作用，部分在国内不适用，合理的删减nar包能明显的减少安装包体积；删减nar包的方式很简便，直接在nifi-assembly 的pom.xml注释掉相关的依赖就可以了

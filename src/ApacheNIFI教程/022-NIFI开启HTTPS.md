@@ -3,6 +3,7 @@ title: NIFI开启HTTPS
 date: 2020-05-21
 category: ApacheNIFI教程
 tag: NIFI
+order: 22
 ---
 
 前言：Apache NIFI是自带用户验证、权限验证模块的，对用户和权限的模块都有详细的设计和划分。但默认配置下我们使用的是NIFI的HTTP服务，HTTP模式下，NIFI是不启用用户管理和权限管理模块的。

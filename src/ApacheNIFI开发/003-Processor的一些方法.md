@@ -3,6 +3,7 @@ title: Processor的一些方法
 date: 2020-05-21
 category: ApacheNIFI开发
 tag: NIFI
+order: 3
 ---
 
 在使用NIFI的过程中，我们经常需要创建自定义Processor，而通常情况下，我们只需要在覆盖onTrigger方法中实现我们的需求即可，但有时候是不够的，这里我们就来了解一下Processor的那些方法。

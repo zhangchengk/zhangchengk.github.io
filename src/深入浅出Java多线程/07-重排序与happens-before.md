@@ -2,6 +2,7 @@
 title: 重排序与happens-before
 date: 2020-12-08
 category: 深入浅出Java多线程
+order: 7
 ---
 
 ## 7.1 什么是重排序？

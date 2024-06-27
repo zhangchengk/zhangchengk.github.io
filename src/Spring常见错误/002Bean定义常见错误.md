@@ -3,6 +3,7 @@ title: Bean 定义常见错误
 date: 2022-05-31
 category: Spring常见错误
 tag: Spring
+order: 2
 ---
 
 Spring 的核心是围绕 Bean 进行的。不管是 Spring Boot 还是 Spring Cloud，只要名称中带有 Spring 关键字的技术都脱离不了 Bean，而要使用一个 Bean 少不了要先定义出来，所以**定义一个 Bean 就变得格外重要了**。

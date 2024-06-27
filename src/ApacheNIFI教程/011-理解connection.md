@@ -3,6 +3,7 @@ title: 深入理解Connection
 date: 2020-05-21
 category: ApacheNIFI教程
 tag: NIFI
+order: 11
 ---
 
 NiFi `Connection`是在两个已连接的NiFi处理器组件之间临时保存FlowFiles的位置。每个包含排队的NiFi FlowFiles的`Connection`在JVM堆中都会占一些空间。本文将对`Connection`进行分析，探究NiFi如何管理在该`Connection`中排队的FlowFiles和`Connection`对堆和性能的影响。

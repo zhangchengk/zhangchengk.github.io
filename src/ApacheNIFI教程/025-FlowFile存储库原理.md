@@ -4,6 +4,7 @@ date: 2021-03-01
 category: ApacheNIFI教程
 tag: NIFI
 author: 张诚
+order: 25
 ---
 
 ## FlowFile Repository

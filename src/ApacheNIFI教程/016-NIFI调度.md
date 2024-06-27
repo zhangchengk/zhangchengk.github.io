@@ -3,6 +3,7 @@ title: 深入解析调度策略
 date: 2020-06-08
 category: ApacheNIFI教程
 tag: NIFI
+order: 16
 ---
 
 简介：本文主要讲解Apache NIFI的调度策略，对象主要是针对Processor组件。本文假定读者已经对Apache NIFI有了一定的了解和使用经验，同时作者也尽可能的去讲解的更透彻，使得本文尽可能让对NIFI接触不深的读者也能够看懂。

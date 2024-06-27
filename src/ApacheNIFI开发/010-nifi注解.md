@@ -3,6 +3,7 @@ title: NIFI 注解讲解
 date: 2020-05-21
 category: ApacheNIFI开发
 tag: NIFI
+order: 10
 ---
 
 阅读这篇文章之前如果对Java注解没有什么深入了解，建议看一看java注解

@@ -3,6 +3,7 @@ title: NIFI里的数据库连接池
 date: 2020-09-08
 category: ApacheNIFI教程
 tag: NIFI
+order: 19
 ---
 
 通常我们在NIFI里最常见的使用场景就是读写关系型数据库，一些组件比如GenerateTableFetch、ExecuteSQL、PutSQL、ExecuteSQLRecord、PutDatabaseRecord等等，都会有一个属性配置大概叫`Database Connection Pooling Service`的，对应的接口是`DBCPService`，其实现类有：HiveConnectionPool DBCPConnectionPool DBCPConnectionPoolLookup。我们用的最多的就是DBCPConnectionPool。具体怎么配置这里就不赘述了，看对应的Controller Service文档就可以了。
