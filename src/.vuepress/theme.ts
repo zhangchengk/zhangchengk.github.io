@@ -20,6 +20,8 @@ export default hopeTheme({
 
   docsDir: "src",
 
+  fullscreen: true,
+
   // 导航栏
   navbar,
 
@@ -87,6 +89,7 @@ export default hopeTheme({
       imgSize: true,
       include: true,
       mark: true,
+      alert: true,
       plantuml: true,
       spoiler: true,
       stylize: [
