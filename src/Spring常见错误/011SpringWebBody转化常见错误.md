@@ -194,16 +194,21 @@ public class HelloController {
 ```
 
 上述代码接受了一个 `Student` 对象，然后原样返回。我们使用下面的测试请求进行测试：
-
->POST http://localhost:8080/springmvc3_war/app/hi2
->Content-Type: application/json
->{“name”: “xiaoming”}
+```json
+POST http://localhost:8080/springmvc3_war/app/hi2
+Content-Type: application/json
+{"name": "xiaoming"}
+```
 
 经过测试，我们会得到以下结果：
->{“name”: “xiaoming”}
+```json
+{"name": "xiaoming"}
+```
 
 但是随着项目的推进，在代码并未改变时，我们可能会返回以下结果： 
->{“name”: “xiaoming”,“age”: null}
+```json
+{"name": "xiaoming","age": null}
+```
 
 即当 `age` 取不到值，开始并没有序列化它作为响应 `Body` 的一部分，后来又序列化成 `null` 作为 `Body` 返回了。
 
@@ -350,16 +355,17 @@ public Student hi3(@RequestBody Student student) {
 ```
 
 运行测试，我们会发现下面的日志：
-
->print request body in filter:{
->“name”: “xiaoming”,
->“age”: 10
->}
->25-Mar-2021 11:04:44.906 璀﹀憡 `[http-nio-8080-exec-5]` 
->org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException 
->Resolved [org.springframework.http.converter.HttpMessageNotReadableException: 
->Required request body is missing: public com.puzzles.Student 
->com.puzzles.HelloController.hi3(com.puzzles.Student)]
+```
+print request body in filter:{
+“name”: “xiaoming”,
+“age”: 10
+}
+25-Mar-2021 11:04:44.906 璀﹀憡 `[http-nio-8080-exec-5]` 
+org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException 
+Resolved [org.springframework.http.converter.HttpMessageNotReadableException: 
+Required request body is missing: public com.puzzles.Student 
+com.puzzles.HelloController.hi3(com.puzzles.Student)]
+```
 
 可以看到，请求的 `Body` 确实在请求中输出了，但是后续的操作直接报错了，错误提示：`Required request body is missing`。
 
